@@ -1,0 +1,26 @@
+[
+  { "level": "A1", "skill": "grammar", "order_index": 1, "question_text": "She ___ a teacher.", "options": ["is", "are", "am", "be"], "correct_option": 0 },
+  { "level": "A1", "skill": "vocabulary", "order_index": 2, "question_text": "Choose the correct word: I ___ coffee every morning.", "options": ["drink", "drinks", "drinking", "drank"], "correct_option": 0 },
+  { "level": "A1", "skill": "grammar", "order_index": 3, "question_text": "This is ___ office.", "options": ["my", "I", "me", "mine's"], "correct_option": 0 },
+  { "level": "A1", "skill": "vocabulary", "order_index": 4, "question_text": "Opposite of 'big' is ___.", "options": ["small", "tall", "long", "short"], "correct_option": 0 },
+
+  { "level": "A2", "skill": "grammar", "order_index": 5, "question_text": "We ___ to the meeting yesterday.", "options": ["went", "go", "goes", "going"], "correct_option": 0 },
+  { "level": "A2", "skill": "grammar", "order_index": 6, "question_text": "There ___ many emails in my inbox right now.", "options": ["are", "is", "be", "was"], "correct_option": 0 },
+  { "level": "A2", "skill": "vocabulary", "order_index": 7, "question_text": "A person who buys goods or services is a ___.", "options": ["customer", "supplier", "employer", "colleague"], "correct_option": 0 },
+  { "level": "A2", "skill": "grammar", "order_index": 8, "question_text": "I ___ finished the report yet.", "options": ["haven't", "didn't", "don't", "wasn't"], "correct_option": 0 },
+
+  { "level": "B1", "skill": "grammar", "order_index": 9, "question_text": "If we ___ the deadline, the client will be upset.", "options": ["miss", "missed", "will miss", "missing"], "correct_option": 0 },
+  { "level": "B1", "skill": "vocabulary", "order_index": 10, "question_text": "To 'negotiate' a deal means to ___.", "options": ["discuss terms to reach an agreement", "sign a contract immediately", "cancel a meeting", "reject an offer"], "correct_option": 0 },
+  { "level": "B1", "skill": "grammar", "order_index": 11, "question_text": "The report ___ by the finance team every quarter.", "options": ["is prepared", "prepares", "prepared", "preparing"], "correct_option": 0 },
+  { "level": "B1", "skill": "reading", "order_index": 12, "question_text": "\"Our revenue grew by 12% despite rising costs.\" This sentence means the company ___.", "options": ["earned more money even though expenses increased", "lost money because of high costs", "reduced its prices", "closed a department"], "correct_option": 0 },
+
+  { "level": "B2", "skill": "grammar", "order_index": 13, "question_text": "By the time you arrive, the meeting ___ already ___.", "options": ["will have / started", "will / start", "has / started", "is / starting"], "correct_option": 0 },
+  { "level": "B2", "skill": "vocabulary", "order_index": 14, "question_text": "'To streamline a process' means to ___.", "options": ["make it more efficient", "make it more complicated", "stop it completely", "outsource it"], "correct_option": 0 },
+  { "level": "B2", "skill": "grammar", "order_index": 15, "question_text": "Had we invested earlier, we ___ higher returns.", "options": ["would have earned", "will earn", "would earn", "earned"], "correct_option": 0 },
+  { "level": "B2", "skill": "reading", "order_index": 16, "question_text": "\"The merger is contingent upon regulatory approval.\" This means the merger ___.", "options": ["will only happen if regulators approve it", "has already been approved", "was cancelled by regulators", "does not need approval"], "correct_option": 0 },
+
+  { "level": "C1", "skill": "vocabulary", "order_index": 17, "question_text": "'To mitigate risk' most nearly means to ___.", "options": ["reduce the severity of a risk", "increase exposure to risk", "ignore potential risk", "transfer all risk to a partner"], "correct_option": 0 },
+  { "level": "C1", "skill": "grammar", "order_index": 18, "question_text": "Not only ___ the target, but they also exceeded it.", "options": ["did they meet", "they met", "they did meet", "met they"], "correct_option": 0 },
+  { "level": "C1", "skill": "reading", "order_index": 19, "question_text": "\"The board remains cautiously optimistic amid macroeconomic headwinds.\" This suggests the board is ___.", "options": ["hopeful but aware of external economic challenges", "certain of failure", "unconcerned about the economy", "planning to shut down"], "correct_option": 0 },
+  { "level": "C1", "skill": "vocabulary", "order_index": 20, "question_text": "A 'watertight contract' is one that is ___.", "options": ["carefully written with no loopholes", "informal and flexible", "signed digitally", "written in plain language"], "correct_option": 0 }
+]

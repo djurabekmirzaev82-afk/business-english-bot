@@ -1,0 +1,24 @@
+{
+  "name": "business-english-surxondaryo-bot",
+  "version": "0.1.0",
+  "description": "Business English in Surkhandarya Region - Telegram bot (MVP: Placement Test + Student Cabinet)",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "migrate": "node src/db/migrate.js",
+    "seed": "node src/db/seed.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^5.2.1",
+    "pg": "^8.13.1",
+    "telegraf": "^4.16.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}

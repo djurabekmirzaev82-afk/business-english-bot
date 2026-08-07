@@ -1,0 +1,230 @@
+[
+  {
+    "id": "communication",
+    "title": "💬 Business Communication",
+    "vocabulary": [
+      { "term": "stakeholder", "def": "manfaatdor tomon — loyihadan manfaatdor shaxs yoki tashkilot" },
+      { "term": "follow up", "def": "keyingi qadam sifatida qayta bog'lanish, eslatib qo'yish" },
+      { "term": "touch base", "def": "qisqa muloqot qilib, holatdan xabardor bo'lish" },
+      { "term": "on the same page", "def": "bir xil tushunchada bo'lish, kelishilganlik" },
+      { "term": "circle back", "def": "keyinroq shu mavzuga qaytish" }
+    ],
+    "keyPhrases": [
+      "I'd like to follow up on our previous conversation.",
+      "Let's touch base next week.",
+      "Just to make sure we're on the same page...",
+      "Could you clarify what you mean by that?",
+      "I'll circle back to you by Friday."
+    ],
+    "miniDialogue": "A: I'd like to follow up on the proposal we discussed.\nB: Sure, let's touch base tomorrow morning.\nA: Great, just to make sure we're on the same page — the deadline is next Friday, right?\nB: Correct. I'll circle back with the final numbers by then."
+  },
+  {
+    "id": "meetings",
+    "title": "🗓 Business Meetings",
+    "vocabulary": [
+      { "term": "agenda", "def": "kun tartibi — yig'ilishda muhokama qilinadigan masalalar ro'yxati" },
+      { "term": "minutes", "def": "yig'ilish bayonnomasi" },
+      { "term": "action item", "def": "yig'ilishdan keyin bajarilishi kerak bo'lgan vazifa" },
+      { "term": "table a discussion", "def": "muhokamani keyinga qoldirish" },
+      { "term": "chair the meeting", "def": "yig'ilishga rahbarlik qilish" }
+    ],
+    "keyPhrases": [
+      "Let's go through today's agenda.",
+      "Can someone take the minutes?",
+      "I think we should table this discussion for now.",
+      "Who's going to chair the meeting?",
+      "Let's wrap up with the action items."
+    ],
+    "miniDialogue": "A: Let's go through today's agenda — three items to cover.\nB: Sounds good. Who's taking the minutes?\nA: I will. Let's start with the budget review.\n...\nA: Okay, let's wrap up with the action items for next week."
+  },
+  {
+    "id": "negotiation",
+    "title": "🤝 Negotiation",
+    "vocabulary": [
+      { "term": "counteroffer", "def": "qarshi taklif" },
+      { "term": "leverage", "def": "muzokarada ustunlik/dalil sifatida ishlatiladigan omil" },
+      { "term": "concession", "def": "yon berish, kelishuv uchun beriladigan imtiyoz" },
+      { "term": "win-win situation", "def": "ikkala tomon uchun ham foydali natija" },
+      { "term": "bottom line", "def": "eng past chegara, kelisha oladigan minimal shart" }
+    ],
+    "keyPhrases": [
+      "We'd like to propose a counteroffer.",
+      "What's your bottom line on pricing?",
+      "We're looking for a win-win situation here.",
+      "We could make a concession on delivery time.",
+      "Let's find a middle ground."
+    ],
+    "miniDialogue": "A: Your price is above our budget. Can we discuss the terms?\nB: We could make a concession on delivery time if you increase the order volume.\nA: Let's find a middle ground — what if we meet halfway on price?\nB: That could work. Let me propose a counteroffer."
+  },
+  {
+    "id": "marketing",
+    "title": "📈 Marketing",
+    "vocabulary": [
+      { "term": "target audience", "def": "maqsadli auditoriya" },
+      { "term": "brand awareness", "def": "brendni tanish/tanilganlik darajasi" },
+      { "term": "market share", "def": "bozordagi ulush" },
+      { "term": "call to action", "def": "harakatga chaqiruv (masalan, reklamada)" },
+      { "term": "conversion rate", "def": "konversiya darajasi — maqsadli harakatga o'tish foizi" }
+    ],
+    "keyPhrases": [
+      "Our target audience is young professionals.",
+      "We need to increase brand awareness.",
+      "Our market share grew by 5% this quarter.",
+      "The ad needs a stronger call to action.",
+      "Let's track the conversion rate closely."
+    ],
+    "miniDialogue": "A: How's the new campaign performing?\nB: Brand awareness is up, but the conversion rate is still low.\nA: Maybe we need a stronger call to action.\nB: Agreed. Let's revise the ad copy."
+  },
+  {
+    "id": "finance",
+    "title": "💰 Finance",
+    "vocabulary": [
+      { "term": "cash flow", "def": "pul oqimi" },
+      { "term": "revenue", "def": "daromad, tushum" },
+      { "term": "expenditure", "def": "xarajat" },
+      { "term": "break-even point", "def": "zararsizlik nuqtasi" },
+      { "term": "return on investment (ROI)", "def": "investitsiya rentabelligi" }
+    ],
+    "keyPhrases": [
+      "Our cash flow has improved this quarter.",
+      "Revenue increased by 15% year over year.",
+      "We need to cut unnecessary expenditure.",
+      "When will we reach the break-even point?",
+      "What's the expected ROI on this project?"
+    ],
+    "miniDialogue": "A: How does our cash flow look this month?\nB: Better than expected — revenue is up 15%.\nA: Good. What's the ROI on the new equipment?\nB: We should break even within eight months."
+  },
+  {
+    "id": "banking",
+    "title": "🏦 Banking",
+    "vocabulary": [
+      { "term": "interest rate", "def": "foiz stavkasi" },
+      { "term": "loan", "def": "kredit, qarz" },
+      { "term": "collateral", "def": "garov (kredit uchun)" },
+      { "term": "credit score", "def": "kredit reytingi" },
+      { "term": "installment", "def": "bo'lib to'lash, muddatli to'lov" }
+    ],
+    "keyPhrases": [
+      "What's the current interest rate on business loans?",
+      "We'll need collateral to secure the loan.",
+      "Your credit score qualifies you for a lower rate.",
+      "Can we pay in monthly installments?",
+      "The bank approved our loan application."
+    ],
+    "miniDialogue": "A: We'd like to apply for a business loan.\nB: Sure. What collateral can you offer?\nA: Our warehouse property. What's the interest rate?\nB: With your credit score, we can offer a competitive rate."
+  },
+  {
+    "id": "management",
+    "title": "👔 Management",
+    "vocabulary": [
+      { "term": "delegate", "def": "vazifani boshqaga topshirish" },
+      { "term": "accountability", "def": "javobgarlik" },
+      { "term": "performance review", "def": "ishchi faoliyatini baholash" },
+      { "term": "workflow", "def": "ish jarayoni" },
+      { "term": "bottleneck", "def": "ish jarayonidagi to'siq/sekinlashtiruvchi joy" }
+    ],
+    "keyPhrases": [
+      "I'll delegate this task to the team lead.",
+      "We need clearer accountability on this project.",
+      "Let's schedule the performance reviews for next week.",
+      "There's a bottleneck in our approval process.",
+      "Let's streamline the workflow."
+    ],
+    "miniDialogue": "A: The project is behind schedule.\nB: There's a bottleneck in the approval process.\nA: Let's delegate approvals to team leads to speed things up.\nB: Good idea — I'll update the workflow today."
+  },
+  {
+    "id": "hr",
+    "title": "👥 HR",
+    "vocabulary": [
+      { "term": "recruitment", "def": "xodimlar yollash jarayoni" },
+      { "term": "onboarding", "def": "yangi xodimni ishga moslashtirish" },
+      { "term": "turnover rate", "def": "xodimlar almashinuvi darajasi" },
+      { "term": "benefits package", "def": "ijtimoiy imtiyozlar to'plami" },
+      { "term": "probation period", "def": "sinov muddati" }
+    ],
+    "keyPhrases": [
+      "We're starting the recruitment process next week.",
+      "The onboarding program takes two weeks.",
+      "Our turnover rate has decreased this year.",
+      "The benefits package includes health insurance.",
+      "The probation period is three months."
+    ],
+    "miniDialogue": "A: How's the recruitment going for the new position?\nB: We have five candidates for the interview stage.\nA: Good. What does our onboarding program look like?\nB: Two weeks, including training and a mentor assignment."
+  },
+  {
+    "id": "entrepreneurship",
+    "title": "🚀 Entrepreneurship",
+    "vocabulary": [
+      { "term": "startup", "def": "startap — yangi tashkil topgan innovatsion kompaniya" },
+      { "term": "seed funding", "def": "boshlang'ich investitsiya" },
+      { "term": "pitch", "def": "loyihani qisqa taqdim etish" },
+      { "term": "scale up", "def": "biznesni kengaytirish" },
+      { "term": "value proposition", "def": "mahsulotning mijozga taklif qiladigan qiymati" }
+    ],
+    "keyPhrases": [
+      "We're raising seed funding for our startup.",
+      "Can you pitch your idea in two minutes?",
+      "We're planning to scale up next year.",
+      "What's your unique value proposition?",
+      "Investors were impressed by the pitch."
+    ],
+    "miniDialogue": "A: We're looking to raise seed funding.\nB: What's your value proposition?\nA: We help small farmers sell directly to markets, cutting out middlemen.\nB: Interesting. Can you pitch that to our investors on Thursday?"
+  },
+  {
+    "id": "presentation",
+    "title": "🎯 Presentation Skills",
+    "vocabulary": [
+      { "term": "key takeaway", "def": "asosiy xulosa" },
+      { "term": "visual aid", "def": "vizual yordamchi material (slayd, grafik)" },
+      { "term": "engage the audience", "def": "tinglovchilarni jalb qilish" },
+      { "term": "wrap up", "def": "yakunlash" },
+      { "term": "Q&A session", "def": "savol-javob qismi" }
+    ],
+    "keyPhrases": [
+      "Let me walk you through the key takeaways.",
+      "As you can see on this slide...",
+      "I'd like to engage the audience with a quick question.",
+      "To wrap up, let's summarize the main points.",
+      "We'll have a Q&A session at the end."
+    ],
+    "miniDialogue": "A: Good morning everyone, today I'll walk you through our quarterly results.\n... \nA: To wrap up, our key takeaway is steady growth despite market challenges.\nA: Now let's move to the Q&A session — feel free to ask questions."
+  },
+  {
+    "id": "email",
+    "title": "✉ Professional Email",
+    "vocabulary": [
+      { "term": "CC / BCC", "def": "nusxa yuborish (ochiq/yashirin)" },
+      { "term": "attachment", "def": "biriktirilgan fayl" },
+      { "term": "kindly", "def": "iltimos (rasmiy uslub)" },
+      { "term": "at your earliest convenience", "def": "iloji boricha tezroq (rasmiy)" },
+      { "term": "looking forward to", "def": "intiqlik bilan kutish" }
+    ],
+    "keyPhrases": [
+      "I hope this email finds you well.",
+      "Please find the attachment for your review.",
+      "Kindly confirm your availability for the meeting.",
+      "Could you respond at your earliest convenience?",
+      "Looking forward to hearing from you."
+    ],
+    "miniDialogue": "Subject: Meeting Confirmation\n\nDear Mr. Aliyev,\n\nI hope this email finds you well. Please find attached the agenda for Thursday's meeting. Kindly confirm your availability at your earliest convenience.\n\nLooking forward to hearing from you.\n\nBest regards,\nDjurabek"
+  },
+  {
+    "id": "vocabulary",
+    "title": "📚 Business Vocabulary",
+    "vocabulary": [
+      { "term": "outsource", "def": "tashqi manbaga topshirish (masalan, xizmatni)" },
+      { "term": "merger", "def": "birlashish (kompaniyalar)" },
+      { "term": "acquisition", "def": "sotib olish (kompaniyani)" },
+      { "term": "supply chain", "def": "ta'minot zanjiri" },
+      { "term": "overhead costs", "def": "doimiy/umumiy xarajatlar" }
+    ],
+    "keyPhrases": [
+      "We decided to outsource our customer support.",
+      "The merger will be finalized next quarter.",
+      "The acquisition doubled our market presence.",
+      "The supply chain was disrupted last month.",
+      "We're trying to reduce overhead costs."
+    ],
+    "miniDialogue": "A: I heard about the merger — congratulations.\nB: Thanks. It should strengthen our supply chain significantly.\nA: Are you planning to outsource any departments?\nB: Just customer support, to reduce overhead costs."
+  }
+]
