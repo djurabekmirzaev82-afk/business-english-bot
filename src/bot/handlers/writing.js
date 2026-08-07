@@ -81,7 +81,7 @@ async function handleWritingSubmission(ctx) {
   } catch (err) {
     if (err.code === 'AI_NOT_CONFIGURED') {
       await ctx.reply(
-        '⚠️ AI Tutor hali sozlanmagan (ANTHROPIC_API_KEY yo\'q). Administrator .env faylga API kalitni qo\'shishi kerak.'
+        '⚠️ AI Tutor hali sozlanmagan (GEMINI_API_KEY yo\'q). Administrator .env faylga API kalitni qo\'shishi kerak.'
       );
     } else {
       console.error('Writing check failed:', err.message);

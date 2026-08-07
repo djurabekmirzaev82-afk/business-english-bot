@@ -1,42 +1,55 @@
 const config = require('../config');
 
-const API_URL = 'https://api.anthropic.com/v1/messages';
-const MODEL = 'claude-haiku-4-5-20251001'; // fast + cost-effective, good enough for feedback/roleplay
+// "gemini-flash-latest" is Google's stable alias that always points to the
+// current recommended Flash model — avoids needing to update this string
+// every time Google releases a new model version.
+const MODEL = 'gemini-flash-latest';
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`;
 
 function assertConfigured() {
-  if (!config.anthropicApiKey) {
-    const err = new Error('ANTHROPIC_API_KEY sozlanmagan. .env fayliga API kalitni qo\'shing.');
+  if (!config.geminiApiKey) {
+    const err = new Error('GEMINI_API_KEY sozlanmagan. .env fayliga API kalitni qo\'shing.');
     err.code = 'AI_NOT_CONFIGURED';
     throw err;
   }
 }
 
-async function callClaude(messages, system, maxTokens = 700) {
+/**
+ * `messages` uses the same shape as before ({role: 'user'|'assistant', content: string}[])
+ * so callers (writing.js, speaking.js) don't need to change. This function converts
+ * that shape into Gemini's contents[]/parts[] format, mapping 'assistant' -> 'model'.
+ */
+async function callGemini(messages, systemInstruction, maxOutputTokens = 900) {
   assertConfigured();
 
-  const response = await fetch(API_URL, {
+  const contents = messages.map((m) => ({
+    role: m.role === 'assistant' ? 'model' : 'user',
+    parts: [{ text: m.content }],
+  }));
+
+  const body = {
+    contents,
+    generationConfig: { maxOutputTokens, temperature: 0.7 },
+  };
+  if (systemInstruction) {
+    body.systemInstruction = { parts: [{ text: systemInstruction }] };
+  }
+
+  const response = await fetch(`${API_URL}?key=${config.geminiApiKey}`, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-api-key': config.anthropicApiKey,
-      'anthropic-version': '2023-06-01',
-    },
-    body: JSON.stringify({
-      model: MODEL,
-      max_tokens: maxTokens,
-      system,
-      messages,
-    }),
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
   });
 
   if (!response.ok) {
     const errText = await response.text();
-    throw new Error(`Claude API xatosi (${response.status}): ${errText}`);
+    throw new Error(`Gemini API xatosi (${response.status}): ${errText}`);
   }
 
   const data = await response.json();
-  const textBlock = data.content.find((b) => b.type === 'text');
-  return textBlock ? textBlock.text : '';
+  const candidate = data.candidates && data.candidates[0];
+  const text = candidate?.content?.parts?.map((p) => p.text).join('') || '';
+  return text;
 }
 
 /**
@@ -68,7 +81,7 @@ async function checkWriting(taskType, userText, criteria) {
     `Task type: ${taskType}${criteriaBlock}\n\nStudent's text:\n"""\n${userText}\n"""\n\n` +
     'Please evaluate this according to the format above.';
 
-  return callClaude([{ role: 'user', content: userMessage }], system, 900);
+  return callGemini([{ role: 'user', content: userMessage }], system, 900);
 }
 
 /**
@@ -82,7 +95,7 @@ async function roleplayReply(scenario, history) {
     '(2-4 sentences), and gently move the conversation forward. Respond ONLY in English — this is a speaking ' +
     'practice exercise, not a translation task. Do not break character or add meta-commentary.';
 
-  return callClaude(history, system, 300);
+  return callGemini(history, system, 300);
 }
 
 /**
@@ -100,7 +113,7 @@ async function roleplaySummary(scenario, history) {
     { role: 'user', content: '[Please provide the feedback summary now, in Uzbek, following the format above.]' },
   ];
 
-  return callClaude(summaryPrompt, system, 500);
+  return callGemini(summaryPrompt, system, 500);
 }
 
 module.exports = { checkWriting, roleplayReply, roleplaySummary };

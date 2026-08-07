@@ -12,6 +12,6 @@ module.exports = {
   botToken: requireEnv('BOT_TOKEN'),
   databaseUrl: requireEnv('DATABASE_URL'),
   databaseSsl: process.env.DATABASE_SSL === 'true',
-  anthropicApiKey: process.env.ANTHROPIC_API_KEY || null,
+  geminiApiKey: process.env.GEMINI_API_KEY || null,
   nodeEnv: process.env.NODE_ENV || 'development',
 };

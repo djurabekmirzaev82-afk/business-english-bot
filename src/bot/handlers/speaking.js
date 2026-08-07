@@ -22,9 +22,9 @@ async function selectScenario(ctx) {
   const scenario = ctx.match[1];
   await ctx.answerCbQuery();
 
-  if (!process.env.ANTHROPIC_API_KEY) {
+  if (!process.env.GEMINI_API_KEY) {
     await ctx.reply(
-      '⚠️ AI Tutor hali sozlanmagan (ANTHROPIC_API_KEY yo\'q). Administrator .env faylga API kalitni qo\'shishi kerak.'
+      '⚠️ AI Tutor hali sozlanmagan (GEMINI_API_KEY yo\'q). Administrator .env faylga API kalitni qo\'shishi kerak.'
     );
     return;
   }
