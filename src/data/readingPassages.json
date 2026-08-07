@@ -1,0 +1,126 @@
+[
+  {
+    "id": "startup_funding",
+    "title": "💡 A Local Startup Story",
+    "level": "B1",
+    "text": "Aziz started a small delivery company in Termiz two years ago. At first, he worked alone, using his own car to deliver packages around the city. Within six months, demand grew so quickly that he had to hire three drivers. To expand further, Aziz applied for a small business loan from a local bank. The bank approved the loan because his revenue had grown steadily every month. Today, his company employs twelve people and delivers to five cities across Surkhandarya region. Aziz says the biggest lesson he learned was the importance of tracking cash flow carefully — many small businesses fail not because they lack customers, but because they run out of money before payments arrive.",
+    "questions": [
+      {
+        "q": "Why did Aziz hire more drivers?",
+        "options": [
+          "Demand for deliveries grew quickly",
+          "His car broke down",
+          "The bank required it",
+          "He wanted to retire"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Why did the bank approve his loan?",
+        "options": [
+          "His revenue had grown steadily",
+          "He had no competitors",
+          "He was friends with the bank manager",
+          "He paid a large fee"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "According to Aziz, why do many small businesses fail?",
+        "options": [
+          "They run out of money before payments arrive",
+          "They have too many customers",
+          "They hire too many employees",
+          "They expand too slowly"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "remote_work_trend",
+    "title": "🏠 The Shift Toward Remote Work",
+    "level": "B2",
+    "text": "Over the past several years, many companies around the world have allowed employees to work from home, at least part of the time. Supporters argue that remote work increases productivity, since employees avoid long commutes and can better manage their personal schedules. Critics, however, point out that remote work can weaken team collaboration and make it harder for new employees to learn company culture. Some businesses have adopted a hybrid model, requiring staff to come to the office two or three days a week while allowing flexibility on other days. This approach, they claim, offers the best of both worlds — the focus and flexibility of remote work combined with the collaboration benefits of in-person meetings. Whether this trend continues largely depends on how well companies can measure and maintain productivity across different working arrangements.",
+    "questions": [
+      {
+        "q": "What is one advantage of remote work mentioned in the text?",
+        "options": [
+          "Employees avoid long commutes",
+          "It reduces company costs to zero",
+          "It eliminates the need for meetings",
+          "It guarantees higher salaries"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "What is a criticism of remote work mentioned in the text?",
+        "options": [
+          "It can weaken team collaboration",
+          "It is illegal in most countries",
+          "It always reduces productivity",
+          "Employees dislike it"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "What does the \"hybrid model\" refer to?",
+        "options": [
+          "A mix of office and remote work",
+          "Working only on weekends",
+          "A fully remote company",
+          "A four-day work week"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "According to the text, what determines whether the remote work trend continues?",
+        "options": [
+          "How well companies can measure and maintain productivity",
+          "Government regulations only",
+          "The price of office rent",
+          "Employee age"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "negotiation_case",
+    "title": "🤝 A Difficult Negotiation",
+    "level": "B2",
+    "text": "During a negotiation with a foreign supplier, a Uzbek trading company was asked to accept a 15% price increase due to rising raw material costs. Instead of rejecting the offer outright, the company's negotiator proposed a compromise: accepting a smaller 8% increase in exchange for a longer-term contract that guaranteed steady orders for two years. The supplier agreed, since a guaranteed long-term partnership reduced their own business risk. This case illustrates a key negotiation principle — a good deal often comes not from simply refusing demands, but from finding a solution where both sides gain something they value. In this case, the supplier valued stability more than the full price increase, while the buyer valued cost savings more than short-term flexibility.",
+    "questions": [
+      {
+        "q": "What did the supplier originally request?",
+        "options": [
+          "A 15% price increase",
+          "A 15% price decrease",
+          "A shorter contract",
+          "Payment in advance"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "What compromise did the Uzbek company's negotiator propose?",
+        "options": [
+          "An 8% increase in exchange for a two-year contract",
+          "A full rejection of the deal",
+          "A 20% increase for a shorter contract",
+          "Free delivery instead of a price change"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Why did the supplier accept the compromise?",
+        "options": [
+          "A guaranteed long-term partnership reduced their business risk",
+          "They had no other customers",
+          "It was required by law",
+          "The buyer threatened to sue"
+        ],
+        "correct": 0
+      }
+    ]
+  }
+]

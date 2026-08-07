@@ -10,6 +10,7 @@ const mainMenu = Markup.keyboard([
   ['📝 Placement Test', '👨‍🎓 Mening kabinetim'],
   ['💼 Business English', '📚 Courses'],
   ['🎤 Speaking Club', '✍ Writing'],
+  ['📖 Reading', '🎧 Listening'],
   ['📅 Schedule', '☎ Contact'],
 ]).resize();
 

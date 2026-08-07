@@ -1,0 +1,65 @@
+[
+  {
+    "id": "informal_letter",
+    "category": "letter",
+    "title": "📩 Norasmiy xat (Informal/Friendly Letter)",
+    "lesson": "📩 *Norasmiy xat — tuzilishi*\n\n1️⃣ *Salomlashish:* Dear [Ism], / Hi [Ism],\n2️⃣ *Kirish:* Hol-ahvol so'rash — \"How are you? I hope you're doing well.\"\n3️⃣ *Asosiy qism:* Asosiy xabar — do'stona, erkin uslubda, qisqartmalar (I'm, it's) va so'zlashuv iboralari (by the way, guess what) ishlatiladi.\n4️⃣ *Yakunlash:* \"Looking forward to hearing from you soon.\" / \"Take care,\"\n5️⃣ *Imzo:* Best wishes, / Love, — so'ng ismingiz\n\n🗣 *Foydali iboralar:*\n— It was great to hear from you!\n— Sorry I haven't written in a while.\n— Guess what happened...\n— Anyway, I'd better go now.\n— Write back soon!",
+    "taskPrompt": "✍ *Vazifa:* Xorijda o'qiyotgan do'stingizga xat yozing — unga yangi ish/loyihangiz haqida so'zlab bering va uni tashrif buyurishga taklif qiling. Kamida 100 so'z."
+  },
+  {
+    "id": "formal_letter",
+    "category": "letter",
+    "title": "📄 Rasmiy xat (Formal Letter)",
+    "lesson": "📄 *Rasmiy xat — tuzilishi*\n\n1️⃣ *Salomlashish:* Dear Mr./Ms. [Familiya], yoki Dear Sir/Madam, (agar ism noma'lum bo'lsa)\n2️⃣ *Kirish:* Xat maqsadini aniq bildiring — \"I am writing to inform/request/complain...\"\n3️⃣ *Asosiy qism:* Har bir paragraf — bitta fikr. Rasmiy uslub: qisqartmalar ishlatilmaydi (I am, emas I'm), \"kindly\", \"please find attached\" kabi iboralar.\n4️⃣ *Yakunlash:* \"I look forward to your response.\" / \"Please do not hesitate to contact me.\"\n5️⃣ *Imzo:* Yours faithfully, (ism noma'lum bo'lsa) / Yours sincerely, (ism ma'lum bo'lsa) — so'ng to'liq ism\n\n🗣 *Foydali iboralar:*\n— I am writing to inform you that...\n— I would be grateful if you could...\n— Please find attached...\n— I look forward to hearing from you.\n— Should you require further information, please contact me.",
+    "taskPrompt": "✍ *Vazifa:* Muassasa ma'muriyatiga xat yozing — talabalar uchun qo'shimcha Business English kursi ochish taklifini bildiring, buning foydalarini asoslang. Kamida 120 so'z."
+  },
+  {
+    "id": "essay_paraphrasing",
+    "category": "essay",
+    "title": "🔄 Paraphrasing",
+    "lesson": "🔄 *Paraphrasing — fikrni boshqa so'zlar bilan ifodalash*\n\nInsholarda savol matnini so'zma-so'z takrorlamaslik kerak — buning o'rniga uni **o'z so'zlaringiz bilan** qayta ifodalaysiz.\n\n*Usullar:*\n1️⃣ *Sinonim ishlatish:* important → crucial/essential\n2️⃣ *So'z turkumini o'zgartirish:* to decide (fe'l) → decision (ot)\n3️⃣ *Gap tuzilishini o'zgartirish:* Active → Passive (\"Many people believe...\" → \"It is widely believed that...\")\n\n*Namuna:*\nOriginal: \"Many people think that social media has a negative effect on teenagers.\"\nParaphrase: \"It is widely believed that social networking platforms negatively influence young people.\"",
+    "taskPrompt": "✍ *Vazifa:* Quyidagi gapni 2 xil usulda paraphrase qiling: \"Companies should invest more in employee training to increase productivity.\" So'ng shu fikr asosida 3-4 gapli qisqa paragraf yozing."
+  },
+  {
+    "id": "essay_conjunctions",
+    "category": "essay",
+    "title": "🔗 Bog'lovchilar (Linking Words)",
+    "lesson": "🔗 *Insholarda bog'lovchilar (Linking Words)*\n\nFikrlarni bir-biriga bog'lash uchun ishlatiladi — matningizni mantiqiy va oqimli qiladi.\n\n*Qo'shimcha fikr:* Furthermore, Moreover, In addition, Also\n*Qarama-qarshilik:* However, On the other hand, Nevertheless, Although\n*Sabab-natija:* Therefore, As a result, Consequently, Due to\n*Misol keltirish:* For example, For instance, Such as\n*Xulosa:* In conclusion, To sum up, Overall\n\n*Namuna:*\n\"Remote work offers flexibility. **However**, it can also lead to isolation. **Therefore**, companies should organize regular team meetings.\"",
+    "taskPrompt": "✍ *Vazifa:* \"Advantages and disadvantages of working from home\" mavzusida kamida 5 xil bog'lovchi ishlatib, 120 so'zli paragraf yozing."
+  },
+  {
+    "id": "essay_supporting_ideas",
+    "category": "essay",
+    "title": "💡 Fikrni dalillash (Supporting Ideas)",
+    "lesson": "💡 *Fikrni dalillar bilan qo'llab-quvvatlash*\n\nHar bir fikringiz **dalil, misol yoki statistika** bilan asoslanishi kerak — aks holda insho zaif ko'rinadi.\n\n*Tuzilma:* Fikr (Topic sentence) → Tushuntirish (Explanation) → Misol/dalil (Example/Evidence)\n\n*Foydali iboralar:*\n— This is mainly because...\n— A good example of this is...\n— Research shows that...\n— This can be illustrated by...\n\n*Namuna:*\nFikr: \"Small businesses benefit greatly from social media marketing.\"\nDalil: \"This is mainly because it allows them to reach a large audience at a low cost. For example, a local bakery in Termiz increased its sales by 30% after starting an Instagram page.\"",
+    "taskPrompt": "✍ *Vazifa:* \"Investing in staff training improves company performance\" fikrini oling va uni kamida 2 ta dalil/misol bilan asoslab, paragraf yozing."
+  },
+  {
+    "id": "essay_problem_solution",
+    "category": "essay",
+    "title": "⚖ Problem & Solution Essay",
+    "lesson": "⚖ *Problem and Solution Essay — tuzilishi*\n\n1️⃣ *Kirish:* Muammoni tanishtiring\n2️⃣ *Asosiy qism 1:* Muammo(lar)ni tasvirlang va sabablarini tushuntiring\n3️⃣ *Asosiy qism 2:* Yechim(lar)ni taklif qiling, har birini asoslang\n4️⃣ *Xulosa:* Fikrlarni umumlashtiring, eng samarali yechimni ta'kidlang\n\n*Foydali iboralar:*\n— One of the main problems is...\n— This has led to...\n— A possible solution would be to...\n— This could be addressed by...\n— In order to solve this issue...",
+    "taskPrompt": "✍ *Vazifa:* \"Problem and Solution\" formatida insho yozing: \"Unemployment among young graduates in Uzbekistan\" mavzusida muammoni tasvirlab, 2 ta yechim taklif qiling. Kamida 150 so'z."
+  },
+  {
+    "id": "essay_agree_disagree",
+    "category": "essay",
+    "title": "🤝 Agree / Disagree Essay",
+    "lesson": "🤝 *Agree or Disagree Essay — tuzilishi*\n\n1️⃣ *Kirish:* Mavzuni tanishtiring, o'z pozitsiyangizni bildiring (roziman/rozi emasman)\n2️⃣ *Asosiy qism 1:* Birinchi dalil + misol\n3️⃣ *Asosiy qism 2:* Ikkinchi dalil + misol\n4️⃣ *(Ixtiyoriy) Qarama-qarshi fikr:* Boshqa tomon fikrini qisqa keltirib, nega u kuchsizroq ekanini tushuntiring\n5️⃣ *Xulosa:* Pozitsiyangizni qayta tasdiqlang\n\n*Foydali iboralar:*\n— I completely/partly agree that...\n— From my point of view...\n— Although some people argue that..., I believe...\n— This view is supported by the fact that...",
+    "taskPrompt": "✍ *Vazifa:* Quyidagi fikr bilan roziligingizni/rozi emasligingizni yozing: \"Companies should allow employees to work remotely full-time.\" Kamida 150 so'z, aniq pozitsiya bilan."
+  },
+  {
+    "id": "essay_adv_disadv",
+    "category": "essay",
+    "title": "📊 Advantages & Disadvantages Essay",
+    "lesson": "📊 *Advantages and Disadvantages Essay — tuzilishi*\n\n1️⃣ *Kirish:* Mavzuni tanishtiring (pozitsiya bildirmasdan)\n2️⃣ *Asosiy qism 1:* Afzalliklar (kamida 2 ta, dalil bilan)\n3️⃣ *Asosiy qism 2:* Kamchiliklar (kamida 2 ta, dalil bilan)\n4️⃣ *Xulosa:* Umumiy balansni bildiring — qaysi tomon ustunroq deb hisoblaysiz\n\n*Foydali iboralar:*\n— One major advantage/benefit of... is that...\n— On the other hand, a significant drawback is...\n— Despite these benefits/drawbacks...\n— Weighing up both sides, it seems that...",
+    "taskPrompt": "✍ *Vazifa:* \"Advantages and disadvantages of outsourcing business functions\" mavzusida insho yozing — kamida 2 afzallik, 2 kamchilik va xulosa bilan. Kamida 150 so'z."
+  },
+  {
+    "id": "essay_comparison",
+    "category": "essay",
+    "title": "🆚 Comparison Essay (\"Is it better...?\")",
+    "lesson": "🆚 *Comparison Essay — tuzilishi*\n\nIkki narsani (masalan, ikki usul, ikki tanlov) solishtirib, qaysi biri afzalroq ekanini asoslaysiz.\n\n1️⃣ *Kirish:* Ikkala variantni tanishtiring\n2️⃣ *Asosiy qism 1:* Birinchi variant — afzallik/kamchiliklari\n3️⃣ *Asosiy qism 2:* Ikkinchi variant — afzallik/kamchiliklari\n4️⃣ *Xulosa:* Qaysi biri afzalroq ekanini aniq bildiring va sababini tushuntiring\n\n*Foydali iboralar:*\n— Compared to..., ... is...\n— Unlike..., ... offers...\n— Both options have their merits, however...\n— All things considered, ... is the better choice because...",
+    "taskPrompt": "✍ *Vazifa:* \"Is it better to work for a large corporation or a small startup?\" mavzusida ikkalasini solishtirib, xulosa bilan insho yozing. Kamida 150 so'z."
+  }
+]

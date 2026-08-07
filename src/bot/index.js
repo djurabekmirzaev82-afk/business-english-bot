@@ -8,8 +8,10 @@ const { startTest, handleAnswerCallback } = require('./handlers/placementTest');
 const { comingSoon } = require('./handlers/comingSoon');
 const { showModuleList, showModule } = require('./handlers/businessEnglish');
 const { showSchedule, showContact } = require('./handlers/orgInfo');
-const { showWritingMenu, selectTaskType, handleWritingSubmission } = require('./handlers/writing');
+const { showWritingMenu, showSubmenu, selectLesson, handleWritingSubmission } = require('./handlers/writing');
 const { showSpeakingMenu, selectScenario, handleSpeakingMessage, endSpeaking } = require('./handlers/speaking');
+const { showReadingMenu, startPassage, handleAnswer: handleReadingAnswer } = require('./handlers/reading');
+const { showListening } = require('./handlers/listening');
 
 const bot = new Telegraf(config.botToken);
 
@@ -37,9 +39,18 @@ bot.action(/bemod:(.+)/, showModule);
 bot.hears('📅 Schedule', showSchedule);
 bot.hears('☎ Contact', showContact);
 
-// Writing (AI-checked)
+// Writing (lessons + AI-checked tasks)
 bot.hears('✍ Writing', showWritingMenu);
-bot.action(/wtype:(.+)/, selectTaskType);
+bot.action(/wsubmenu:(.+)/, showSubmenu);
+bot.action(/wlesson:(.+)/, selectLesson);
+
+// Reading (original passages + comprehension questions)
+bot.hears('📖 Reading', showReadingMenu);
+bot.action(/rpass:(.+)/, startPassage);
+bot.action(/ranswer:([^:]+):(\d+):(\d+)/, handleReadingAnswer);
+
+// Listening (curated external resource links)
+bot.hears('🎧 Listening', showListening);
 
 // Speaking Club (text-based AI roleplay)
 bot.hears('🎤 Speaking Club', showSpeakingMenu);

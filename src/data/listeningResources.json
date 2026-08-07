@@ -1,0 +1,22 @@
+[
+  {
+    "category": "🇬🇧 BBC Learning English — Business",
+    "items": [
+      { "title": "BBC Learning English (asosiy sahifa)", "url": "https://www.bbc.co.uk/learningenglish" },
+      { "title": "BBC 6 Minute English", "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english" }
+    ]
+  },
+  {
+    "category": "🎙 Business Podcasts",
+    "items": [
+      { "title": "HBR IdeaCast (Harvard Business Review)", "url": "https://hbr.org/podcasts/ideacast" },
+      { "title": "The Diary of a CEO", "url": "https://open.spotify.com/show/6P3zwbaz4qMEtT1YfrkQrn" }
+    ]
+  },
+  {
+    "category": "🎓 TED Talks (Business & Career)",
+    "items": [
+      { "title": "TED Talks Business", "url": "https://www.ted.com/topics/business" }
+    ]
+  }
+]

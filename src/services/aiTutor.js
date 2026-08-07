@@ -40,23 +40,32 @@ async function callClaude(messages, system, maxTokens = 700) {
 }
 
 /**
- * Checks a piece of business writing (email, report, CV, etc.) and returns
+ * Checks a piece of business writing (letter, essay, etc.) and returns
  * structured feedback in Uzbek: score, strengths, corrections, improved version.
+ * `criteria` (optional) is the specific structure/rules the student was taught,
+ * so the AI checks against that lesson's requirements rather than generically.
  */
-async function checkWriting(taskType, userText) {
+async function checkWriting(taskType, userText, criteria) {
   const system =
     'You are a strict but encouraging Business English writing coach for adult students in Uzbekistan. ' +
-    'You will receive a piece of writing for a specific task type. Respond ONLY in Uzbek (except for quoting the ' +
-    'student\'s original English text and corrected English text, which stay in English). ' +
+    'You will receive a piece of writing for a specific task type, and optionally the specific structure/rules ' +
+    "the student was just taught for this task type. Check whether the student's writing follows that structure " +
+    'and check their grammar, vocabulary, and coherence. Respond ONLY in Uzbek (except for quoting the ' +
+    "student's original English text and corrected English text, which stay in English). " +
     'Structure your response exactly like this, with these exact section headers:\n\n' +
     'BALL: <0-100 raqam>\n\n' +
     'KUCHLI TOMONLAR:\n- ...\n\n' +
     "TUZATISHLAR KERAK BO'LGAN JOYLAR:\n- ...\n\n" +
+    "TALAB QILINGAN TUZILMAGA MOSLIGI:\n- ...\n\n" +
     'TAKOMILLASHTIRILGAN VARIANT:\n<yaxshilangan matn, ingliz tilida>\n\n' +
     'Keep feedback concrete and specific to the actual text, not generic.';
 
+  const criteriaBlock = criteria
+    ? `\n\nThe structure/rules the student was taught for this task:\n"""\n${criteria}\n"""\n`
+    : '';
+
   const userMessage =
-    `Task type: ${taskType}\n\nStudent's text:\n"""\n${userText}\n"""\n\n` +
+    `Task type: ${taskType}${criteriaBlock}\n\nStudent's text:\n"""\n${userText}\n"""\n\n` +
     'Please evaluate this according to the format above.';
 
   return callClaude([{ role: 'user', content: userMessage }], system, 900);
