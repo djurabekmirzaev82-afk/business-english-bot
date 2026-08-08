@@ -10,7 +10,8 @@ const { showModuleList, showModule } = require('./handlers/businessEnglish');
 const { showSchedule, showContact } = require('./handlers/orgInfo');
 const { showWritingMenu, showSubmenu, selectLesson, handleWritingSubmission } = require('./handlers/writing');
 const { showSpeakingMenu, selectScenario, handleSpeakingMessage, endSpeaking } = require('./handlers/speaking');
-const { showListening } = require('./handlers/listening');
+const { showListening, showResources } = require('./handlers/listening');
+const { startListeningPart1, handleAnswer: handleListeningPart1Answer } = require('./handlers/listeningPart1');
 const {
   showReadingMenu: showReadingMockMenu,
   showDrillMenu,
@@ -66,6 +67,9 @@ bot.action(/rread:gap:(.+)/, handleGapAnswer);
 
 // Listening (curated external resource links)
 bot.hears('🎧 Listening', showListening);
+bot.action('lpart1:start', startListeningPart1);
+bot.action(/lpart1:(\d+)/, handleListeningPart1Answer);
+bot.action('lresources:show', showResources);
 
 // Speaking Club (text-based AI roleplay)
 bot.hears('🎤 Speaking Club', showSpeakingMenu);
