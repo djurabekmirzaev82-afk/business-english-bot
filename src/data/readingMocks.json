@@ -1,0 +1,337 @@
+[
+  {
+    "id": "mock1",
+    "title": "Reading Mock Test 1",
+    "parts": [
+      {
+        "partNumber": 1,
+        "taskType": "open_cloze",
+        "title": "Part 1 — Open Cloze",
+        "skillNote": "Bo'shliqlarni bitta so'z bilan to'ldiring (odatda grammatik so'zlar: predlog, artikl, yordamchi fe'l, olmosh). Matnning umumiy grammatik mantig'iga e'tibor bering.",
+        "textTemplate": "The handshake is one of the oldest greetings in the world. Historians believe it began (1)___ ancient times as a way (2)___ show that a person was not carrying a weapon. By offering an open hand, two strangers could prove (3)___ they meant no harm to each other. Over the centuries, the gesture spread across many cultures and became (4)___ standard way of greeting someone in business and social situations. Today, a firm handshake is often seen (5)___ a sign of confidence, while a weak one can leave a negative impression. In some countries, however, physical greetings like handshakes are becoming less common, and many people now prefer a simple nod or wave instead. Whether this trend (6)___ continue or the handshake will remain popular for centuries to come is difficult to predict.",
+        "gaps": [
+          {
+            "number": 1,
+            "answers": [
+              "in"
+            ]
+          },
+          {
+            "number": 2,
+            "answers": [
+              "to"
+            ]
+          },
+          {
+            "number": 3,
+            "answers": [
+              "that"
+            ]
+          },
+          {
+            "number": 4,
+            "answers": [
+              "a"
+            ]
+          },
+          {
+            "number": 5,
+            "answers": [
+              "as"
+            ]
+          },
+          {
+            "number": 6,
+            "answers": [
+              "will"
+            ]
+          }
+        ]
+      },
+      {
+        "partNumber": 2,
+        "taskType": "multiple_matching",
+        "title": "Part 2 — Multiple Matching",
+        "skillNote": "To'rtta qisqa matn (A-D) beriladi. Har bir gap qaysi matnga tegishli ekanini aniqlang. Diqqat: bir matn bir necha marta ishlatilishi mumkin.",
+        "texts": [
+          {
+            "label": "A",
+            "title": "Amira",
+            "text": "Amira runs a small graphic design studio from her home in Termiz. She started freelancing five years ago and now works with clients across Central Asia. She says the hardest part of running her own business was learning to manage her time, since nobody was telling her what to do each day. She now uses a strict weekly schedule and never works on Sundays, no matter how much work is waiting."
+          },
+          {
+            "label": "B",
+            "title": "Sardor",
+            "text": "Sardor manages a logistics company that delivers goods between Surkhandarya and Tashkent. He took over the business from his father ten years ago and has since doubled the number of trucks. His biggest challenge has been finding reliable drivers, so he now offers extra training and a bonus system to keep good employees from leaving for competitors."
+          },
+          {
+            "label": "C",
+            "title": "Nilufar",
+            "text": "Nilufar co-founded an online marketplace for local farmers to sell their produce directly to city customers, cutting out expensive middlemen. In the beginning, many farmers were suspicious of selling online and preferred traditional markets. Nilufar spent months visiting villages in person to explain how the platform worked before farmers started trusting it."
+          },
+          {
+            "label": "D",
+            "title": "Bekzod",
+            "text": "Bekzod opened a language center offering English and business courses in his hometown. Demand grew so quickly that within a year he had to move to a bigger building and hire three more teachers. He believes the key to his success has been word-of-mouth recommendations from satisfied students rather than paid advertising."
+          }
+        ],
+        "questions": [
+          {
+            "number": 7,
+            "statement": "Who found it difficult to organize their own working hours?",
+            "answer": "A"
+          },
+          {
+            "number": 8,
+            "statement": "Who took charge of a business that was already established by a family member?",
+            "answer": "B"
+          },
+          {
+            "number": 9,
+            "statement": "Who had to convince people in person before they trusted a new service?",
+            "answer": "C"
+          },
+          {
+            "number": 10,
+            "statement": "Who has grown their business mainly through recommendations rather than advertising?",
+            "answer": "D"
+          },
+          {
+            "number": 11,
+            "statement": "Who offers rewards to stop employees from moving to rival companies?",
+            "answer": "B"
+          },
+          {
+            "number": 12,
+            "statement": "Who protects their personal time by refusing to work on a certain day?",
+            "answer": "A"
+          },
+          {
+            "number": 13,
+            "statement": "Who removes an unnecessary step between producers and buyers?",
+            "answer": "C"
+          },
+          {
+            "number": 14,
+            "statement": "Who needed larger premises soon after starting the business?",
+            "answer": "D"
+          }
+        ]
+      },
+      {
+        "partNumber": 3,
+        "taskType": "multiple_choice",
+        "title": "Part 3 — Multiple Choice",
+        "skillNote": "Uzun matnni o'qib, har bir savol uchun eng to'g'ri javobni tanlang.",
+        "text": "The Four-Day Work Week: A Passing Trend or the Future of Work?\n\nOver the past few years, a growing number of companies around the world have experimented with a four-day work week, giving employees a three-day weekend without cutting their pay. Supporters of the idea point to trial programs in which companies reported little or no drop in productivity, and in some cases even saw improvements, as employees returned to work more rested and motivated. Workers in these trials also reported lower stress levels and better relationships at home, since they had more time for family, hobbies, and rest.\n\nHowever, not everyone believes the model can work for every type of business. Critics argue that the four-day week is easiest to introduce in office-based jobs where tasks can be reorganized flexibly, but far more difficult in industries such as healthcare, manufacturing, or retail, where someone must always be present to serve customers or operate machinery. For these industries, a four-day week would likely mean hiring additional staff, which increases costs significantly.\n\nAnother concern raised by economists is that shorter trials, often lasting only a few months, may not reveal the full picture. Employees might work harder during a trial simply because they know they are being observed, a phenomenon researchers call the “observer effect”. Whether the same productivity levels would be maintained over several years remains uncertain, and few companies have committed to the four-day model on a permanent, long-term basis.\n\nDespite these doubts, several governments have begun studying the idea more seriously, and a handful of countries have launched national pilot programs. Whether the four-day week becomes standard practice or remains a niche experiment limited to a small number of progressive companies is a question that will likely take years, not months, to answer.",
+        "questions": [
+          {
+            "number": 15,
+            "q": "According to the text, what did companies in early trials generally report about productivity?",
+            "options": [
+              "It stayed the same or improved",
+              "It dropped significantly",
+              "It could not be measured",
+              "It improved only in retail businesses"
+            ],
+            "correct": 0
+          },
+          {
+            "number": 16,
+            "q": "Why do critics say the four-day week is harder to apply in healthcare or retail?",
+            "options": [
+              "Someone must always be available to serve customers or operate equipment",
+              "Employees in these industries do not want shorter weeks",
+              "These industries already work fewer than four days",
+              "Governments have banned it in these sectors"
+            ],
+            "correct": 0
+          },
+          {
+            "number": 17,
+            "q": "What extra cost do critics mention for industries like manufacturing?",
+            "options": [
+              "Hiring additional staff",
+              "Building new factories",
+              "Paying higher taxes",
+              "Buying new machinery"
+            ],
+            "correct": 0
+          },
+          {
+            "number": 18,
+            "q": "What is the \"observer effect\" mentioned in the text?",
+            "options": [
+              "People may work harder simply because they know they are being watched",
+              "Machines work faster when monitored by computers",
+              "Customers behave differently when observed",
+              "Managers change their opinions when observed by employees"
+            ],
+            "correct": 0
+          },
+          {
+            "number": 19,
+            "q": "What does the text say about the length of most trials?",
+            "options": [
+              "They are often short, which may limit what conclusions can be drawn",
+              "They typically last several years",
+              "They are always conducted by governments",
+              "They are too expensive to carry out"
+            ],
+            "correct": 0
+          },
+          {
+            "number": 20,
+            "q": "What is the writer's overall attitude toward the future of the four-day work week?",
+            "options": [
+              "Uncertain — it may take years to know if it becomes standard",
+              "Fully confident it will replace the five-day week everywhere",
+              "Convinced it will fail completely",
+              "Indifferent — the writer expresses no view"
+            ],
+            "correct": 0
+          }
+        ]
+      },
+      {
+        "partNumber": 4,
+        "taskType": "gapped_text",
+        "title": "Part 4 — Gapped Text",
+        "skillNote": "Matndan 9 ta gap olib tashlangan. Ro'yxatdan (A-K, 11 variant, 2 tasi ortiqcha) har bir bo'shliq uchun mos gapni tanlang.",
+        "text": "From Market Stall to National Brand: The Story of Uzbek Honey\n\nTwelve years ago, Farida began selling homemade honey from a small stall at her local bazaar in Surkhandarya. She had learned beekeeping from her grandfather as a child and always believed the family's honey was special. (21)___ Still, she had never imagined turning it into a full business.\n\nThe turning point came when a customer, impressed by the quality, asked whether she could supply honey to a small shop in Tashkent. (22)___ Farida agreed, even though she had no experience shipping products such a long distance.\n\nThe first shipment sold out within a week. (23)___ Encouraged by this success, Farida began looking for more shops willing to stock her honey.\n\nGrowing the business was not easy. (24)___ She had to learn how to negotiate prices, handle paperwork, and ensure her packaging met national safety standards.\n\nA major challenge came when a large supermarket chain expressed interest in her product. (25)___ Farida realized she would need to significantly increase her production capacity.\n\nShe decided to hire her first employees, two local women experienced in food processing. (26)___ Together, they built a small production facility behind Farida's house.\n\nWithin two years, the business had grown enough to require a proper factory. (27)___ Farida took out a small loan to fund the move, which she paid back within eighteen months.\n\nToday, Farida's honey is sold in shops across the country, and she employs twelve people full-time. (28)___ She credits her grandfather's early lessons for giving her both the skill and the confidence to start.\n\nLooking back, Farida says she never expected her small bazaar stall to grow into a national brand. (29)___ Her advice to other young entrepreneurs is simple: start small, but always be ready to grow.",
+        "options": [
+          {
+            "label": "A",
+            "text": "Their supermarket order alone was larger than her entire monthly output at the time."
+          },
+          {
+            "label": "B",
+            "text": "She had no formal training in business or marketing at that point."
+          },
+          {
+            "label": "C",
+            "text": "The shop owner offered to place a regular monthly order if the quality remained consistent."
+          },
+          {
+            "label": "D",
+            "text": "Their combined experience helped her scale up production without losing quality."
+          },
+          {
+            "label": "E",
+            "text": "It required renting equipment she could not yet afford to buy outright."
+          },
+          {
+            "label": "F",
+            "text": "The shop reordered twice as much the following month."
+          },
+          {
+            "label": "G",
+            "text": "She still visits the same bazaar stall every weekend to meet her original customers."
+          },
+          {
+            "label": "H",
+            "text": "Every customer she meets, she says, reminds her of that very first small stall."
+          },
+          {
+            "label": "I",
+            "text": "Every business decision, she admits, felt like a risk at the time."
+          },
+          {
+            "label": "J",
+            "text": "The move allowed her to double her production within the first year."
+          },
+          {
+            "label": "K",
+            "text": "Friends and neighbours often told her it tasted better than anything they could buy in stores."
+          }
+        ],
+        "answers": {
+          "21": "K",
+          "22": "C",
+          "23": "F",
+          "24": "I",
+          "25": "A",
+          "26": "D",
+          "27": "J",
+          "28": "G",
+          "29": "H"
+        }
+      },
+      {
+        "partNumber": 5,
+        "taskType": "multiple_choice",
+        "title": "Part 5 — Multiple Choice",
+        "skillNote": "Ikkinchi uzun matn. Savollarga eng to'g'ri javobni tanlang.",
+        "text": "Artificial Intelligence and the Changing Workplace\n\nArtificial intelligence, once mostly discussed in science fiction, has quietly become part of everyday working life. Tools that can draft emails, analyze spreadsheets, or answer customer questions are now common in offices of all sizes, from small family businesses to multinational corporations. Supporters argue that these tools free employees from repetitive tasks, allowing them to focus on more creative or strategic work that machines cannot easily replicate.\n\nAt the same time, the rapid spread of these technologies has raised concerns among workers, particularly in roles that involve large amounts of routine data processing or basic writing. Some economists predict that certain jobs will disappear entirely over the next decade, while others believe that, as with previous waves of technological change, new types of jobs will emerge to replace the ones that are lost. History offers some support for this second view: the introduction of computers in the 1980s eliminated many clerical positions but created entirely new fields, such as software development and IT support, that did not previously exist.\n\nWhat makes the current transition different, according to some researchers, is its speed. Earlier technological shifts often unfolded over several decades, giving workers and educational institutions time to adapt gradually. Artificial intelligence tools, by contrast, have become widely available within just a few years, leaving many companies and employees scrambling to catch up. Training programs that once took years to design and approve are now being rushed into place, sometimes with mixed results.\n\nFor businesses in developing economies, including many in Central Asia, the situation presents both a challenge and an opportunity. Companies that adopt these tools early may gain a significant advantage over slower competitors, particularly in industries like customer service, logistics, and translation. However, without proper training and investment, there is also a risk that the benefits of these technologies will be concentrated among a small number of large firms, leaving smaller businesses further behind.\n\nMost experts agree on one point: simply avoiding these tools is not a realistic long-term strategy for most businesses. The more useful question, they suggest, is not whether to adopt artificial intelligence, but how to do so in a way that supports employees rather than replacing them entirely.",
+        "questions": [
+          {
+            "number": 30,
+            "q": "According to supporters mentioned in the text, what is one benefit of AI tools in the workplace?",
+            "options": [
+              "They free employees to focus on more creative or strategic work",
+              "They completely remove the need for human employees",
+              "They are only useful for large multinational corporations",
+              "They eliminate the need for any employee training"
+            ],
+            "correct": 0
+          },
+          {
+            "number": 31,
+            "q": "What historical comparison does the text use to support the idea that new jobs may replace lost ones?",
+            "options": [
+              "The introduction of computers in the 1980s",
+              "The invention of the telephone",
+              "The rise of factories in the industrial revolution",
+              "The growth of international trade in the 1990s"
+            ],
+            "correct": 0
+          },
+          {
+            "number": 32,
+            "q": "According to some researchers, what makes the current AI transition different from earlier technological shifts?",
+            "options": [
+              "Its speed — it is happening much faster",
+              "It only affects developing economies",
+              "It has had no effect on employment so far",
+              "It is limited to a small number of countries"
+            ],
+            "correct": 0
+          },
+          {
+            "number": 33,
+            "q": "What risk does the text mention for smaller businesses in developing economies?",
+            "options": [
+              "Benefits of AI could be concentrated among a small number of large firms",
+              "They will be legally banned from using AI tools",
+              "They will be forced to close within a year",
+              "They already have too much investment in AI"
+            ],
+            "correct": 0
+          },
+          {
+            "number": 34,
+            "q": "What industries does the text mention as areas where early AI adoption could give companies an advantage?",
+            "options": [
+              "Customer service, logistics, and translation",
+              "Agriculture, mining, and construction",
+              "Tourism, sports, and entertainment",
+              "Education, healthcare, and law only"
+            ],
+            "correct": 0
+          },
+          {
+            "number": 35,
+            "q": "According to the final paragraph, what question do most experts think is more useful to ask?",
+            "options": [
+              "How to adopt AI in a way that supports employees rather than replacing them",
+              "Whether AI should be banned in the workplace entirely",
+              "Which country will develop the best AI technology",
+              "How much AI tools cost compared to human employees"
+            ],
+            "correct": 0
+          }
+        ]
+      }
+    ]
+  }
+]
