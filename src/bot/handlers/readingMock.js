@@ -17,9 +17,8 @@ async function showReadingMenu(ctx) {
 async function showDrillMenu(ctx) {
   await ctx.answerCbQuery();
   const buttons = [1, 2, 3, 4, 5].map((n) => {
-    const drill = engine.getDrillsForPart(n)[0];
     const exp = engine.getExplanation(n);
-    return [Markup.button.callback(exp.title, `rread:startdrill:${drill.id}`)];
+    return [Markup.button.callback(exp.title, `rread:startdrillpart:${n}`)];
   });
   await ctx.reply("📝 Qaysi Part'ni mashq qilmoqchisiz?", Markup.inlineKeyboard(buttons));
 }
@@ -36,18 +35,19 @@ async function showMockMenu(ctx) {
 // ==================== STARTING A RUN (drill = 1 part, mock = 5 parts) ====================
 
 async function startDrill(ctx) {
-  const drillId = ctx.match[1];
-  const drill = engine.getDrill(drillId);
-  if (!drill) {
+  const partNumber = parseInt(ctx.match[1], 10);
+  const partDrills = engine.getDrillsForPart(partNumber);
+  if (!partDrills.length) {
     await ctx.answerCbQuery('Mashq topilmadi.');
     return;
   }
   await ctx.answerCbQuery();
 
+  const exp = engine.getExplanation(partNumber);
   ctx.session.readingRun = {
     mode: 'drill',
-    label: drill.title,
-    queue: [drill],
+    label: exp.title,
+    queue: partDrills, // may be >1 segment (e.g. Part 5 = note completion + MC)
     index: 0,
     scores: {},
     state: {},
@@ -74,6 +74,17 @@ async function startMock(ctx) {
     state: {},
   };
   await runQueue(ctx);
+}
+
+
+function addScore(run, partNumber, correct, total) {
+  const existing = run.scores[partNumber];
+  if (existing) {
+    existing.correct += correct;
+    existing.total += total;
+  } else {
+    run.scores[partNumber] = { correct, total };
+  }
 }
 
 // ==================== GENERIC PART RUNNER ====================
@@ -118,10 +129,10 @@ async function handleClozeSubmission(ctx) {
   const words = ctx.message.text.split(',').map((w) => w.trim());
 
   const result = engine.scoreOpenCloze(part, words);
-  run.scores[part.partNumber] = { correct: result.correct, total: result.total };
+  addScore(run, part.partNumber, result.correct, result.total);
   run.state.awaitingCloze = false;
 
-  let feedback = `📊 Part ${part.partNumber} natijasi: ${result.correct}/${result.total}\n\n`;
+  let feedback = `📊 ${part.title} natijasi: ${result.correct}/${result.total}\n\n`;
   result.results.forEach((r) => {
     feedback += `${r.isCorrect ? '✅' : '❌'} ${r.number}) siz: "${r.userWord}"`;
     if (!r.isCorrect) feedback += ` — to'g'ri: "${r.correctAnswers[0]}"`;
@@ -172,8 +183,8 @@ async function handleMmAnswer(ctx) {
 
   const nextIdx = idx + 1;
   if (nextIdx >= part.questions.length) {
-    run.scores[part.partNumber] = { correct: run.state.correct, total: part.questions.length };
-    await ctx.reply(`📊 Part ${part.partNumber} natijasi: ${run.state.correct}/${part.questions.length}`);
+    addScore(run, part.partNumber, run.state.correct, part.questions.length);
+    await ctx.reply(`📊 ${part.title} natijasi: ${run.state.correct}/${part.questions.length}`);
     await advanceToNextPart(ctx);
     return;
   }
@@ -216,8 +227,8 @@ async function handleMcAnswer(ctx) {
 
   const nextIdx = idx + 1;
   if (nextIdx >= part.questions.length) {
-    run.scores[part.partNumber] = { correct: run.state.correct, total: part.questions.length };
-    await ctx.reply(`📊 Part ${part.partNumber} natijasi: ${run.state.correct}/${part.questions.length}`);
+    addScore(run, part.partNumber, run.state.correct, part.questions.length);
+    await ctx.reply(`📊 ${part.title} natijasi: ${run.state.correct}/${part.questions.length}`);
     await advanceToNextPart(ctx);
     return;
   }
@@ -255,7 +266,7 @@ async function startGappedText(ctx, part) {
 async function sendGapQuestion(ctx, part) {
   const state = ctx.session.readingRun.state;
   const gapNumber = state.gapNumbers[state.gIndex];
-  await ctx.reply(`❓ Bo'shliq (${gapNumber})`, gapKeyboard(part, state.used));
+  await ctx.reply(`❓ (${gapNumber})`, gapKeyboard(part, state.used));
 }
 
 async function handleGapAnswer(ctx) {
@@ -274,8 +285,8 @@ async function handleGapAnswer(ctx) {
 
   const nextIdx = state.gIndex + 1;
   if (nextIdx >= state.gapNumbers.length) {
-    run.scores[part.partNumber] = { correct: state.correct, total: state.gapNumbers.length };
-    await ctx.reply(`📊 Part ${part.partNumber} natijasi: ${state.correct}/${state.gapNumbers.length}`);
+    addScore(run, part.partNumber, state.correct, state.gapNumbers.length);
+    await ctx.reply(`📊 ${part.title} natijasi: ${state.correct}/${state.gapNumbers.length}`);
     await advanceToNextPart(ctx);
     return;
   }

@@ -1,58 +1,10 @@
 [
-  {
-    "number": 1,
-    "script": "Say naturally, in a neutral tone, as if reading an announcement: Attention passengers. The 10:15 train to Bukhara has been delayed and will now depart from platform 4 at 10:45.",
-    "question": "What time will the train now depart?",
-    "options": ["10:15", "10:45", "4:45"],
-    "correct": 1
-  },
-  {
-    "number": 2,
-    "script": "Say naturally, as one person speaking to a colleague: I left the report on your desk, but I also emailed you a copy just in case you can't find the paper version.",
-    "question": "How did the speaker send the report?",
-    "options": ["Only on paper", "Only by email", "Both on paper and by email"],
-    "correct": 2
-  },
-  {
-    "number": 3,
-    "script": "Say naturally, as a shop assistant speaking to a customer: I'm sorry, we're out of the medium size, but we do have it in small and large.",
-    "question": "Which size is NOT available?",
-    "options": ["Small", "Medium", "Large"],
-    "correct": 1
-  },
-  {
-    "number": 4,
-    "script": "Say naturally, as someone leaving a voicemail: Hi, it's Aziz. Can you call me back before 3 o'clock? After that I'll be in a meeting until 5.",
-    "question": "When does Aziz want to receive the call?",
-    "options": ["Before 3 o'clock", "During his meeting", "After 5 o'clock"],
-    "correct": 0
-  },
-  {
-    "number": 5,
-    "script": "Say naturally, as a tour guide speaking to a group: The museum closes at six, but the gift shop stays open for an extra thirty minutes after that.",
-    "question": "What time does the gift shop close?",
-    "options": ["5:30", "6:00", "6:30"],
-    "correct": 2
-  },
-  {
-    "number": 6,
-    "script": "Say naturally, as a manager speaking to an employee: I know you usually take the bus, but for tomorrow's client visit, please take a taxi instead so you arrive on time.",
-    "question": "How should the employee travel tomorrow?",
-    "options": ["By bus", "By taxi", "On foot"],
-    "correct": 1
-  },
-  {
-    "number": 7,
-    "script": "Say naturally, as a radio host: Coming up after the break, we'll be talking to a local entrepreneur who started her business with just two hundred dollars.",
-    "question": "What will the next segment be about?",
-    "options": ["A government policy", "An entrepreneur's story", "A weather report"],
-    "correct": 1
-  },
-  {
-    "number": 8,
-    "script": "Say naturally, as a receptionist speaking to a visitor: Mr. Karimov is currently in a meeting, but he should be free in about twenty minutes if you'd like to wait.",
-    "question": "What is Mr. Karimov currently doing?",
-    "options": ["Waiting for a visitor", "In a meeting", "On his way to the office"],
-    "correct": 1
-  }
+  { "number": 1, "sentence": "I'm afraid the meeting has been moved to Thursday.", "options": ["Yes, please do.", "Oh, that's fine with me.", "No, I haven't."], "correct": 1 },
+  { "number": 2, "sentence": "Would you like some more coffee?", "options": ["No, I wouldn't.", "It's on the table.", "Yes, please."], "correct": 2 },
+  { "number": 3, "sentence": "I heard the new manager starts on Monday.", "options": ["Really? That's soon.", "No, he doesn't.", "Where is she?"], "correct": 0 },
+  { "number": 4, "sentence": "Did you manage to finish the report last night?", "options": ["Yes, it does.", "No, it wouldn't.", "Yes, I did."], "correct": 2 },
+  { "number": 5, "sentence": "I'm exhausted after that presentation.", "options": ["You too!", "So am I.", "Cheer up!"], "correct": 1 },
+  { "number": 6, "sentence": "We finally closed the deal with the client!", "options": ["Hurry up!", "Never mind.", "Well done!"], "correct": 2 },
+  { "number": 7, "sentence": "Do you think it will rain during the conference?", "options": ["You tell me!", "Maybe, I'm not sure.", "Oh, don't be shy!"], "correct": 1 },
+  { "number": 8, "sentence": "Could I borrow your laptop for a moment?", "options": ["Well, you didn't.", "Um, no it can't.", "Sure, go ahead."], "correct": 2 }
 ]

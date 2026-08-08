@@ -98,170 +98,157 @@
   {
     "id": "drill_p3_1",
     "partNumber": 3,
-    "taskType": "multiple_choice",
-    "title": "Part 3 — Mashq 1",
-    "text": "The Hidden Cost of \"Free\" Shipping\n\nOnline retailers have trained customers to expect free shipping as a basic right rather than a costly service. Yet delivering a package to someone's door is never actually free — the cost is simply absorbed elsewhere, often in ways customers do not notice. Some companies build shipping costs into product prices, meaning shoppers pay for delivery whether they realize it or not. Others rely on high order volumes to offset the cost of individual deliveries, a strategy that works only as long as growth continues.\n\nA less visible cost falls on the environment. Free shipping tends to encourage smaller, more frequent orders rather than fewer, consolidated ones, since customers have little financial incentive to wait and combine purchases. This results in more delivery vehicles making more trips, often partially empty, which increases fuel consumption and emissions per item delivered. Some environmental researchers argue that a small delivery fee, even a modest one, could meaningfully reduce unnecessary trips simply by making customers pause before checkout.\n\nRetailers, however, are cautious about introducing delivery charges, having seen competitors lose market share after doing so. Customer expectations, once set, are notoriously difficult to reverse; a company that charges for shipping while a rival does not risks losing sales even if its underlying prices are lower overall. This creates a kind of trap: retailers know the current system is inefficient, yet none wants to be the first to change it.\n\nA few companies have experimented with a middle path, offering free shipping only above a minimum order value. This approach nudges customers toward larger, less frequent orders without removing the appeal of free delivery altogether. Early data suggests this compromise reduces the number of individual deliveries while causing less customer resistance than a straightforward shipping fee. Whether this becomes the industry standard, or whether some other solution emerges, remains to be seen.",
-    "questions": [
+    "taskType": "gapped_text",
+    "title": "Part 3 — Mashq 1 (Matching Headings)",
+    "text": "Choosing a Career Path\n\n15) Many young people feel pressured to decide on a career direction while still in their teens, long before they have any real experience of what different jobs actually involve day to day. This mismatch between early decision-making and limited experience is one reason career changes later in life are so common.\n\n16) Career counsellors increasingly recommend short trial placements, sometimes just a few days long, before committing to a field of study. Even a brief taste of the daily reality of a job can reveal a mismatch that months of research never would.\n\n17) Parents often mean well when they push their children toward stable, well-paying professions, but this advice can backfire when it ignores a young person's genuine interests. Employees who feel little connection to their chosen field frequently report lower job satisfaction, regardless of salary.\n\n18) Some experts now argue that the idea of a single, lifelong career is becoming outdated. With industries changing rapidly, the ability to learn new skills may matter more than any specific early choice.",
+    "options": [
       {
-        "number": 1,
-        "q": "According to the text, how do many companies actually cover the cost of \"free\" shipping?",
-        "options": [
-          "By building the cost into product prices or relying on high order volumes",
-          "By legally requiring customers to pay a hidden tax",
-          "By refusing to ship internationally",
-          "By reducing the quality of the products sold"
-        ],
-        "correct": 0
+        "label": "A",
+        "text": "The value of brief, real-world experience"
       },
       {
-        "q": "Why does free shipping create an environmental cost, according to the text?",
-        "number": 2,
-        "options": [
-          "It encourages smaller, more frequent orders, leading to more delivery trips",
-          "It requires products to be packaged in more plastic",
-          "It forces companies to build new factories",
-          "It increases the price of fuel for all consumers"
-        ],
-        "correct": 0
+        "label": "B",
+        "text": "A decision made too early in life"
       },
       {
-        "number": 3,
-        "q": "Why are retailers cautious about introducing delivery charges, according to the text?",
-        "options": [
-          "They fear losing customers to competitors who still offer free shipping",
-          "Government regulations prevent them from doing so",
-          "They believe customers would not notice the change",
-          "Shipping companies refuse to cooperate with paid models"
-        ],
-        "correct": 0
+        "label": "C",
+        "text": "When good intentions work against happiness"
       },
       {
-        "number": 4,
-        "q": "What does the text suggest about the \"minimum order value\" approach?",
-        "options": [
-          "It may reduce the number of deliveries while causing less resistance than a direct fee",
-          "It has completely failed in every case it was tried",
-          "It is more expensive for retailers than a flat shipping fee",
-          "It removes the appeal of free shipping entirely"
-        ],
-        "correct": 0
+        "label": "D",
+        "text": "Adaptability over a single fixed path"
       },
       {
-        "number": 5,
-        "q": "What is the overall tone of the text toward the free shipping model?",
-        "options": [
-          "Critical of its hidden costs, while acknowledging why retailers are reluctant to change it",
-          "Entirely positive, with no concerns raised",
-          "Dismissive of any environmental concerns",
-          "Confident that free shipping will disappear within a year"
-        ],
-        "correct": 0
+        "label": "E",
+        "text": "The financial risks of changing careers"
+      },
+      {
+        "label": "F",
+        "text": "How technology is replacing traditional jobs"
       }
-    ]
+    ],
+    "answers": {
+      "15": "B",
+      "16": "A",
+      "17": "C",
+      "18": "D"
+    }
   },
   {
     "id": "drill_p4_1",
     "partNumber": 4,
-    "taskType": "gapped_text",
-    "title": "Part 4 — Mashq 1",
-    "text": "The Translator Who Never Learned to Type\n\nMalika worked as an interpreter for over twenty years before she ever touched a computer keyboard. (1)___ Her clients, mostly foreign businesspeople negotiating deals in Tashkent, never seemed to mind.\n\nHer reputation was built entirely on word of mouth. (2)___ One executive later said her ability to catch subtle tone shifts during tense negotiations had saved his company from a costly misunderstanding.\n\nWhen digital translation tools became widely available, many assumed interpreters like Malika would struggle to find work. (3)___ Instead, demand for her services increased, as clients specifically wanted a human who could read the room during sensitive discussions.\n\nEventually, Malika's daughter convinced her to learn basic computer skills, mostly so she could manage her own scheduling. (4)___ She still refuses to use translation software during actual negotiations, insisting that machines miss too much of what is left unsaid.\n\nNow in her sixties, Malika has started training a small group of younger interpreters. (5)___ Her main lesson to them is always the same: technology can translate words, but only experience can translate meaning.",
-    "options": [
-      {
-        "label": "A",
-        "text": "She learned the trade the traditional way, sitting beside senior interpreters for years before working alone."
-      },
-      {
-        "label": "B",
-        "text": "She insisted on writing every note by hand throughout her career."
-      },
-      {
-        "label": "C",
-        "text": "Companies recommended her to one another after particularly difficult negotiations went smoothly."
-      },
-      {
-        "label": "D",
-        "text": "That prediction turned out to be largely incorrect."
-      },
-      {
-        "label": "E",
-        "text": "She learned just enough to send emails, nothing more."
-      },
-      {
-        "label": "F",
-        "text": "She selects them not for their vocabulary, but for their ability to notice what a speaker leaves unsaid."
-      },
-      {
-        "label": "G",
-        "text": "She eventually opened her own translation agency downtown."
-      }
-    ],
-    "answers": {
-      "1": "B",
-      "2": "C",
-      "3": "D",
-      "4": "E",
-      "5": "F"
-    }
-  },
-  {
-    "id": "drill_p5_1",
-    "partNumber": 5,
     "taskType": "multiple_choice",
-    "title": "Part 5 — Mashq 1",
-    "text": "Why Some Companies Resist Growth\n\nConventional business wisdom holds that companies should grow whenever possible — more customers, more revenue, more market share. Yet a small but persistent group of business owners deliberately caps their company's size, turning away potential customers and rejecting expansion opportunities that most competitors would eagerly accept. Understanding why requires looking beyond simple profit calculations.\n\nFor some owners, the decision is rooted in quality control. A restaurant owner who prepares every dish personally cannot realistically serve five hundred customers a night without either hiring additional cooks, who might not match her exact standards, or compromising on quality. Rather than risk her reputation, she chooses to remain small, even though a larger restaurant would almost certainly generate more income. This is not simply caution; it reflects a calculated judgment that certain kinds of quality cannot survive rapid scaling.\n\nFor others, the reasoning is more personal. Growth typically requires taking on debt, hiring managers, and gradually shifting from hands-on craft work to overseeing systems and spreadsheets. Some founders started their businesses specifically to avoid that kind of work, and view rapid growth as a threat to the very reason they became entrepreneurs in the first place. For them, a smaller, more manageable business is not a limitation but the actual goal.\n\nEconomists studying this pattern note an important distinction: staying small by choice is fundamentally different from staying small due to lack of resources or opportunity. The former group could grow if they wanted to, and often receive serious offers from investors or larger companies, but decline them deliberately. This distinguishes them from struggling small businesses that would expand immediately if given the chance, but simply lack access to capital or demand.\n\nWhether this approach represents wisdom or missed opportunity likely depends on what a business owner actually values. In an economy that often treats growth as the only valid measure of success, these owners offer a quiet counterexample: sometimes staying the same size is not a failure to grow, but a decision to protect something growth would destroy.",
+    "title": "Part 4 — Mashq 1 (MC + True/False/No Info)",
+    "text": "A Second Chance for Old Furniture\n\nFarrukh never planned to start a business repairing old furniture. It began as a hobby after he restored a broken chair he found near his apartment building, simply because he disliked seeing it go to waste. A neighbour who saw the finished chair offered to pay him to restore a table, and within a year, word of mouth had turned his hobby into a small workshop with a growing waiting list.\n\nWhat surprised Farrukh most was not the demand itself, but who his customers were. He had expected mostly older clients holding onto sentimental family pieces, but instead, many of his customers were young professionals who preferred restoring a unique, well-made older piece to buying a mass-produced new one. Several told him they liked knowing the exact history of their furniture, something a factory-made item could never offer.",
     "questions": [
       {
         "number": 1,
-        "q": "According to the text, why does the restaurant owner avoid expanding her business?",
+        "q": "How did Farrukh's business begin?",
         "options": [
-          "She fears that hiring more staff would compromise the quality she is known for",
-          "She cannot legally hire additional staff",
-          "Her customers have specifically asked her not to expand",
-          "She has already tried expanding and failed financially"
+          "As a hobby after restoring a discarded chair",
+          "As a formal apprenticeship with a furniture maker",
+          "After inheriting his grandfather's workshop",
+          "By attending a business course on furniture repair"
         ],
         "correct": 0
       },
       {
         "number": 2,
-        "q": "For some founders mentioned in the text, why is limiting growth a personal choice?",
+        "q": "What surprised Farrukh about his customer base?",
         "options": [
-          "Growth would shift their role away from the hands-on work they enjoy",
-          "They are legally required to remain small",
-          "They cannot find enough customers to justify growing",
-          "Investors have refused to work with them"
+          "Many were young professionals rather than older clients",
+          "Most of his customers were from other cities",
+          "Very few customers returned for repeat business",
+          "His customers preferred cheap, quick repairs"
         ],
         "correct": 0
       },
       {
         "number": 3,
-        "q": "What key distinction do economists draw, according to the text?",
+        "q": "Farrukh advertised his business heavily from the start.",
         "options": [
-          "Between businesses that stay small by choice and those that stay small due to lack of resources",
-          "Between businesses that are profitable and those that are not",
-          "Between businesses run by families and those run by strangers",
-          "Between businesses in cities and those in rural areas"
+          "True",
+          "False",
+          "No Information"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "number": 4,
-        "q": "What evidence does the text give that some small business owners could grow if they wanted to?",
+        "q": "Some customers valued knowing the history of their furniture.",
         "options": [
-          "They often receive serious offers from investors or larger companies but decline them",
-          "They have already grown once before and shrunk back down",
-          "Government reports confirm their growth potential",
-          "Their competitors have publicly confirmed it"
+          "True",
+          "False",
+          "No Information"
         ],
         "correct": 0
       },
       {
         "number": 5,
-        "q": "What is the writer's main point in the final paragraph?",
+        "q": "Farrukh plans to hire additional workers next year.",
         "options": [
-          "Staying small can be a deliberate decision to protect something growth would destroy, not a failure",
-          "All businesses should avoid growing whenever possible",
-          "Growth is always the wrong choice for small business owners",
-          "Economists agree that small businesses are more profitable than large ones"
+          "True",
+          "False",
+          "No Information"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "id": "drill_p5_1a",
+    "partNumber": 5,
+    "taskType": "open_cloze",
+    "title": "Part 5 — Mashq 1 (Note Completion)",
+    "textTemplate": "(Continuing from the furniture article above.) Complete the notes.\n\nFarrukh started by restoring a broken (30)___ he found near his building.\nHis first paying customer was a (31)___ .\nMany of his customers turned out to be young (32)___ .",
+    "gaps": [
+      {
+        "number": 30,
+        "answers": [
+          "chair"
+        ]
+      },
+      {
+        "number": 31,
+        "answers": [
+          "neighbour",
+          "neighbor"
+        ]
+      },
+      {
+        "number": 32,
+        "answers": [
+          "professionals"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "drill_p5_1b",
+    "partNumber": 5,
+    "taskType": "multiple_choice",
+    "title": "Part 5 — Mashq 1 (Multiple Choice)",
+    "text": "(Still about the same furniture article.)",
+    "questions": [
+      {
+        "number": 33,
+        "q": "Which title best summarizes the text?",
+        "options": [
+          "The Decline of Furniture Making",
+          "From Hobby to Business: Restoring Old Furniture",
+          "How to Repair a Broken Chair",
+          "Young Professionals and Their Spending Habits"
+        ],
+        "correct": 1
+      },
+      {
+        "number": 34,
+        "q": "What does the text suggest about many young professionals' preferences?",
+        "options": [
+          "They prefer unique, restored items over mass-produced new furniture",
+          "They avoid buying secondhand furniture entirely",
+          "They only buy furniture online",
+          "They prefer furniture with no history at all"
         ],
         "correct": 0
       }

@@ -12,7 +12,7 @@ async function startListeningPart1(ctx) {
   await ctx.answerCbQuery();
   const exp = explanations.part1;
   await ctx.reply(`${exp.title}\n\n${exp.explanation}`, { parse_mode: 'Markdown' });
-  await ctx.reply(`🎧 8 ta qisqa audio bo'ladi. Har birini tinglab, savolga javob bering.`);
+  await ctx.reply('🎧 8 ta gap eshitasiz. Har biriga eng mos javobni tanlang.');
 
   ctx.session.listeningPart1 = { index: 0, correct: 0 };
   await sendItem(ctx);
@@ -28,20 +28,21 @@ async function sendItem(ctx) {
     return;
   }
 
-  await ctx.reply(`⏳ Audio ${item.number}/8 tayyorlanmoqda...`);
+  await ctx.reply(`⏳ ${item.number}/8 audio tayyorlanmoqda...`);
 
   try {
-    const audioBuffer = await audioTutor.generateSpeech(item.script);
+    const audioBuffer = await audioTutor.generateSpeech(`Say naturally: ${item.sentence}`);
     await ctx.replyWithAudio({ source: audioBuffer, filename: `listening_${item.number}.wav` });
   } catch (err) {
     console.error('Listening audio generation failed:', err.message);
-    await ctx.reply('Audio yaratishda texnik xatolik yuz berdi. Birozdan so\'ng qayta urinib ko\'ring.');
+    await ctx.reply("Audio yaratishda texnik xatolik yuz berdi. Birozdan so'ng qayta urinib ko'ring.");
     ctx.session.listeningPart1 = null;
     return;
   }
 
-  const buttons = item.options.map((opt, i) => [Markup.button.callback(opt, `lpart1:${i}`)]);
-  await ctx.reply(`❓ ${item.number}) ${item.question}`, Markup.inlineKeyboard(buttons));
+  const letters = ['A', 'B', 'C'];
+  const buttons = item.options.map((opt, i) => [Markup.button.callback(`${letters[i]}) ${opt}`, `lpart1:${i}`)]);
+  await ctx.reply(`❓ ${item.number}) Eng mos javobni tanlang:`, Markup.inlineKeyboard(buttons));
 }
 
 async function handleAnswer(ctx) {
@@ -56,7 +57,10 @@ async function handleAnswer(ctx) {
   const isCorrect = selected === item.correct;
   if (isCorrect) state.correct += 1;
 
-  await ctx.answerCbQuery(isCorrect ? "✅ To'g'ri!" : `❌ Noto'g'ri. To'g'ri javob: ${item.options[item.correct]}`);
+  const letters = ['A', 'B', 'C'];
+  await ctx.answerCbQuery(
+    isCorrect ? "✅ To'g'ri!" : `❌ Noto'g'ri. To'g'ri javob: ${letters[item.correct]}) ${item.options[item.correct]}`
+  );
   await ctx.editMessageReplyMarkup(undefined).catch(() => {});
 
   const nextIndex = state.index + 1;

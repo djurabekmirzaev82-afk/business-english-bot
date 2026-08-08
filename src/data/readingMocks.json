@@ -120,215 +120,213 @@
       },
       {
         "partNumber": 3,
+        "taskType": "gapped_text",
+        "title": "Part 3 — Matching Headings",
+        "text": "Adapting to Remote Work\n\n15) When offices around the world closed almost overnight, most companies had no formal policy for remote work at all. Managers who had always relied on walking over to a colleague's desk suddenly found themselves unable to gauge how their teams were really doing, and many admitted, in later interviews, that the first few weeks felt closer to guesswork than management.\n\n16) Some companies responded by monitoring employees more closely, installing software that tracked keystrokes or took periodic screenshots. While this approach reassured a handful of nervous executives, employee surveys consistently showed that surveillance tools damaged trust far more than they improved output, often making staff feel like suspects rather than colleagues.\n\n17) A smaller group of companies took the opposite approach, focusing entirely on results rather than hours logged. Managers set clear weekly goals and largely left employees to organize their own schedules. Early data suggested this approach worked well for experienced staff, though newer employees sometimes struggled without the informal guidance office life used to provide.\n\n18) One unexpected challenge was the disappearance of casual, unplanned conversations — the kind that happen in a hallway or over coffee, rather than in a scheduled meeting. Several companies tried to recreate this with virtual \"coffee chat\" software, with mixed success; some employees found the forced scheduling made spontaneous conversation feel oddly artificial.\n\n19) As remote work continued for months rather than weeks, a new concern emerged: many employees reported working longer hours than they had in the office, unable to draw a clear line between work and home life. Companies that ignored this often saw a rise in resignations several months later, once the initial novelty of working from home had worn off.\n\n20) By the time many offices reopened, a significant number of employees requested to keep working remotely, at least part of the time. Businesses that treated the shift as temporary found themselves negotiating from a weaker position than those that had already begun redesigning their long-term policies around flexibility.",
+        "options": [
+          {
+            "label": "A",
+            "text": "A cautious approach that backfired"
+          },
+          {
+            "label": "B",
+            "text": "Managing without visual confirmation"
+          },
+          {
+            "label": "C",
+            "text": "Freedom that suited some more than others"
+          },
+          {
+            "label": "D",
+            "text": "The loss of unplanned interaction"
+          },
+          {
+            "label": "E",
+            "text": "Blurred boundaries between work and rest"
+          },
+          {
+            "label": "F",
+            "text": "A shift that outlasted expectations"
+          },
+          {
+            "label": "G",
+            "text": "A return to the traditional office"
+          },
+          {
+            "label": "H",
+            "text": "The financial cost of new software"
+          }
+        ],
+        "answers": {
+          "15": "B",
+          "16": "A",
+          "17": "C",
+          "18": "D",
+          "19": "E",
+          "20": "F"
+        }
+      },
+      {
+        "partNumber": 4,
         "taskType": "multiple_choice",
-        "title": "Part 3 — Multiple Choice",
-        "skillNote": "Uzun matnni o'qib, har bir savol uchun eng to'g'ri javobni tanlang.",
-        "text": "The Four-Day Work Week: A Passing Trend or the Future of Work?\n\nOver the past few years, a growing number of companies around the world have experimented with a four-day work week, giving employees a three-day weekend without cutting their pay. Supporters of the idea point to trial programs in which companies reported little or no drop in productivity, and in some cases even saw improvements, as employees returned to work more rested and motivated. Workers in these trials also reported lower stress levels and better relationships at home, since they had more time for family, hobbies, and rest.\n\nHowever, not everyone believes the model can work for every type of business. Critics argue that the four-day week is easiest to introduce in office-based jobs where tasks can be reorganized flexibly, but far more difficult in industries such as healthcare, manufacturing, or retail, where someone must always be present to serve customers or operate machinery. For these industries, a four-day week would likely mean hiring additional staff, which increases costs significantly.\n\nAnother concern raised by economists is that shorter trials, often lasting only a few months, may not reveal the full picture. Employees might work harder during a trial simply because they know they are being observed, a phenomenon researchers call the “observer effect”. Whether the same productivity levels would be maintained over several years remains uncertain, and few companies have committed to the four-day model on a permanent, long-term basis.\n\nDespite these doubts, several governments have begun studying the idea more seriously, and a handful of countries have launched national pilot programs. Whether the four-day week becomes standard practice or remains a niche experiment limited to a small number of progressive companies is a question that will likely take years, not months, to answer.",
+        "title": "Part 4 — Multiple Choice + True/False/No Info",
+        "text": "The Unlikely Rise of a Local Bookshop\n\nWhen Malika opened a small bookshop in Termiz eight years ago, most people in her family thought she was making a mistake. Online retailers had already begun undercutting small bookshops on price, and her own relatives suggested she open a clothing store instead, arguing that books were a dying business in the age of smartphones.\n\nMalika disagreed, but not because she thought people would stop buying from online retailers entirely. Instead, she noticed that many of her friends complained about not knowing what to read next among the millions of titles available online. She decided her shop would sell something online retailers could not easily replicate: personal recommendations from someone who had actually read the books.\n\nFor the first two years, the shop barely broke even. Malika spent most evenings reading late into the night so she could speak knowledgeably about as many books as possible. Slowly, word spread that her recommendations were unusually accurate, and customers began returning specifically to ask, \"What should I read next?\" rather than searching for a specific title.\n\nThe shop's turning point came when Malika started a small monthly book club, initially just eight people meeting in the shop after closing hours. Members paid a small fee to join, which covered light refreshments, and Malika chose a different book each month based on the group's evolving tastes. Within eighteen months, the club had grown so large that she had to run two separate sessions to fit everyone in.\n\nToday, book club memberships account for nearly a third of the shop's total income, and Malika has hired two part-time staff to help manage the growing membership. She still personally chooses every book club title herself, insisting that this personal touch is the one thing a large online retailer could never fully copy, no matter how sophisticated their recommendation algorithms become.",
         "questions": [
           {
-            "number": 15,
-            "q": "According to the text, what did companies in early trials generally report about productivity?",
+            "number": 21,
+            "q": "Why did some of Malika's relatives think opening a bookshop was a mistake?",
             "options": [
-              "It stayed the same or improved",
-              "It dropped significantly",
-              "It could not be measured",
-              "It improved only in retail businesses"
+              "They believed books were losing popularity because of smartphones",
+              "They thought a clothing store would need less starting capital",
+              "They had tried running a bookshop themselves and failed",
+              "They believed Malika did not enjoy reading"
             ],
             "correct": 0
           },
           {
-            "number": 16,
-            "q": "Why do critics say the four-day week is harder to apply in healthcare or retail?",
+            "number": 22,
+            "q": "What gap did Malika notice among her friends?",
             "options": [
-              "Someone must always be available to serve customers or operate equipment",
-              "Employees in these industries do not want shorter weeks",
-              "These industries already work fewer than four days",
-              "Governments have banned it in these sectors"
+              "They did not know what to read next among so many online options",
+              "They could not afford to buy books online",
+              "They did not have time to visit physical bookshops",
+              "They preferred audiobooks to printed books"
             ],
             "correct": 0
           },
           {
-            "number": 17,
-            "q": "What extra cost do critics mention for industries like manufacturing?",
+            "number": 23,
+            "q": "What caused the turning point in the shop's success?",
             "options": [
-              "Hiring additional staff",
-              "Building new factories",
-              "Paying higher taxes",
-              "Buying new machinery"
+              "Starting a small monthly book club",
+              "Lowering her prices to compete with online retailers",
+              "Moving to a larger location in the city centre",
+              "Hiring additional staff to serve more customers"
             ],
             "correct": 0
           },
           {
-            "number": 18,
-            "q": "What is the \"observer effect\" mentioned in the text?",
+            "number": 24,
+            "q": "According to the text, what does Malika believe online retailers cannot easily replicate?",
             "options": [
-              "People may work harder simply because they know they are being watched",
-              "Machines work faster when monitored by computers",
-              "Customers behave differently when observed",
-              "Managers change their opinions when observed by employees"
+              "Her personal, individually chosen book recommendations",
+              "Her shop's low prices",
+              "Her fast delivery service",
+              "Her large selection of titles"
             ],
             "correct": 0
           },
           {
-            "number": 19,
-            "q": "What does the text say about the length of most trials?",
+            "number": 25,
+            "q": "The shop was profitable from its very first year.",
             "options": [
-              "They are often short, which may limit what conclusions can be drawn",
-              "They typically last several years",
-              "They are always conducted by governments",
-              "They are too expensive to carry out"
+              "True",
+              "False",
+              "No Information"
+            ],
+            "correct": 1
+          },
+          {
+            "number": 26,
+            "q": "Malika read extensively in the evenings to improve her recommendations.",
+            "options": [
+              "True",
+              "False",
+              "No Information"
             ],
             "correct": 0
           },
           {
-            "number": 20,
-            "q": "What is the writer's overall attitude toward the future of the four-day work week?",
+            "number": 27,
+            "q": "The book club charges a fee that covers refreshments.",
             "options": [
-              "Uncertain — it may take years to know if it becomes standard",
-              "Fully confident it will replace the five-day week everywhere",
-              "Convinced it will fail completely",
-              "Indifferent — the writer expresses no view"
+              "True",
+              "False",
+              "No Information"
             ],
             "correct": 0
+          },
+          {
+            "number": 28,
+            "q": "Malika plans to open a second bookshop in another city.",
+            "options": [
+              "True",
+              "False",
+              "No Information"
+            ],
+            "correct": 2
+          },
+          {
+            "number": 29,
+            "q": "Book club memberships now make up less than a third of the shop's income.",
+            "options": [
+              "True",
+              "False",
+              "No Information"
+            ],
+            "correct": 1
           }
         ]
       },
       {
-        "partNumber": 4,
-        "taskType": "gapped_text",
-        "title": "Part 4 — Gapped Text",
-        "skillNote": "Matndan 9 ta gap olib tashlangan. Ro'yxatdan (A-K, 11 variant, 2 tasi ortiqcha) har bir bo'shliq uchun mos gapni tanlang.",
-        "text": "From Market Stall to National Brand: The Story of Uzbek Honey\n\nTwelve years ago, Farida began selling homemade honey from a small stall at her local bazaar in Surkhandarya. She had learned beekeeping from her grandfather as a child and always believed the family's honey was special. (21)___ Still, she had never imagined turning it into a full business.\n\nThe turning point came when a customer, impressed by the quality, asked whether she could supply honey to a small shop in Tashkent. (22)___ Farida agreed, even though she had no experience shipping products such a long distance.\n\nThe first shipment sold out within a week. (23)___ Encouraged by this success, Farida began looking for more shops willing to stock her honey.\n\nGrowing the business was not easy. (24)___ She had to learn how to negotiate prices, handle paperwork, and ensure her packaging met national safety standards.\n\nA major challenge came when a large supermarket chain expressed interest in her product. (25)___ Farida realized she would need to significantly increase her production capacity.\n\nShe decided to hire her first employees, two local women experienced in food processing. (26)___ Together, they built a small production facility behind Farida's house.\n\nWithin two years, the business had grown enough to require a proper factory. (27)___ Farida took out a small loan to fund the move, which she paid back within eighteen months.\n\nToday, Farida's honey is sold in shops across the country, and she employs twelve people full-time. (28)___ She credits her grandfather's early lessons for giving her both the skill and the confidence to start.\n\nLooking back, Farida says she never expected her small bazaar stall to grow into a national brand. (29)___ Her advice to other young entrepreneurs is simple: start small, but always be ready to grow.",
-        "options": [
+        "partNumber": 5,
+        "taskType": "open_cloze",
+        "title": "Part 5 — Note Completion",
+        "textTemplate": "(Continuing from the bookshop article above.) Complete the notes below.\n\nMalika's shop opened (30)___ years ago in Termiz.\nHer main product, besides books, was personal (31)___.\nThe book club originally had (32)___ members.\nBook club fees cover light (33)___.",
+        "gaps": [
           {
-            "label": "A",
-            "text": "Their supermarket order alone was larger than her entire monthly output at the time."
+            "number": 30,
+            "answers": [
+              "eight"
+            ]
           },
           {
-            "label": "B",
-            "text": "She had no formal training in business or marketing at that point."
+            "number": 31,
+            "answers": [
+              "recommendations"
+            ]
           },
           {
-            "label": "C",
-            "text": "The shop owner offered to place a regular monthly order if the quality remained consistent."
+            "number": 32,
+            "answers": [
+              "eight"
+            ]
           },
           {
-            "label": "D",
-            "text": "Their combined experience helped her scale up production without losing quality."
-          },
-          {
-            "label": "E",
-            "text": "It required renting equipment she could not yet afford to buy outright."
-          },
-          {
-            "label": "F",
-            "text": "The shop reordered twice as much the following month."
-          },
-          {
-            "label": "G",
-            "text": "She still visits the same bazaar stall every weekend to meet her original customers."
-          },
-          {
-            "label": "H",
-            "text": "Every customer she meets, she says, reminds her of that very first small stall."
-          },
-          {
-            "label": "I",
-            "text": "Every business decision, she admits, felt like a risk at the time."
-          },
-          {
-            "label": "J",
-            "text": "The move allowed her to double her production within the first year."
-          },
-          {
-            "label": "K",
-            "text": "Friends and neighbours often told her it tasted better than anything they could buy in stores."
+            "number": 33,
+            "answers": [
+              "refreshments"
+            ]
           }
-        ],
-        "answers": {
-          "21": "K",
-          "22": "C",
-          "23": "F",
-          "24": "I",
-          "25": "A",
-          "26": "D",
-          "27": "J",
-          "28": "G",
-          "29": "H"
-        }
+        ]
       },
       {
         "partNumber": 5,
         "taskType": "multiple_choice",
         "title": "Part 5 — Multiple Choice",
-        "skillNote": "Ikkinchi uzun matn. Savollarga eng to'g'ri javobni tanlang.",
-        "text": "Artificial Intelligence and the Changing Workplace\n\nArtificial intelligence, once mostly discussed in science fiction, has quietly become part of everyday working life. Tools that can draft emails, analyze spreadsheets, or answer customer questions are now common in offices of all sizes, from small family businesses to multinational corporations. Supporters argue that these tools free employees from repetitive tasks, allowing them to focus on more creative or strategic work that machines cannot easily replicate.\n\nAt the same time, the rapid spread of these technologies has raised concerns among workers, particularly in roles that involve large amounts of routine data processing or basic writing. Some economists predict that certain jobs will disappear entirely over the next decade, while others believe that, as with previous waves of technological change, new types of jobs will emerge to replace the ones that are lost. History offers some support for this second view: the introduction of computers in the 1980s eliminated many clerical positions but created entirely new fields, such as software development and IT support, that did not previously exist.\n\nWhat makes the current transition different, according to some researchers, is its speed. Earlier technological shifts often unfolded over several decades, giving workers and educational institutions time to adapt gradually. Artificial intelligence tools, by contrast, have become widely available within just a few years, leaving many companies and employees scrambling to catch up. Training programs that once took years to design and approve are now being rushed into place, sometimes with mixed results.\n\nFor businesses in developing economies, including many in Central Asia, the situation presents both a challenge and an opportunity. Companies that adopt these tools early may gain a significant advantage over slower competitors, particularly in industries like customer service, logistics, and translation. However, without proper training and investment, there is also a risk that the benefits of these technologies will be concentrated among a small number of large firms, leaving smaller businesses further behind.\n\nMost experts agree on one point: simply avoiding these tools is not a realistic long-term strategy for most businesses. The more useful question, they suggest, is not whether to adopt artificial intelligence, but how to do so in a way that supports employees rather than replacing them entirely.",
+        "text": "(Still about the same bookshop article.)",
         "questions": [
           {
-            "number": 30,
-            "q": "According to supporters mentioned in the text, what is one benefit of AI tools in the workplace?",
-            "options": [
-              "They free employees to focus on more creative or strategic work",
-              "They completely remove the need for human employees",
-              "They are only useful for large multinational corporations",
-              "They eliminate the need for any employee training"
-            ],
-            "correct": 0
-          },
-          {
-            "number": 31,
-            "q": "What historical comparison does the text use to support the idea that new jobs may replace lost ones?",
-            "options": [
-              "The introduction of computers in the 1980s",
-              "The invention of the telephone",
-              "The rise of factories in the industrial revolution",
-              "The growth of international trade in the 1990s"
-            ],
-            "correct": 0
-          },
-          {
-            "number": 32,
-            "q": "According to some researchers, what makes the current AI transition different from earlier technological shifts?",
-            "options": [
-              "Its speed — it is happening much faster",
-              "It only affects developing economies",
-              "It has had no effect on employment so far",
-              "It is limited to a small number of countries"
-            ],
-            "correct": 0
-          },
-          {
-            "number": 33,
-            "q": "What risk does the text mention for smaller businesses in developing economies?",
-            "options": [
-              "Benefits of AI could be concentrated among a small number of large firms",
-              "They will be legally banned from using AI tools",
-              "They will be forced to close within a year",
-              "They already have too much investment in AI"
-            ],
-            "correct": 0
-          },
-          {
             "number": 34,
-            "q": "What industries does the text mention as areas where early AI adoption could give companies an advantage?",
+            "q": "What is the writer's main purpose in this text?",
             "options": [
-              "Customer service, logistics, and translation",
-              "Agriculture, mining, and construction",
-              "Tourism, sports, and entertainment",
-              "Education, healthcare, and law only"
+              "To criticize online book retailers",
+              "To describe how a small bookshop found a way to compete by offering something unique",
+              "To give instructions on how to start a book club",
+              "To compare prices between bookshops and online retailers"
             ],
-            "correct": 0
+            "correct": 1
           },
           {
             "number": 35,
-            "q": "According to the final paragraph, what question do most experts think is more useful to ask?",
+            "q": "Which title best summarizes the whole text?",
             "options": [
-              "How to adopt AI in a way that supports employees rather than replacing them",
-              "Whether AI should be banned in the workplace entirely",
-              "Which country will develop the best AI technology",
-              "How much AI tools cost compared to human employees"
+              "The Decline of Physical Bookshops",
+              "How to Choose the Right Book to Read",
+              "Finding a Niche: One Bookshop's Answer to Online Competition",
+              "The History of Book Clubs in Uzbekistan"
             ],
-            "correct": 0
+            "correct": 2
           }
         ]
       }

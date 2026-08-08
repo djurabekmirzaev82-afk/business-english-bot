@@ -59,7 +59,7 @@ bot.action(/wlesson:(.+)/, selectLesson);
 bot.hears('📖 Reading', showReadingMockMenu);
 bot.action('rread:menu:drills', showDrillMenu);
 bot.action('rread:menu:mocks', showMockMenu);
-bot.action(/rread:startdrill:(.+)/, startDrill);
+bot.action(/rread:startdrillpart:(\d+)/, startDrill);
 bot.action(/rread:startmock:(.+)/, startMock);
 bot.action(/rread:mm:(.+)/, handleMmAnswer);
 bot.action(/rread:mc:(\d+):(\d+)/, handleMcAnswer);
