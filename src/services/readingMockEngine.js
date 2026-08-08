@@ -1,8 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const mocks = JSON.parse(
-  fs.readFileSync(path.join(__dirname, '..', 'data', 'readingMocks.json'), 'utf8')
+const mocks = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'readingMocks.json'), 'utf8'));
+const drills = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'readingDrills.json'), 'utf8'));
+const explanations = JSON.parse(
+  fs.readFileSync(path.join(__dirname, '..', 'data', 'readingPartExplanations.json'), 'utf8')
 );
 
 function getMock(id) {
@@ -11,6 +13,18 @@ function getMock(id) {
 
 function getAllMocks() {
   return mocks;
+}
+
+function getDrill(id) {
+  return drills.find((d) => d.id === id);
+}
+
+function getDrillsForPart(partNumber) {
+  return drills.filter((d) => d.partNumber === partNumber);
+}
+
+function getExplanation(partNumber) {
+  return explanations[`part${partNumber}`];
 }
 
 function partItemCount(part) {
@@ -27,7 +41,7 @@ function normalizeWord(w) {
   return w.trim().toLowerCase().replace(/[.,!?;:]/g, '');
 }
 
-/** Scores Part 1 (open cloze) given an array of user-submitted words (in gap order). */
+/** Scores an open-cloze part (mock part OR standalone drill — same shape) given user words in gap order. */
 function scoreOpenCloze(part, userWords) {
   let correct = 0;
   const results = part.gaps.map((gap, i) => {
@@ -39,4 +53,13 @@ function scoreOpenCloze(part, userWords) {
   return { correct, total: part.gaps.length, results };
 }
 
-module.exports = { getMock, getAllMocks, partItemCount, totalQuestions, scoreOpenCloze };
+module.exports = {
+  getMock,
+  getAllMocks,
+  getDrill,
+  getDrillsForPart,
+  getExplanation,
+  partItemCount,
+  totalQuestions,
+  scoreOpenCloze,
+};

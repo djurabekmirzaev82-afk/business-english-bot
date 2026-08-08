@@ -12,13 +12,15 @@ const { showWritingMenu, showSubmenu, selectLesson, handleWritingSubmission } = 
 const { showSpeakingMenu, selectScenario, handleSpeakingMessage, endSpeaking } = require('./handlers/speaking');
 const { showListening } = require('./handlers/listening');
 const {
-  showReadingMockMenu,
+  showReadingMenu: showReadingMockMenu,
+  showDrillMenu,
+  showMockMenu,
+  startDrill,
   startMock,
   handleClozeSubmission,
-  handlePart2Answer,
-  handlePart3Answer,
-  handlePart4Answer,
-  handlePart5Answer,
+  handleMmAnswer,
+  handleMcAnswer,
+  handleGapAnswer,
 } = require('./handlers/readingMock');
 
 const bot = new Telegraf(config.botToken);
@@ -52,13 +54,15 @@ bot.hears('✍ Writing', showWritingMenu);
 bot.action(/wsubmenu:(.+)/, showSubmenu);
 bot.action(/wlesson:(.+)/, selectLesson);
 
-// Reading (Multilevel-format 5-part mock tests)
+// Reading (Multilevel-format: standalone part drills + full 5-part mocks)
 bot.hears('📖 Reading', showReadingMockMenu);
-bot.action(/rmock:start:(.+)/, startMock);
-bot.action(/rmock:p2:(.+)/, handlePart2Answer);
-bot.action(/rmock:p3:(\d+):(\d+)/, handlePart3Answer);
-bot.action(/rmock:p4:(.+)/, handlePart4Answer);
-bot.action(/rmock:p5:(\d+):(\d+)/, handlePart5Answer);
+bot.action('rread:menu:drills', showDrillMenu);
+bot.action('rread:menu:mocks', showMockMenu);
+bot.action(/rread:startdrill:(.+)/, startDrill);
+bot.action(/rread:startmock:(.+)/, startMock);
+bot.action(/rread:mm:(.+)/, handleMmAnswer);
+bot.action(/rread:mc:(\d+):(\d+)/, handleMcAnswer);
+bot.action(/rread:gap:(.+)/, handleGapAnswer);
 
 // Listening (curated external resource links)
 bot.hears('🎧 Listening', showListening);
@@ -76,7 +80,7 @@ bot.action(/answer:(\d+)/, handleAnswerCallback);
 // Generic free-text router: only fires when no bot.hears() label matched above.
 // Routes to whichever flow (Writing / Speaking / Reading Mock Cloze) the user currently has active.
 bot.on('text', async (ctx) => {
-  if (ctx.session.readingMock && ctx.session.readingMock.awaitingCloze) {
+  if (ctx.session.readingRun && ctx.session.readingRun.state && ctx.session.readingRun.state.awaitingCloze) {
     return handleClozeSubmission(ctx);
   }
   if (ctx.session.pendingWriting) {

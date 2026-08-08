@@ -1,0 +1,270 @@
+[
+  {
+    "id": "drill_p1_1",
+    "partNumber": 1,
+    "taskType": "open_cloze",
+    "title": "Part 1 — Mashq 1",
+    "textTemplate": "For centuries, coffeehouses have served as more than places to drink coffee. In seventeenth-century London, they became known (1)___ \"penny universities,\" because for the price of a single cup, a visitor could sit for hours listening to debates (2)___ politics, science, and literature. Merchants conducted business there, poets read their latest work, and strangers exchanged news long (3)___ newspapers became widely available. Some historians argue (4)___ the modern stock exchange has its roots in a London coffeehouse, where traders once gathered daily to discuss shipping prices. Although coffeehouses today rarely serve (5)___ centers of political debate the way they once did, many still function as informal meeting places (6)___ freelancers, students, and small business owners who cannot afford a private office.",
+    "gaps": [
+      {
+        "number": 1,
+        "answers": [
+          "as"
+        ]
+      },
+      {
+        "number": 2,
+        "answers": [
+          "on",
+          "about"
+        ]
+      },
+      {
+        "number": 3,
+        "answers": [
+          "before"
+        ]
+      },
+      {
+        "number": 4,
+        "answers": [
+          "that"
+        ]
+      },
+      {
+        "number": 5,
+        "answers": [
+          "as"
+        ]
+      },
+      {
+        "number": 6,
+        "answers": [
+          "for"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "drill_p2_1",
+    "partNumber": 2,
+    "taskType": "multiple_matching",
+    "title": "Part 2 — Mashq 1",
+    "texts": [
+      {
+        "label": "A",
+        "title": "GreenCart",
+        "text": "GreenCart delivers grocery orders within two hours in major Uzbek cities. The company initially struggled because customers doubted that fresh produce could survive fast delivery without quality loss. To address this, GreenCart introduced a public satisfaction guarantee: any customer unhappy with the freshness of their order receives an automatic refund, no questions asked. This policy, though costly at first, gradually rebuilt customer confidence and is now central to the brand's reputation."
+      },
+      {
+        "label": "B",
+        "title": "PathFinder Logistics",
+        "text": "PathFinder Logistics specializes in moving oversized industrial equipment across difficult terrain. Unlike competitors who rely on standard trucking routes, the company invests heavily in route-planning software that maps out alternative paths around seasonal road closures. While this technology was expensive to develop, it has allowed PathFinder to guarantee delivery windows that rival companies consider impossible to promise."
+      },
+      {
+        "label": "C",
+        "title": "Silk Thread Apparel",
+        "text": "Silk Thread Apparel manufactures traditional textiles using techniques passed down through several generations of the same family. The company deliberately avoids automating certain production steps, arguing that machine-made goods cannot replicate the subtle irregularities that customers associate with authentic handcraft. This decision limits how quickly the company can scale production, but has helped it command premium prices in export markets."
+      }
+    ],
+    "questions": [
+      {
+        "number": 1,
+        "statement": "Which company deliberately limits its own growth potential in order to preserve a particular quality?",
+        "answer": "C"
+      },
+      {
+        "number": 2,
+        "statement": "Which company had to overcome initial customer skepticism about its core service?",
+        "answer": "A"
+      },
+      {
+        "number": 3,
+        "statement": "Which company relies on technology to achieve something competitors say cannot be done?",
+        "answer": "B"
+      },
+      {
+        "number": 4,
+        "statement": "Which company offers a policy that removes financial risk for the customer?",
+        "answer": "A"
+      },
+      {
+        "number": 5,
+        "statement": "Which company bases part of its value on techniques that are old rather than modern?",
+        "answer": "C"
+      }
+    ]
+  },
+  {
+    "id": "drill_p3_1",
+    "partNumber": 3,
+    "taskType": "multiple_choice",
+    "title": "Part 3 — Mashq 1",
+    "text": "The Hidden Cost of \"Free\" Shipping\n\nOnline retailers have trained customers to expect free shipping as a basic right rather than a costly service. Yet delivering a package to someone's door is never actually free — the cost is simply absorbed elsewhere, often in ways customers do not notice. Some companies build shipping costs into product prices, meaning shoppers pay for delivery whether they realize it or not. Others rely on high order volumes to offset the cost of individual deliveries, a strategy that works only as long as growth continues.\n\nA less visible cost falls on the environment. Free shipping tends to encourage smaller, more frequent orders rather than fewer, consolidated ones, since customers have little financial incentive to wait and combine purchases. This results in more delivery vehicles making more trips, often partially empty, which increases fuel consumption and emissions per item delivered. Some environmental researchers argue that a small delivery fee, even a modest one, could meaningfully reduce unnecessary trips simply by making customers pause before checkout.\n\nRetailers, however, are cautious about introducing delivery charges, having seen competitors lose market share after doing so. Customer expectations, once set, are notoriously difficult to reverse; a company that charges for shipping while a rival does not risks losing sales even if its underlying prices are lower overall. This creates a kind of trap: retailers know the current system is inefficient, yet none wants to be the first to change it.\n\nA few companies have experimented with a middle path, offering free shipping only above a minimum order value. This approach nudges customers toward larger, less frequent orders without removing the appeal of free delivery altogether. Early data suggests this compromise reduces the number of individual deliveries while causing less customer resistance than a straightforward shipping fee. Whether this becomes the industry standard, or whether some other solution emerges, remains to be seen.",
+    "questions": [
+      {
+        "number": 1,
+        "q": "According to the text, how do many companies actually cover the cost of \"free\" shipping?",
+        "options": [
+          "By building the cost into product prices or relying on high order volumes",
+          "By legally requiring customers to pay a hidden tax",
+          "By refusing to ship internationally",
+          "By reducing the quality of the products sold"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Why does free shipping create an environmental cost, according to the text?",
+        "number": 2,
+        "options": [
+          "It encourages smaller, more frequent orders, leading to more delivery trips",
+          "It requires products to be packaged in more plastic",
+          "It forces companies to build new factories",
+          "It increases the price of fuel for all consumers"
+        ],
+        "correct": 0
+      },
+      {
+        "number": 3,
+        "q": "Why are retailers cautious about introducing delivery charges, according to the text?",
+        "options": [
+          "They fear losing customers to competitors who still offer free shipping",
+          "Government regulations prevent them from doing so",
+          "They believe customers would not notice the change",
+          "Shipping companies refuse to cooperate with paid models"
+        ],
+        "correct": 0
+      },
+      {
+        "number": 4,
+        "q": "What does the text suggest about the \"minimum order value\" approach?",
+        "options": [
+          "It may reduce the number of deliveries while causing less resistance than a direct fee",
+          "It has completely failed in every case it was tried",
+          "It is more expensive for retailers than a flat shipping fee",
+          "It removes the appeal of free shipping entirely"
+        ],
+        "correct": 0
+      },
+      {
+        "number": 5,
+        "q": "What is the overall tone of the text toward the free shipping model?",
+        "options": [
+          "Critical of its hidden costs, while acknowledging why retailers are reluctant to change it",
+          "Entirely positive, with no concerns raised",
+          "Dismissive of any environmental concerns",
+          "Confident that free shipping will disappear within a year"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "id": "drill_p4_1",
+    "partNumber": 4,
+    "taskType": "gapped_text",
+    "title": "Part 4 — Mashq 1",
+    "text": "The Translator Who Never Learned to Type\n\nMalika worked as an interpreter for over twenty years before she ever touched a computer keyboard. (1)___ Her clients, mostly foreign businesspeople negotiating deals in Tashkent, never seemed to mind.\n\nHer reputation was built entirely on word of mouth. (2)___ One executive later said her ability to catch subtle tone shifts during tense negotiations had saved his company from a costly misunderstanding.\n\nWhen digital translation tools became widely available, many assumed interpreters like Malika would struggle to find work. (3)___ Instead, demand for her services increased, as clients specifically wanted a human who could read the room during sensitive discussions.\n\nEventually, Malika's daughter convinced her to learn basic computer skills, mostly so she could manage her own scheduling. (4)___ She still refuses to use translation software during actual negotiations, insisting that machines miss too much of what is left unsaid.\n\nNow in her sixties, Malika has started training a small group of younger interpreters. (5)___ Her main lesson to them is always the same: technology can translate words, but only experience can translate meaning.",
+    "options": [
+      {
+        "label": "A",
+        "text": "She learned the trade the traditional way, sitting beside senior interpreters for years before working alone."
+      },
+      {
+        "label": "B",
+        "text": "She insisted on writing every note by hand throughout her career."
+      },
+      {
+        "label": "C",
+        "text": "Companies recommended her to one another after particularly difficult negotiations went smoothly."
+      },
+      {
+        "label": "D",
+        "text": "That prediction turned out to be largely incorrect."
+      },
+      {
+        "label": "E",
+        "text": "She learned just enough to send emails, nothing more."
+      },
+      {
+        "label": "F",
+        "text": "She selects them not for their vocabulary, but for their ability to notice what a speaker leaves unsaid."
+      },
+      {
+        "label": "G",
+        "text": "She eventually opened her own translation agency downtown."
+      }
+    ],
+    "answers": {
+      "1": "B",
+      "2": "C",
+      "3": "D",
+      "4": "E",
+      "5": "F"
+    }
+  },
+  {
+    "id": "drill_p5_1",
+    "partNumber": 5,
+    "taskType": "multiple_choice",
+    "title": "Part 5 — Mashq 1",
+    "text": "Why Some Companies Resist Growth\n\nConventional business wisdom holds that companies should grow whenever possible — more customers, more revenue, more market share. Yet a small but persistent group of business owners deliberately caps their company's size, turning away potential customers and rejecting expansion opportunities that most competitors would eagerly accept. Understanding why requires looking beyond simple profit calculations.\n\nFor some owners, the decision is rooted in quality control. A restaurant owner who prepares every dish personally cannot realistically serve five hundred customers a night without either hiring additional cooks, who might not match her exact standards, or compromising on quality. Rather than risk her reputation, she chooses to remain small, even though a larger restaurant would almost certainly generate more income. This is not simply caution; it reflects a calculated judgment that certain kinds of quality cannot survive rapid scaling.\n\nFor others, the reasoning is more personal. Growth typically requires taking on debt, hiring managers, and gradually shifting from hands-on craft work to overseeing systems and spreadsheets. Some founders started their businesses specifically to avoid that kind of work, and view rapid growth as a threat to the very reason they became entrepreneurs in the first place. For them, a smaller, more manageable business is not a limitation but the actual goal.\n\nEconomists studying this pattern note an important distinction: staying small by choice is fundamentally different from staying small due to lack of resources or opportunity. The former group could grow if they wanted to, and often receive serious offers from investors or larger companies, but decline them deliberately. This distinguishes them from struggling small businesses that would expand immediately if given the chance, but simply lack access to capital or demand.\n\nWhether this approach represents wisdom or missed opportunity likely depends on what a business owner actually values. In an economy that often treats growth as the only valid measure of success, these owners offer a quiet counterexample: sometimes staying the same size is not a failure to grow, but a decision to protect something growth would destroy.",
+    "questions": [
+      {
+        "number": 1,
+        "q": "According to the text, why does the restaurant owner avoid expanding her business?",
+        "options": [
+          "She fears that hiring more staff would compromise the quality she is known for",
+          "She cannot legally hire additional staff",
+          "Her customers have specifically asked her not to expand",
+          "She has already tried expanding and failed financially"
+        ],
+        "correct": 0
+      },
+      {
+        "number": 2,
+        "q": "For some founders mentioned in the text, why is limiting growth a personal choice?",
+        "options": [
+          "Growth would shift their role away from the hands-on work they enjoy",
+          "They are legally required to remain small",
+          "They cannot find enough customers to justify growing",
+          "Investors have refused to work with them"
+        ],
+        "correct": 0
+      },
+      {
+        "number": 3,
+        "q": "What key distinction do economists draw, according to the text?",
+        "options": [
+          "Between businesses that stay small by choice and those that stay small due to lack of resources",
+          "Between businesses that are profitable and those that are not",
+          "Between businesses run by families and those run by strangers",
+          "Between businesses in cities and those in rural areas"
+        ],
+        "correct": 0
+      },
+      {
+        "number": 4,
+        "q": "What evidence does the text give that some small business owners could grow if they wanted to?",
+        "options": [
+          "They often receive serious offers from investors or larger companies but decline them",
+          "They have already grown once before and shrunk back down",
+          "Government reports confirm their growth potential",
+          "Their competitors have publicly confirmed it"
+        ],
+        "correct": 0
+      },
+      {
+        "number": 5,
+        "q": "What is the writer's main point in the final paragraph?",
+        "options": [
+          "Staying small can be a deliberate decision to protect something growth would destroy, not a failure",
+          "All businesses should avoid growing whenever possible",
+          "Growth is always the wrong choice for small business owners",
+          "Economists agree that small businesses are more profitable than large ones"
+        ],
+        "correct": 0
+      }
+    ]
+  }
+]

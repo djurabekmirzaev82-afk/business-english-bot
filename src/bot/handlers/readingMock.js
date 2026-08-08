@@ -1,26 +1,58 @@
 const { Markup } = require('telegraf');
 const engine = require('../../services/readingMockEngine');
 
-function mockListKeyboard() {
-  const mocks = engine.getAllMocks();
-  const buttons = mocks.map((m) => [
-    Markup.button.callback(`${m.title} (${engine.totalQuestions(m)} savol)`, `rmock:start:${m.id}`),
-  ]);
-  return Markup.inlineKeyboard(buttons);
+// ==================== MENUS ====================
+
+async function showReadingMenu(ctx) {
+  await ctx.reply(
+    '📖 Reading (Multilevel format)\n\n' +
+      "Avval har bir qismni alohida mashq qiling, keyin to'liq Mock test (35 savol) bilan o'zingizni sinang:",
+    Markup.inlineKeyboard([
+      [Markup.button.callback("📝 Mashqlar (Part bo'yicha)", 'rread:menu:drills')],
+      [Markup.button.callback("🏆 To'liq Mock testlar", 'rread:menu:mocks')],
+    ])
+  );
 }
 
-async function showReadingMockMenu(ctx) {
-  await ctx.reply(
-    '📖 Reading — Multilevel formatidagi Mock testlar.\n\n' +
-      'Har bir mock 5 qismdan iborat (Part 1-5, jami 35 savol), xuddi haqiqiy Multilevel imtihoni tuzilishiga mos:\n\n' +
-      "1️⃣ Part 1 — Open Cloze: matndagi bo'shliqlarni bitta so'z bilan to'ldirish\n" +
-      "2️⃣ Part 2 — Multiple Matching: gaplarni mos matnga bog'lash\n" +
-      "3️⃣ Part 3 — Multiple Choice: uzun matn, tushunish savollari\n" +
-      "4️⃣ Part 4 — Gapped Text: olib tashlangan gaplarni joyiga qaytarish\n" +
-      "5️⃣ Part 5 — Multiple Choice: ikkinchi uzun matn\n\n" +
-      'Mockni tanlang:',
-    mockListKeyboard()
-  );
+async function showDrillMenu(ctx) {
+  await ctx.answerCbQuery();
+  const buttons = [1, 2, 3, 4, 5].map((n) => {
+    const drill = engine.getDrillsForPart(n)[0];
+    const exp = engine.getExplanation(n);
+    return [Markup.button.callback(exp.title, `rread:startdrill:${drill.id}`)];
+  });
+  await ctx.reply("📝 Qaysi Part'ni mashq qilmoqchisiz?", Markup.inlineKeyboard(buttons));
+}
+
+async function showMockMenu(ctx) {
+  await ctx.answerCbQuery();
+  const mocksList = engine.getAllMocks();
+  const buttons = mocksList.map((m) => [
+    Markup.button.callback(`${m.title} (${engine.totalQuestions(m)} savol)`, `rread:startmock:${m.id}`),
+  ]);
+  await ctx.reply("🏆 To'liq Mock testni tanlang:", Markup.inlineKeyboard(buttons));
+}
+
+// ==================== STARTING A RUN (drill = 1 part, mock = 5 parts) ====================
+
+async function startDrill(ctx) {
+  const drillId = ctx.match[1];
+  const drill = engine.getDrill(drillId);
+  if (!drill) {
+    await ctx.answerCbQuery('Mashq topilmadi.');
+    return;
+  }
+  await ctx.answerCbQuery();
+
+  ctx.session.readingRun = {
+    mode: 'drill',
+    label: drill.title,
+    queue: [drill],
+    index: 0,
+    scores: {},
+    state: {},
+  };
+  await runQueue(ctx);
 }
 
 async function startMock(ctx) {
@@ -32,38 +64,64 @@ async function startMock(ctx) {
   }
   await ctx.answerCbQuery();
 
-  ctx.session.readingMock = {
-    mockId,
-    scores: {},
-  };
-
   await ctx.reply(`🏁 ${mock.title} boshlandi! Omad tilaymiz.`);
-  await startPart1(ctx, mock);
+  ctx.session.readingRun = {
+    mode: 'mock',
+    label: mock.title,
+    queue: mock.parts,
+    index: 0,
+    scores: {},
+    state: {},
+  };
+  await runQueue(ctx);
 }
 
-// ==================== PART 1: OPEN CLOZE ====================
+// ==================== GENERIC PART RUNNER ====================
 
-async function startPart1(ctx, mock) {
-  const part = mock.parts[0];
-  await ctx.reply(`${part.title}\n\nℹ️ ${part.skillNote}`);
+async function runQueue(ctx) {
+  const run = ctx.session.readingRun;
+  if (run.index >= run.queue.length) {
+    await finishRun(ctx);
+    return;
+  }
+  const part = run.queue[run.index];
+  run.state = {}; // reset per-part transient state
+
+  const exp = engine.getExplanation(part.partNumber);
+  await ctx.reply(`${exp.title}\n\n${exp.explanation}`, { parse_mode: 'Markdown' });
+
+  if (part.taskType === 'open_cloze') return startOpenCloze(ctx, part);
+  if (part.taskType === 'multiple_matching') return startMultipleMatching(ctx, part);
+  if (part.taskType === 'multiple_choice') return startMultipleChoice(ctx, part);
+  if (part.taskType === 'gapped_text') return startGappedText(ctx, part);
+}
+
+async function advanceToNextPart(ctx) {
+  ctx.session.readingRun.index += 1;
+  await runQueue(ctx);
+}
+
+// ---------- OPEN CLOZE ----------
+
+async function startOpenCloze(ctx, part) {
   await ctx.reply(part.textTemplate);
+  const n = part.gaps.length;
   await ctx.reply(
-    "✍ Javoblaringizni shu tartibda, vergul bilan ajratib yuboring (masalan: in, to, that, a, as, will):\n\n" +
-      '1) ___  2) ___  3) ___  4) ___  5) ___  6) ___'
+    `✍ Javoblaringizni vergul bilan ajratib, ${n} ta so'z tartibda yuboring (masalan: so'z1, so'z2, so'z3...):`
   );
-  ctx.session.readingMock.awaitingCloze = true;
+  ctx.session.readingRun.state.awaitingCloze = true;
 }
 
 async function handleClozeSubmission(ctx) {
-  const mock = engine.getMock(ctx.session.readingMock.mockId);
-  const part = mock.parts[0];
+  const run = ctx.session.readingRun;
+  const part = run.queue[run.index];
   const words = ctx.message.text.split(',').map((w) => w.trim());
 
   const result = engine.scoreOpenCloze(part, words);
-  ctx.session.readingMock.scores.part1 = { correct: result.correct, total: result.total };
-  ctx.session.readingMock.awaitingCloze = false;
+  run.scores[part.partNumber] = { correct: result.correct, total: result.total };
+  run.state.awaitingCloze = false;
 
-  let feedback = `📊 Part 1 natijasi: ${result.correct}/${result.total}\n\n`;
+  let feedback = `📊 Part ${part.partNumber} natijasi: ${result.correct}/${result.total}\n\n`;
   result.results.forEach((r) => {
     feedback += `${r.isCorrect ? '✅' : '❌'} ${r.number}) siz: "${r.userWord}"`;
     if (!r.isCorrect) feedback += ` — to'g'ri: "${r.correctAnswers[0]}"`;
@@ -71,166 +129,113 @@ async function handleClozeSubmission(ctx) {
   });
   await ctx.reply(feedback);
 
-  await startPart2(ctx, mock);
+  await advanceToNextPart(ctx);
 }
 
-// ==================== PART 2: MULTIPLE MATCHING ====================
+// ---------- MULTIPLE MATCHING ----------
 
-function part2Keyboard(part) {
-  const buttons = part.texts.map((t) => [Markup.button.callback(`${t.label} — ${t.title}`, `rmock:p2:${t.label}`)]);
+function mmKeyboard(part) {
+  const buttons = part.texts.map((t) => [Markup.button.callback(`${t.label} — ${t.title}`, `rread:mm:${t.label}`)]);
   return Markup.inlineKeyboard(buttons);
 }
 
-async function startPart2(ctx, mock) {
-  const part = mock.parts[1];
-  await ctx.reply(`${part.title}\n\nℹ️ ${part.skillNote}`);
-
+async function startMultipleMatching(ctx, part) {
   let textsMsg = '';
   part.texts.forEach((t) => {
     textsMsg += `*${t.label}) ${t.title}*\n${t.text}\n\n`;
   });
   await ctx.reply(textsMsg, { parse_mode: 'Markdown' });
 
-  ctx.session.readingMock.p2Index = 0;
-  ctx.session.readingMock.p2Correct = 0;
-  await sendPart2Question(ctx, part);
+  ctx.session.readingRun.state.qIndex = 0;
+  ctx.session.readingRun.state.correct = 0;
+  await sendMmQuestion(ctx, part);
 }
 
-async function sendPart2Question(ctx, part) {
-  const idx = ctx.session.readingMock.p2Index;
+async function sendMmQuestion(ctx, part) {
+  const idx = ctx.session.readingRun.state.qIndex;
   const q = part.questions[idx];
-  await ctx.reply(`❓ ${q.number}) ${q.statement}`, part2Keyboard(part));
+  await ctx.reply(`❓ ${q.number}) ${q.statement}`, mmKeyboard(part));
 }
 
-async function handlePart2Answer(ctx) {
+async function handleMmAnswer(ctx) {
   const chosenLabel = ctx.match[1];
-  const mock = engine.getMock(ctx.session.readingMock.mockId);
-  const part = mock.parts[1];
-  const idx = ctx.session.readingMock.p2Index;
+  const run = ctx.session.readingRun;
+  const part = run.queue[run.index];
+  const idx = run.state.qIndex;
   const q = part.questions[idx];
 
   const isCorrect = chosenLabel === q.answer;
-  if (isCorrect) ctx.session.readingMock.p2Correct += 1;
+  if (isCorrect) run.state.correct += 1;
 
   await ctx.answerCbQuery(isCorrect ? "✅ To'g'ri!" : `❌ Noto'g'ri. To'g'ri javob: ${q.answer}`);
   await ctx.editMessageReplyMarkup(undefined).catch(() => {});
 
   const nextIdx = idx + 1;
   if (nextIdx >= part.questions.length) {
-    ctx.session.readingMock.scores.part2 = {
-      correct: ctx.session.readingMock.p2Correct,
-      total: part.questions.length,
-    };
-    await ctx.reply(`📊 Part 2 natijasi: ${ctx.session.readingMock.p2Correct}/${part.questions.length}`);
-    await startPart3(ctx, mock);
+    run.scores[part.partNumber] = { correct: run.state.correct, total: part.questions.length };
+    await ctx.reply(`📊 Part ${part.partNumber} natijasi: ${run.state.correct}/${part.questions.length}`);
+    await advanceToNextPart(ctx);
     return;
   }
-
-  ctx.session.readingMock.p2Index = nextIdx;
-  await sendPart2Question(ctx, part);
+  run.state.qIndex = nextIdx;
+  await sendMmQuestion(ctx, part);
 }
 
-// ==================== PART 3 & 5: MULTIPLE CHOICE ====================
+// ---------- MULTIPLE CHOICE ----------
 
-function mcKeyboard(prefix, qIndex, options) {
-  const buttons = options.map((opt, i) => [Markup.button.callback(opt, `${prefix}:${qIndex}:${i}`)]);
+function mcKeyboard(qIndex, options) {
+  const buttons = options.map((opt, i) => [Markup.button.callback(opt, `rread:mc:${qIndex}:${i}`)]);
   return Markup.inlineKeyboard(buttons);
 }
 
-async function startPart3(ctx, mock) {
-  const part = mock.parts[2];
-  await ctx.reply(`${part.title}\n\nℹ️ ${part.skillNote}`);
+async function startMultipleChoice(ctx, part) {
   await ctx.reply(part.text);
-
-  ctx.session.readingMock.p3Index = 0;
-  ctx.session.readingMock.p3Correct = 0;
-  await sendMcQuestion(ctx, part, 'rmock:p3', 0);
+  ctx.session.readingRun.state.qIndex = 0;
+  ctx.session.readingRun.state.correct = 0;
+  await sendMcQuestion(ctx, part);
 }
 
-async function sendMcQuestion(ctx, part, prefix, idx) {
+async function sendMcQuestion(ctx, part) {
+  const idx = ctx.session.readingRun.state.qIndex;
   const q = part.questions[idx];
-  await ctx.reply(`❓ ${q.number}) ${q.q}`, mcKeyboard(prefix, idx, q.options));
+  await ctx.reply(`❓ ${q.number}) ${q.q}`, mcKeyboard(idx, q.options));
 }
 
-async function handlePart3Answer(ctx) {
+async function handleMcAnswer(ctx) {
   const idx = parseInt(ctx.match[1], 10);
   const selected = parseInt(ctx.match[2], 10);
-  const mock = engine.getMock(ctx.session.readingMock.mockId);
-  const part = mock.parts[2];
+  const run = ctx.session.readingRun;
+  const part = run.queue[run.index];
   const q = part.questions[idx];
 
   const isCorrect = selected === q.correct;
-  if (isCorrect) ctx.session.readingMock.p3Correct += 1;
+  if (isCorrect) run.state.correct += 1;
 
   await ctx.answerCbQuery(isCorrect ? "✅ To'g'ri!" : `❌ Noto'g'ri. To'g'ri javob: ${q.options[q.correct]}`);
   await ctx.editMessageReplyMarkup(undefined).catch(() => {});
 
   const nextIdx = idx + 1;
   if (nextIdx >= part.questions.length) {
-    ctx.session.readingMock.scores.part3 = {
-      correct: ctx.session.readingMock.p3Correct,
-      total: part.questions.length,
-    };
-    await ctx.reply(`📊 Part 3 natijasi: ${ctx.session.readingMock.p3Correct}/${part.questions.length}`);
-    await startPart4(ctx, mock);
+    run.scores[part.partNumber] = { correct: run.state.correct, total: part.questions.length };
+    await ctx.reply(`📊 Part ${part.partNumber} natijasi: ${run.state.correct}/${part.questions.length}`);
+    await advanceToNextPart(ctx);
     return;
   }
-
-  ctx.session.readingMock.p3Index = nextIdx;
-  await sendMcQuestion(ctx, part, 'rmock:p3', nextIdx);
+  run.state.qIndex = nextIdx;
+  await sendMcQuestion(ctx, part);
 }
 
-async function startPart5(ctx, mock) {
-  const part = mock.parts[4];
-  await ctx.reply(`${part.title}\n\nℹ️ ${part.skillNote}`);
-  await ctx.reply(part.text);
+// ---------- GAPPED TEXT ----------
 
-  ctx.session.readingMock.p5Index = 0;
-  ctx.session.readingMock.p5Correct = 0;
-  await sendMcQuestion(ctx, part, 'rmock:p5', 0);
-}
-
-async function handlePart5Answer(ctx) {
-  const idx = parseInt(ctx.match[1], 10);
-  const selected = parseInt(ctx.match[2], 10);
-  const mock = engine.getMock(ctx.session.readingMock.mockId);
-  const part = mock.parts[4];
-  const q = part.questions[idx];
-
-  const isCorrect = selected === q.correct;
-  if (isCorrect) ctx.session.readingMock.p5Correct += 1;
-
-  await ctx.answerCbQuery(isCorrect ? "✅ To'g'ri!" : `❌ Noto'g'ri. To'g'ri javob: ${q.options[q.correct]}`);
-  await ctx.editMessageReplyMarkup(undefined).catch(() => {});
-
-  const nextIdx = idx + 1;
-  if (nextIdx >= part.questions.length) {
-    ctx.session.readingMock.scores.part5 = {
-      correct: ctx.session.readingMock.p5Correct,
-      total: part.questions.length,
-    };
-    await ctx.reply(`📊 Part 5 natijasi: ${ctx.session.readingMock.p5Correct}/${part.questions.length}`);
-    await finishMock(ctx, mock);
-    return;
-  }
-
-  ctx.session.readingMock.p5Index = nextIdx;
-  await sendMcQuestion(ctx, part, 'rmock:p5', nextIdx);
-}
-
-// ==================== PART 4: GAPPED TEXT ====================
-
-function part4Keyboard(part, usedLabels) {
+function gapKeyboard(part, usedLabels) {
   const available = part.options.filter((o) => !usedLabels.includes(o.label));
   const buttons = available.map((o) => [
-    Markup.button.callback(`${o.label}) ${o.text.slice(0, 40)}${o.text.length > 40 ? '...' : ''}`, `rmock:p4:${o.label}`),
+    Markup.button.callback(`${o.label}) ${o.text.slice(0, 40)}${o.text.length > 40 ? '...' : ''}`, `rread:gap:${o.label}`),
   ]);
   return Markup.inlineKeyboard(buttons);
 }
 
-async function startPart4(ctx, mock) {
-  const part = mock.parts[3];
-  await ctx.reply(`${part.title}\n\nℹ️ ${part.skillNote}`);
+async function startGappedText(ctx, part) {
   await ctx.reply(part.text);
 
   let optionsMsg = "Variantlar:\n";
@@ -239,72 +244,73 @@ async function startPart4(ctx, mock) {
   });
   await ctx.reply(optionsMsg);
 
-  ctx.session.readingMock.p4GapNumbers = Object.keys(part.answers).map(Number).sort((a, b) => a - b);
-  ctx.session.readingMock.p4Index = 0;
-  ctx.session.readingMock.p4Correct = 0;
-  ctx.session.readingMock.p4UsedLabels = [];
-  await sendPart4Question(ctx, part);
+  const state = ctx.session.readingRun.state;
+  state.gapNumbers = Object.keys(part.answers).map(Number).sort((a, b) => a - b);
+  state.gIndex = 0;
+  state.correct = 0;
+  state.used = [];
+  await sendGapQuestion(ctx, part);
 }
 
-async function sendPart4Question(ctx, part) {
-  const state = ctx.session.readingMock;
-  const gapNumber = state.p4GapNumbers[state.p4Index];
-  await ctx.reply(`❓ Bo'shliq (${gapNumber})`, part4Keyboard(part, state.p4UsedLabels));
+async function sendGapQuestion(ctx, part) {
+  const state = ctx.session.readingRun.state;
+  const gapNumber = state.gapNumbers[state.gIndex];
+  await ctx.reply(`❓ Bo'shliq (${gapNumber})`, gapKeyboard(part, state.used));
 }
 
-async function handlePart4Answer(ctx) {
+async function handleGapAnswer(ctx) {
   const chosenLabel = ctx.match[1];
-  const mock = engine.getMock(ctx.session.readingMock.mockId);
-  const part = mock.parts[3];
-  const state = ctx.session.readingMock;
-  const gapNumber = state.p4GapNumbers[state.p4Index];
+  const run = ctx.session.readingRun;
+  const part = run.queue[run.index];
+  const state = run.state;
+  const gapNumber = state.gapNumbers[state.gIndex];
 
   const isCorrect = part.answers[gapNumber] === chosenLabel;
-  if (isCorrect) state.p4Correct += 1;
-  state.p4UsedLabels.push(chosenLabel);
+  if (isCorrect) state.correct += 1;
+  state.used.push(chosenLabel);
 
   await ctx.answerCbQuery(isCorrect ? "✅ To'g'ri!" : `❌ Noto'g'ri. To'g'ri javob: ${part.answers[gapNumber]}`);
   await ctx.editMessageReplyMarkup(undefined).catch(() => {});
 
-  const nextIdx = state.p4Index + 1;
-  if (nextIdx >= state.p4GapNumbers.length) {
-    state.scores.part4 = { correct: state.p4Correct, total: state.p4GapNumbers.length };
-    await ctx.reply(`📊 Part 4 natijasi: ${state.p4Correct}/${state.p4GapNumbers.length}`);
-    await startPart5(ctx, mock);
+  const nextIdx = state.gIndex + 1;
+  if (nextIdx >= state.gapNumbers.length) {
+    run.scores[part.partNumber] = { correct: state.correct, total: state.gapNumbers.length };
+    await ctx.reply(`📊 Part ${part.partNumber} natijasi: ${state.correct}/${state.gapNumbers.length}`);
+    await advanceToNextPart(ctx);
     return;
   }
-
-  state.p4Index = nextIdx;
-  await sendPart4Question(ctx, part);
+  state.gIndex = nextIdx;
+  await sendGapQuestion(ctx, part);
 }
 
-// ==================== FINAL SUMMARY ====================
+// ==================== FINISH ====================
 
-async function finishMock(ctx, mock) {
+async function finishRun(ctx) {
   const { mainMenu } = require('../keyboards');
-  const scores = ctx.session.readingMock.scores;
+  const run = ctx.session.readingRun;
+  const scores = run.scores;
   const total = Object.values(scores).reduce((sum, s) => sum + s.correct, 0);
-  const totalMax = engine.totalQuestions(mock);
+  const totalMax = Object.values(scores).reduce((sum, s) => sum + s.total, 0);
 
-  let summary = `🏆 ${mock.title} yakunlandi!\n\n`;
-  summary += `Part 1: ${scores.part1.correct}/${scores.part1.total}\n`;
-  summary += `Part 2: ${scores.part2.correct}/${scores.part2.total}\n`;
-  summary += `Part 3: ${scores.part3.correct}/${scores.part3.total}\n`;
-  summary += `Part 4: ${scores.part4.correct}/${scores.part4.total}\n`;
-  summary += `Part 5: ${scores.part5.correct}/${scores.part5.total}\n\n`;
-  summary += `📊 JAMI: ${total}/${totalMax}\n\n`;
+  let summary = `🏆 ${run.label} yakunlandi!\n\n`;
+  Object.entries(scores).forEach(([partNum, s]) => {
+    summary += `Part ${partNum}: ${s.correct}/${s.total}\n`;
+  });
+  summary += `\n📊 JAMI: ${total}/${totalMax}\n\n`;
   summary += "Natija taxminiy — rasmiy Multilevel bahosi emas, mashq maqsadida.";
 
   await ctx.reply(summary, mainMenu);
-  ctx.session.readingMock = null;
+  ctx.session.readingRun = null;
 }
 
 module.exports = {
-  showReadingMockMenu,
+  showReadingMenu,
+  showDrillMenu,
+  showMockMenu,
+  startDrill,
   startMock,
   handleClozeSubmission,
-  handlePart2Answer,
-  handlePart3Answer,
-  handlePart4Answer,
-  handlePart5Answer,
+  handleMmAnswer,
+  handleMcAnswer,
+  handleGapAnswer,
 };
