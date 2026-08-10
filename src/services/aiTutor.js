@@ -116,4 +116,31 @@ async function roleplaySummary(scenario, history) {
   return callGemini(summaryPrompt, system, 500);
 }
 
-module.exports = { checkWriting, roleplayReply, roleplaySummary };
+/**
+ * Evaluates a full IELTS-style Speaking attempt (Part 1 + Part 2 + Part 3 answers,
+ * given as one combined transcript) using simplified IELTS Speaking band descriptors.
+ * Pronunciation cannot be judged from text, so only the three text-assessable
+ * criteria are used — this limitation is explicitly noted in the output.
+ */
+async function checkIeltsSpeaking(theme, transcript) {
+  const system =
+    'You are an IELTS Speaking examiner giving feedback to a student in Uzbekistan. You will receive a full ' +
+    'transcript of a student\'s answers across Part 1 (short interview questions), Part 2 (a 1-2 minute cue-card ' +
+    'talk), and Part 3 (discussion questions) on the same theme. Respond ONLY in Uzbek (keep the student\'s own ' +
+    'English quotes and any corrected English in English). Assess against three of the four official IELTS ' +
+    'Speaking criteria — Fluency & Coherence, Lexical Resource, and Grammatical Range & Accuracy (explicitly note ' +
+    'that Pronunciation cannot be assessed from text). Structure your response exactly like this:\n\n' +
+    'TAXMINIY BALL (Band): <masalan 5.5-6.0 oralig\'ida>\n\n' +
+    'FLUENCY & COHERENCE:\n- ...\n\n' +
+    'LEXICAL RESOURCE (so\'z boyligi):\n- ...\n\n' +
+    'GRAMMATICAL RANGE & ACCURACY:\n- ...\n\n' +
+    "ESLATMA: Talaffuz (Pronunciation) matn orqali baholanmaydi.\n\n" +
+    "YAXSHILASH BO'YICHA TAVSIYALAR:\n- ...\n\n" +
+    'Be specific to what the student actually said, not generic.';
+
+  const userMessage = `Theme: ${theme}\n\nFull transcript:\n"""\n${transcript}\n"""\n\nPlease evaluate according to the format above.`;
+
+  return callGemini([{ role: 'user', content: userMessage }], system, 900);
+}
+
+module.exports = { checkWriting, roleplayReply, roleplaySummary, checkIeltsSpeaking };

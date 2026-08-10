@@ -13,8 +13,11 @@ const endKeyboard = Markup.keyboard([['🛑 Suhbatni tugatish']]).resize();
 async function showSpeakingMenu(ctx) {
   await ctx.reply(
     '🎤 Speaking Club — mashq turini tanlang. AI siz bilan ingliz tilida suhbat qiladi ' +
-      '(hozircha matn orqali — ovozli xabarlar keyingi bosqichda qo\'shiladi):',
-    scenarioKeyboard()
+      "(hozircha matn orqali — ovozli xabarlar keyingi bosqichda qo'shiladi):",
+    Markup.inlineKeyboard([
+      ...SCENARIOS.map((s) => [Markup.button.callback(s, `speak:${s}`)]),
+      [Markup.button.callback('🎓 IELTS Speaking (Part 1 → 2 → 3)', 'ispeak:menu')],
+    ])
   );
 }
 
@@ -73,6 +76,14 @@ async function handleSpeakingMessage(ctx) {
 
 async function endSpeaking(ctx) {
   const { mainMenu } = require('../keyboards');
+
+  // Delegate to the IELTS Speaking handler if that flow is active.
+  const ieltsSpeaking = require('./ieltsSpeaking');
+  if (ctx.session.ieltsSpeaking) {
+    await ieltsSpeaking.endEarly(ctx);
+    return;
+  }
+
   const state = ctx.session.pendingSpeaking;
   if (!state) {
     await ctx.reply('Faol suhbat topilmadi.', mainMenu);

@@ -10,6 +10,7 @@ const { showModuleList, showModule } = require('./handlers/businessEnglish');
 const { showSchedule, showContact } = require('./handlers/orgInfo');
 const { showWritingMenu, showSubmenu, selectLesson, handleWritingSubmission } = require('./handlers/writing');
 const { showSpeakingMenu, selectScenario, handleSpeakingMessage, endSpeaking } = require('./handlers/speaking');
+const { showIeltsSpeakingMenu, startTopic: startIeltsSpeakingTopic, handleAnswer: handleIeltsSpeakingAnswer } = require('./handlers/ieltsSpeaking');
 const { showListening, showResources } = require('./handlers/listening');
 const { startListeningPart1, handleAnswer: handleListeningPart1Answer } = require('./handlers/listeningPart1');
 const {
@@ -74,6 +75,8 @@ bot.action('lresources:show', showResources);
 // Speaking Club (text-based AI roleplay)
 bot.hears('🎤 Speaking Club', showSpeakingMenu);
 bot.action(/speak:(.+)/, selectScenario);
+bot.action('ispeak:menu', showIeltsSpeakingMenu);
+bot.action(/ispeak:(.+)/, startIeltsSpeakingTopic);
 bot.hears('🛑 Suhbatni tugatish', endSpeaking);
 
 // Still reserved for later phases
@@ -86,6 +89,9 @@ bot.action(/answer:(\d+)/, handleAnswerCallback);
 bot.on('text', async (ctx) => {
   if (ctx.session.readingRun && ctx.session.readingRun.state && ctx.session.readingRun.state.awaitingCloze) {
     return handleClozeSubmission(ctx);
+  }
+  if (ctx.session.ieltsSpeaking) {
+    return handleIeltsSpeakingAnswer(ctx);
   }
   if (ctx.session.pendingWriting) {
     return handleWritingSubmission(ctx);

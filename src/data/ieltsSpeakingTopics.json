@@ -1,0 +1,77 @@
+[
+  {
+    "id": "work_career",
+    "theme": "Ish va kasb (Work & Career)",
+    "part1Questions": [
+      "Do you work or are you a student?",
+      "What do you like most about your job?",
+      "Do you think your job will change in the future?",
+      "Would you like to change your career someday?"
+    ],
+    "part2": {
+      "cueCardTitle": "Describe a job you would like to have in the future",
+      "bulletPoints": [
+        "what the job is",
+        "what skills it requires",
+        "why you would like to do it",
+        "and explain how you could get this job"
+      ]
+    },
+    "part3Questions": [
+      "Why do some people change their careers several times in their life?",
+      "Do you think salary is the most important factor when choosing a job? Why or why not?",
+      "How is the job market changing because of technology?",
+      "Should governments help train people for jobs that are in high demand?"
+    ]
+  },
+  {
+    "id": "hometown_travel",
+    "theme": "Vatan va sayohat (Hometown & Travel)",
+    "part1Questions": [
+      "Where is your hometown?",
+      "What do you like about living there?",
+      "Do you enjoy travelling to new places?",
+      "What was the last trip you took?"
+    ],
+    "part2": {
+      "cueCardTitle": "Describe a place you visited that you really enjoyed",
+      "bulletPoints": [
+        "where it was",
+        "when you went there",
+        "what you did there",
+        "and explain why you enjoyed it so much"
+      ]
+    },
+    "part3Questions": [
+      "Why do you think tourism is important for a country's economy?",
+      "How has tourism changed in your country over the last twenty years?",
+      "What are the disadvantages of a place becoming too popular with tourists?",
+      "Do you think people will travel more or less in the future? Why?"
+    ]
+  },
+  {
+    "id": "technology",
+    "theme": "Texnologiya (Technology)",
+    "part1Questions": [
+      "Do you use a smartphone every day?",
+      "What apps do you use most often?",
+      "Has technology made your life easier or more complicated?",
+      "What new technology would you like to try?"
+    ],
+    "part2": {
+      "cueCardTitle": "Describe a piece of technology that you find useful",
+      "bulletPoints": [
+        "what it is",
+        "how often you use it",
+        "what you use it for",
+        "and explain why it is useful to you"
+      ]
+    },
+    "part3Questions": [
+      "How has technology changed the way people communicate with each other?",
+      "Do you think children today spend too much time using technology?",
+      "What are the risks of relying too much on technology at work?",
+      "How might artificial intelligence change everyday life in the next ten years?"
+    ]
+  }
+]
