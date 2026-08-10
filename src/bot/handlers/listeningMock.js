@@ -55,6 +55,28 @@ async function startMock(ctx) {
   }
   await ctx.answerCbQuery();
 
+  // "Real audio" mocks ship one continuous recording (like the real exam) instead of
+  // per-item TTS clips. No GEMINI key needed for these — the audio is bundled.
+  if (mock.audioFile) {
+    await ctx.reply(
+      `🏁 ${mock.title} boshlandi!\n\n🎧 Bu — haqiqiy imtihon yozuvi: barcha qismlar birin-ketin shu audioda keladi. ` +
+        `Diqqat bilan tinglang (savollar pastda ketma-ket chiqadi), zarur bo'lsa audio faylni qayta eshiting.`
+    );
+    const ok = await sendFullMockAudio(ctx, mock);
+    if (!ok) return;
+    ctx.session.listeningRun = {
+      mode: 'mock',
+      label: mock.title,
+      queue: mock.parts,
+      index: 0,
+      scores: {},
+      state: {},
+      skipPerItemAudio: true,
+    };
+    await runQueue(ctx);
+    return;
+  }
+
   if (!process.env.GEMINI_API_KEY) {
     await ctx.reply("⚠️ AI Tutor hali sozlanmagan (GEMINI_API_KEY yo'q). Administrator .env faylga API kalitni qo'shishi kerak.");
     return;
@@ -63,6 +85,19 @@ async function startMock(ctx) {
   await ctx.reply(`🏁 ${mock.title} boshlandi!`);
   ctx.session.listeningRun = { mode: 'mock', label: mock.title, queue: mock.parts, index: 0, scores: {}, state: {} };
   await runQueue(ctx);
+}
+
+async function sendFullMockAudio(ctx, mock) {
+  await ctx.reply('⏳ Audio yuklanmoqda (bir necha o\'n daqiqa davomida bo\'lishi mumkin)...');
+  try {
+    const buffer = await engine.resolveAudio({ audioFile: mock.audioFile });
+    await ctx.replyWithAudio({ source: buffer, filename: mock.audioFile }, { caption: "🎧 To'liq Listening yozuvi (barcha qismlar)" });
+    return true;
+  } catch (err) {
+    console.error('Full mock audio resolution failed:', err.message);
+    await ctx.reply("Audio bilan ishlashda texnik xatolik yuz berdi. Birozdan so'ng qayta urinib ko'ring.");
+    return false;
+  }
 }
 
 // ==================== GENERIC PART RUNNER ====================
@@ -99,6 +134,8 @@ async function advanceToNextPart(ctx) {
 }
 
 async function sendAudioSafely(ctx, item, filenameHint) {
+  const run = ctx.session.listeningRun;
+  if (run && run.skipPerItemAudio) return true; // full recording already played once at mock start
   await ctx.reply('⏳ Audio tayyorlanmoqda...');
   try {
     const buffer = await engine.resolveAudio(item);
