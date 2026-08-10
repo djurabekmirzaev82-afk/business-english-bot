@@ -118,23 +118,31 @@ async function roleplaySummary(scenario, history) {
 
 /**
  * Evaluates a full IELTS-style Speaking attempt (Part 1 + Part 2 + Part 3 answers,
- * given as one combined transcript) using simplified IELTS Speaking band descriptors.
- * Pronunciation cannot be judged from text, so only the three text-assessable
- * criteria are used — this limitation is explicitly noted in the output.
+ * given as one combined transcript) using IELTS Speaking band descriptors.
+ * `hasAudioNotes` — if true, per-answer pronunciation notes (from actual audio) are
+ * included in the transcript, so Pronunciation IS assessed as a full criterion.
+ * If false (text-only session), Pronunciation is explicitly noted as not assessable.
  */
-async function checkIeltsSpeaking(theme, transcript) {
+async function checkIeltsSpeaking(theme, transcript, hasAudioNotes) {
+  const pronunciationInstruction = hasAudioNotes
+    ? 'The transcript includes pronunciation notes taken from the student\'s actual audio for each answer. ' +
+      'Use these to assess Pronunciation as a full fourth criterion, alongside Fluency & Coherence, Lexical ' +
+      'Resource, and Grammatical Range & Accuracy — all four official IELTS Speaking criteria.'
+    : 'No audio was provided (text-only session), so Pronunciation cannot be assessed — explicitly note this ' +
+      'and assess only the three text-assessable criteria: Fluency & Coherence, Lexical Resource, and ' +
+      'Grammatical Range & Accuracy.';
+
   const system =
     'You are an IELTS Speaking examiner giving feedback to a student in Uzbekistan. You will receive a full ' +
     'transcript of a student\'s answers across Part 1 (short interview questions), Part 2 (a 1-2 minute cue-card ' +
-    'talk), and Part 3 (discussion questions) on the same theme. Respond ONLY in Uzbek (keep the student\'s own ' +
-    'English quotes and any corrected English in English). Assess against three of the four official IELTS ' +
-    'Speaking criteria — Fluency & Coherence, Lexical Resource, and Grammatical Range & Accuracy (explicitly note ' +
-    'that Pronunciation cannot be assessed from text). Structure your response exactly like this:\n\n' +
+    `talk), and Part 3 (discussion questions) on the same theme. ${pronunciationInstruction} ` +
+    'Respond ONLY in Uzbek (keep the student\'s own English quotes and any corrected English in English). ' +
+    'Structure your response exactly like this:\n\n' +
     'TAXMINIY BALL (Band): <masalan 5.5-6.0 oralig\'ida>\n\n' +
     'FLUENCY & COHERENCE:\n- ...\n\n' +
     'LEXICAL RESOURCE (so\'z boyligi):\n- ...\n\n' +
     'GRAMMATICAL RANGE & ACCURACY:\n- ...\n\n' +
-    "ESLATMA: Talaffuz (Pronunciation) matn orqali baholanmaydi.\n\n" +
+    'PRONUNCIATION:\n- ... (yoki "Matn orqali baholanmaydi" agar audio berilmagan bo\'lsa)\n\n' +
     "YAXSHILASH BO'YICHA TAVSIYALAR:\n- ...\n\n" +
     'Be specific to what the student actually said, not generic.';
 
@@ -143,4 +151,53 @@ async function checkIeltsSpeaking(theme, transcript) {
   return callGemini([{ role: 'user', content: userMessage }], system, 900);
 }
 
-module.exports = { checkWriting, roleplayReply, roleplaySummary, checkIeltsSpeaking };
+/**
+ * Transcribes a spoken audio answer AND gives a short pronunciation note, in one call.
+ * `audioBase64` is raw base64 audio data (no data: prefix), `mimeType` e.g. 'audio/ogg' (Telegram voice notes) or 'audio/mpeg' (mp3 uploads).
+ * Returns { transcript, pronunciationNote }.
+ */
+async function transcribeAndAssessPronunciation(audioBase64, mimeType) {
+  assertConfigured();
+
+  const prompt =
+    'This is a spoken answer from an English learner practicing IELTS Speaking. Respond with EXACTLY two labelled ' +
+    'sections, nothing else:\n\n' +
+    'TRANSCRIPT:\n<write out exactly what the speaker said, in English>\n\n' +
+    'PRONUNCIATION:\n<1-2 sentences IN UZBEK on pronunciation quality — clarity, intonation, word stress, any ' +
+    'notable mispronunciations you can hear. Be specific and encouraging, not generic.>';
+
+  const body = {
+    contents: [
+      {
+        role: 'user',
+        parts: [{ text: prompt }, { inlineData: { mimeType, data: audioBase64 } }],
+      },
+    ],
+    generationConfig: { maxOutputTokens: 500, temperature: 0.4 },
+  };
+
+  const response = await fetch(`${API_URL}?key=${config.geminiApiKey}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+
+  if (!response.ok) {
+    const errText = await response.text();
+    throw new Error(`Gemini API xatosi (${response.status}): ${errText}`);
+  }
+
+  const data = await response.json();
+  const candidate = data.candidates?.[0];
+  const text = candidate?.content?.parts?.map((p) => p.text).join('') || '';
+
+  const transcriptMatch = text.match(/TRANSCRIPT:\s*([\s\S]*?)(?=PRONUNCIATION:|$)/i);
+  const pronunciationMatch = text.match(/PRONUNCIATION:\s*([\s\S]*)/i);
+
+  return {
+    transcript: transcriptMatch ? transcriptMatch[1].trim() : text.trim(),
+    pronunciationNote: pronunciationMatch ? pronunciationMatch[1].trim() : '',
+  };
+}
+
+module.exports = { checkWriting, roleplayReply, roleplaySummary, checkIeltsSpeaking, transcribeAndAssessPronunciation };

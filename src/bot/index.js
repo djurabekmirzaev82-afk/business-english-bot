@@ -10,7 +10,7 @@ const { showModuleList, showModule } = require('./handlers/businessEnglish');
 const { showSchedule, showContact } = require('./handlers/orgInfo');
 const { showWritingMenu, showSubmenu, selectLesson, handleWritingSubmission } = require('./handlers/writing');
 const { showSpeakingMenu, selectScenario, handleSpeakingMessage, endSpeaking } = require('./handlers/speaking');
-const { showIeltsSpeakingMenu, startTopic: startIeltsSpeakingTopic, handleAnswer: handleIeltsSpeakingAnswer } = require('./handlers/ieltsSpeaking');
+const { showIeltsSpeakingMenu, startTopic: startIeltsSpeakingTopic, handleAnswer: handleIeltsSpeakingAnswer, handleAudioAnswer: handleIeltsSpeakingAudio } = require('./handlers/ieltsSpeaking');
 const { showListening, showResources } = require('./handlers/listening');
 const { startListeningPart1, handleAnswer: handleListeningPart1Answer } = require('./handlers/listeningPart1');
 const {
@@ -101,6 +101,17 @@ bot.on('text', async (ctx) => {
   }
   // No active flow and text didn't match any menu button — gently redirect.
   await ctx.reply('Quyidagi menyudan bo\'limni tanlang 👇', mainMenu);
+});
+
+// Voice notes / audio files are only meaningful during an active IELTS Speaking session.
+bot.on(['voice', 'audio'], async (ctx) => {
+  if (ctx.session.ieltsSpeaking) {
+    return handleIeltsSpeakingAudio(ctx);
+  }
+  await ctx.reply(
+    "Ovozli xabar faqat \"🎓 IELTS Speaking\" mashqi davomida ishlaydi. Quyidagi menyudan bo'limni tanlang 👇",
+    mainMenu
+  );
 });
 
 bot.catch((err, ctx) => {
