@@ -88,5 +88,25 @@
     "wordCountMax": 200,
     "lesson": "🆚 *Comparison Essay — tuzilishi*\n\n📏 *Hajm: 180-200 so'z*\n\n1️⃣ *Kirish:* Ikkala variantni tanishtiring\n2️⃣ *Asosiy qism 1:* Birinchi variant\n3️⃣ *Asosiy qism 2:* Ikkinchi variant\n4️⃣ *Xulosa:* Qaysi biri afzalroq ekanini aniq bildiring\n\n*Foydali iboralar:*\n— Compared to..., ... is...\n— Both options have their merits, however...\n— All things considered, ... is the better choice because...",
     "taskPrompt": "✍ *Vazifa (180-200 so'z):* \"Is it better to work for a large corporation or a small startup?\" mavzusida to'liq insho yozing."
+  },
+  {
+    "id": "academic_task1_graph",
+    "task": "IELTS Academic Task 1",
+    "category": "academic_task1",
+    "title": "📊 Grafik/Diagrammani tasvirlash (Line/Bar Chart)",
+    "wordCountMin": 150,
+    "wordCountMax": 200,
+    "lesson": "📊 *Academic Task 1 — Grafik/Diagrammani tasvirlash*\n\n📏 *Hajm: kamida 150 so'z*\n\nBu yerda insho yozilmaydi — sizga chizma (line/bar chart, jadval) beriladi, va siz undagi **ma'lumotlarni tasvirlaysiz** (o'z fikringizni bildirmaysiz).\n\n1️⃣ *Kirish (Introduction):* Chizma sarlavhasini o'z so'zlaringiz bilan qayta ifodalang (paraphrase) — nusxa ko'chirmang.\n2️⃣ *Umumiy tavsif (Overview):* 2 ta ENG MUHIM tendensiyani (eng yuqori, eng past, umumiy o'zgarish yo'nalishi) qisqa yozing — bu qism juda muhim, ko'pincha talabalar buni unutadi.\n3️⃣ *Tafsilotlar (Body 1-2):* Aniq raqamlar bilan taqqoslang, guruhlab tasvirlang (masalan, o'sayotgan ko'rsatkichlar / kamayayotganlar).\n\n🗣 *Tendensiya ifodalari:*\n— increased/rose/grew steadily/sharply/gradually\n— decreased/fell/declined slightly/dramatically\n— remained stable/constant\n— fluctuated\n— reached a peak of..., hit its lowest point at...\n\n⚠️ *Muhim qoidalar:*\n— Shaxsiy fikr bildirmang (\"I think...\" ishlatilmaydi)\n— Har bir raqamni tasvirlash shart emas — asosiy tendensiyalarni tanlab yozing\n— Kelajak haqida taxmin qilmang, faqat berilgan ma'lumotni tasvirlang",
+    "taskPrompt": "✍ *Vazifa (kamida 150 so'z):* Quyidagi ma'lumotlar asosida hisobot yozing:\n\n*Bir kompaniyaning yillik daromadi (million dollarda):*\n2019: 12\n2020: 8 (pandemiya)\n2021: 15\n2022: 22\n2023: 35\n\nTendensiyani tasvirlab, umumiy xulosa (overview) bilan boshlang."
+  },
+  {
+    "id": "academic_task1_process",
+    "task": "IELTS Academic Task 1",
+    "category": "academic_task1",
+    "title": "⚙️ Jarayonni tasvirlash (Process Diagram)",
+    "wordCountMin": 150,
+    "wordCountMax": 200,
+    "lesson": "⚙️ *Academic Task 1 — Jarayon diagrammasini tasvirlash*\n\n📏 *Hajm: kamida 150 so'z*\n\nSizga bosqichma-bosqich jarayon (masalan, ishlab chiqarish jarayoni) beriladi, uni tartib bilan tasvirlaysiz.\n\n1️⃣ *Kirish:* Jarayon nima haqida ekanini umumiy aytib o'ting.\n2️⃣ *Umumiy tavsif:* Jarayon nechta asosiy bosqichdan iboratligini va qayerdan boshlanib, qayerda tugashini ayting.\n3️⃣ *Bosqichlar:* Har bir bosqichni **Passive Voice** va ketma-ketlik so'zlari bilan tasvirlang.\n\n🗣 *Ketma-ketlik so'zlari:*\n— First/Initially, ... Then/Next/After that, ... Following this, ... Finally/Lastly, ...\n\n🗣 *Passive Voice namunasi:*\n— The raw material is collected.\n— It is then transported to the factory.\n— Once processed, it is packaged for distribution.\n\n⚠️ *Muhim:* Jarayon tasvirida deyarli har doim **Passive Voice** ishlatiladi (chunki kim bajarayotgani emas, nima sodir bo'layotgani muhim).",
+    "taskPrompt": "✍ *Vazifa (kamida 150 so'z):* Quyidagi jarayonni tasvirlab bering:\n\n*Choy ishlab chiqarish jarayoni:*\n1) Choy barglari terib olinadi → 2) Barglar quritiladi → 3) Barglar maydalanadi → 4) Fermentatsiya qilinadi → 5) Qayta quritiladi → 6) Saralanadi va qadoqlanadi → 7) Do'konlarga jo'natiladi."
   }
 ]

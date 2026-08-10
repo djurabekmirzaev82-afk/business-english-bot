@@ -20,12 +20,20 @@ function mainMenuKeyboard() {
     [Markup.button.callback(findLesson('task1_1_informal_letter').title, 'wlesson:task1_1_informal_letter')],
     [Markup.button.callback(findLesson('task1_2_formal_letter').title, 'wlesson:task1_2_formal_letter')],
     [Markup.button.callback('📝 Task 2 — Insho turlari (Essay Types)', 'wsubmenu:essay')],
+    [Markup.button.callback('📊 IELTS Academic Task 1 (Diagramma)', 'wsubmenu:academic')],
   ]);
 }
 
 function essayMenuKeyboard() {
   const essayLessons = lessons.filter((l) => l.category === 'essay');
   const buttons = essayLessons.map((l) => [Markup.button.callback(l.title, `wlesson:${l.id}`)]);
+  buttons.push([Markup.button.callback('⬅ Orqaga', 'wsubmenu:main')]);
+  return Markup.inlineKeyboard(buttons);
+}
+
+function academicMenuKeyboard() {
+  const academicLessons = lessons.filter((l) => l.category === 'academic_task1');
+  const buttons = academicLessons.map((l) => [Markup.button.callback(l.title, `wlesson:${l.id}`)]);
   buttons.push([Markup.button.callback('⬅ Orqaga', 'wsubmenu:main')]);
   return Markup.inlineKeyboard(buttons);
 }
@@ -42,6 +50,8 @@ async function showSubmenu(ctx) {
   await ctx.answerCbQuery();
   if (which === 'essay') {
     await ctx.reply('📝 Task 2 — insho turini tanlang:', essayMenuKeyboard());
+  } else if (which === 'academic') {
+    await ctx.reply('📊 IELTS Academic Task 1 — turini tanlang:', academicMenuKeyboard());
   } else {
     await ctx.reply('✍ Writing — vazifani tanlang:', mainMenuKeyboard());
   }
