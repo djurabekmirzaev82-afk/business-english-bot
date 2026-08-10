@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS users (
 
 CREATE TABLE IF NOT EXISTS test_questions (
     id                SERIAL PRIMARY KEY,
-    level             TEXT NOT NULL CHECK (level IN ('A1', 'A2', 'B1', 'B2', 'C1')),
+    level             TEXT NOT NULL CHECK (level IN ('A1', 'A2', 'B1', 'B2', 'C1', 'C2')),
     skill             TEXT NOT NULL DEFAULT 'grammar' CHECK (skill IN ('grammar', 'vocabulary', 'reading')),
     question_text     TEXT NOT NULL,
     options           JSONB NOT NULL,      -- e.g. ["go", "goes", "going", "gone"]
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS test_attempts (
     finished_at       TIMESTAMPTZ,
     total_questions   INTEGER NOT NULL DEFAULT 0,
     correct_answers   INTEGER NOT NULL DEFAULT 0,
-    result_level      TEXT CHECK (result_level IN ('A1', 'A2', 'B1', 'B2', 'C1')),
+    result_level      TEXT CHECK (result_level IN ('A1', 'A2', 'B1', 'B2', 'C1', 'C2')),
     status            TEXT NOT NULL DEFAULT 'in_progress' CHECK (status IN ('in_progress', 'completed', 'abandoned'))
 );
 
@@ -49,3 +49,13 @@ CREATE TABLE IF NOT EXISTS test_answers (
 CREATE INDEX IF NOT EXISTS idx_test_questions_level ON test_questions(level);
 CREATE INDEX IF NOT EXISTS idx_test_attempts_user ON test_attempts(user_id);
 CREATE INDEX IF NOT EXISTS idx_test_answers_attempt ON test_answers(attempt_id);
+
+-- Migration fix: earlier deployments created these CHECK constraints without 'C2'.
+-- Safely widen them here so existing databases (not just brand-new ones) accept C2.
+ALTER TABLE test_questions DROP CONSTRAINT IF EXISTS test_questions_level_check;
+ALTER TABLE test_questions ADD CONSTRAINT test_questions_level_check
+    CHECK (level IN ('A1', 'A2', 'B1', 'B2', 'C1', 'C2'));
+
+ALTER TABLE test_attempts DROP CONSTRAINT IF EXISTS test_attempts_result_level_check;
+ALTER TABLE test_attempts ADD CONSTRAINT test_attempts_result_level_check
+    CHECK (result_level IN ('A1', 'A2', 'B1', 'B2', 'C1', 'C2'));

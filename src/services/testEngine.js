@@ -1,20 +1,23 @@
 const pool = require('../db/pool');
 
 /**
- * CEFR bands based on total correct answers out of the fixed 20-question test
- * (4 questions per level, ordered A1 -> C1 by difficulty).
+ * CEFR bands for the 20-question placement test (A2 floor — no A1 content —
+ * up to C2 ceiling). Distribution: Q1-5 A2, Q6-10 B1, Q11-15 B2, Q16-18 C1, Q19-20 C2.
+ * C2 is only awarded if BOTH C2-level questions were answered correctly — otherwise
+ * the result is capped at C1, since 2 questions alone aren't reliable enough to
+ * confidently certify C2 on their own.
  */
 const LEVEL_BANDS = [
-  { min: 0, max: 4, level: 'A1' },
-  { min: 5, max: 8, level: 'A2' },
-  { min: 9, max: 12, level: 'B1' },
-  { min: 13, max: 16, level: 'B2' },
-  { min: 17, max: 20, level: 'C1' },
+  { min: 0, max: 4, level: 'A2' },
+  { min: 5, max: 9, level: 'B1' },
+  { min: 10, max: 14, level: 'B2' },
+  { min: 15, max: 17, level: 'C1' },
+  { min: 18, max: 20, level: 'C2' }, // provisional — see the C2 gate in finishAttempt
 ];
 
 function scoreToLevel(correct) {
   const band = LEVEL_BANDS.find((b) => correct >= b.min && correct <= b.max);
-  return band ? band.level : 'A1';
+  return band ? band.level : 'A2';
 }
 
 async function getAllQuestionsOrdered() {
@@ -53,7 +56,21 @@ async function finishAttempt(attemptId) {
     [attemptId]
   );
   const correct = rows[0].correct;
-  const level = scoreToLevel(correct);
+  let level = scoreToLevel(correct);
+
+  // C2 gate: only confirm C2 if BOTH C2-level questions were answered correctly.
+  if (level === 'C2') {
+    const { rows: c2Rows } = await pool.query(
+      `SELECT COUNT(*)::int AS c2_correct
+       FROM test_answers ta
+       JOIN test_questions tq ON tq.id = ta.question_id
+       WHERE ta.attempt_id = $1 AND tq.level = 'C2' AND ta.is_correct = true`,
+      [attemptId]
+    );
+    if (c2Rows[0].c2_correct < 2) {
+      level = 'C1'; // not enough evidence for C2 — cap the result at C1
+    }
+  }
 
   await pool.query(
     `UPDATE test_attempts
