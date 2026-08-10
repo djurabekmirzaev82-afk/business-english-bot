@@ -45,7 +45,7 @@ bot.hears('🏠 Asosiy menu', (ctx) => ctx.reply('Asosiy menyu:', mainMenu));
 
 // Business English modules
 bot.hears('💼 Business English', showModuleList);
-bot.action(/bemod:(.+)/, showModule);
+bot.action(/^bemod:(.+)$/, showModule);
 
 // Schedule & Contact (static info — edit src/config/orgInfo.js)
 bot.hears('📅 Schedule', showSchedule);
@@ -53,36 +53,36 @@ bot.hears('☎ Contact', showContact);
 
 // Writing (Multilevel-format lessons + AI-checked tasks)
 bot.hears('✍ Writing', showWritingMenu);
-bot.action(/wsubmenu:(.+)/, showSubmenu);
-bot.action(/wlesson:(.+)/, selectLesson);
+bot.action(/^wsubmenu:(.+)$/, showSubmenu);
+bot.action(/^wlesson:(.+)$/, selectLesson);
 
 // Reading (Multilevel-format: standalone part drills + full 5-part mocks)
 bot.hears('📖 Reading', showReadingMockMenu);
 bot.action('rread:menu:drills', showDrillMenu);
 bot.action('rread:menu:mocks', showMockMenu);
-bot.action(/rread:startdrillpart:(\d+)/, startDrill);
-bot.action(/rread:startmock:(.+)/, startMock);
-bot.action(/rread:mm:(.+)/, handleMmAnswer);
-bot.action(/rread:mc:(\d+):(\d+)/, handleMcAnswer);
-bot.action(/rread:gap:(.+)/, handleGapAnswer);
+bot.action(/^rread:startdrillpart:(\d+)$/, startDrill);
+bot.action(/^rread:startmock:(.+)$/, startMock);
+bot.action(/^rread:mm:(.+)$/, handleMmAnswer);
+bot.action(/^rread:mc:(\d+):(\d+)$/, handleMcAnswer);
+bot.action(/^rread:gap:(.+)$/, handleGapAnswer);
 
 // Listening (curated external resource links)
 bot.hears('🎧 Listening', showListening);
 bot.action('lpart1:start', startListeningPart1);
-bot.action(/lpart1:(\d+)/, handleListeningPart1Answer);
+bot.action(/^lpart1:(\d+)$/, handleListeningPart1Answer);
 bot.action('lresources:show', showResources);
 
 // Speaking Club (text-based AI roleplay)
 bot.hears('🎤 Speaking Club', showSpeakingMenu);
-bot.action(/speak:(.+)/, selectScenario);
+bot.action(/^speak:(.+)$/, selectScenario);
 bot.action('ispeak:menu', showIeltsSpeakingMenu);
-bot.action(/ispeak:(.+)/, startIeltsSpeakingTopic);
+bot.action(/^ispeak:(.+)$/, startIeltsSpeakingTopic);
 bot.hears('🛑 Suhbatni tugatish', endSpeaking);
 
 // Still reserved for later phases
 ['📚 Courses'].forEach((label) => bot.hears(label, comingSoon));
 
-bot.action(/answer:(\d+)/, handleAnswerCallback);
+bot.action(/^answer:(\d+)$/, handleAnswerCallback);
 
 // Generic free-text router: only fires when no bot.hears() label matched above.
 // Routes to whichever flow (Writing / Speaking / Reading Mock Cloze) the user currently has active.
