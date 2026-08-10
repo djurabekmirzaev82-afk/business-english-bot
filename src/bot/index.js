@@ -11,12 +11,16 @@ const { showSchedule, showContact } = require('./handlers/orgInfo');
 const { showWritingMenu, showSubmenu, selectLesson, handleWritingSubmission } = require('./handlers/writing');
 const { showSpeakingMenu, selectScenario, handleSpeakingMessage, endSpeaking } = require('./handlers/speaking');
 const { showIeltsSpeakingMenu, startTopic: startIeltsSpeakingTopic, handleAnswer: handleIeltsSpeakingAnswer, handleAudioAnswer: handleIeltsSpeakingAudio } = require('./handlers/ieltsSpeaking');
-const { showListening, showResources } = require('./handlers/listening');
-const { startListeningPart1, handleAnswer: handleListeningPart1Answer } = require('./handlers/listeningPart1');
-const { startListeningPart2, handleAnswer: handleListeningPart2Answer } = require('./handlers/listeningPart2');
-const { startListeningPart3, handleAnswer: handleListeningPart3Answer } = require('./handlers/listeningPart3');
-const { startListeningPart5, handleAnswer: handleListeningPart5Answer } = require('./handlers/listeningPart5');
-const { startListeningPart6, handleAnswer: handleListeningPart6Answer } = require('./handlers/listeningPart6');
+const {
+  showListeningMenu,
+  showResources: showListeningResources,
+  startPart: startListeningPart,
+  startMock: startListeningMock,
+  handleSentenceReplyAnswer,
+  handleSpeakerMatchingAnswer,
+  handleExtractsMcAnswer,
+  handleTextAnswer: handleListeningTextAnswer,
+} = require('./handlers/listeningMock');
 const { showAdminStats } = require('./handlers/admin');
 const {
   showReadingMenu: showReadingMockMenu,
@@ -73,17 +77,14 @@ bot.action(/^rread:mm:(.+)$/, handleMmAnswer);
 bot.action(/^rread:mc:(\d+):(\d+)$/, handleMcAnswer);
 bot.action(/^rread:gap:(.+)$/, handleGapAnswer);
 
-// Listening (curated external resource links)
-bot.hears('🎧 Listening', showListening);
-bot.action('lpart1:start', startListeningPart1);
-bot.action(/^lpart1:(\d+)$/, handleListeningPart1Answer);
-bot.action('lpart2:start', startListeningPart2);
-bot.action('lpart3:start', startListeningPart3);
-bot.action(/^lpart3:([A-F])$/, handleListeningPart3Answer);
-bot.action('lpart5:start', startListeningPart5);
-bot.action(/^lpart5:(\d+):(\d+):(\d+)$/, handleListeningPart5Answer);
-bot.action('lpart6:start', startListeningPart6);
-bot.action('lresources:show', showResources);
+// Listening (Multilevel-format: standalone part practice + full mocks, MP3-or-TTS audio)
+bot.hears('🎧 Listening', showListeningMenu);
+bot.action(/^lmock:startpart:(\d+)$/, startListeningPart);
+bot.action(/^lmock:startmock:(.+)$/, startListeningMock);
+bot.action(/^lmock:sr:(\d+)$/, handleSentenceReplyAnswer);
+bot.action(/^lmock:sm:([A-F])$/, handleSpeakerMatchingAnswer);
+bot.action(/^lmock:emc:(\d+):(\d+):(\d+)$/, handleExtractsMcAnswer);
+bot.action('lresources:show', showListeningResources);
 
 // Speaking Club (text-based AI roleplay)
 bot.hears('🎤 Speaking Club', showSpeakingMenu);
@@ -112,11 +113,9 @@ bot.on('text', async (ctx) => {
   if (ctx.session.pendingSpeaking) {
     return handleSpeakingMessage(ctx);
   }
-  if (ctx.session.listeningPart2 && ctx.session.listeningPart2.awaiting) {
-    return handleListeningPart2Answer(ctx);
-  }
-  if (ctx.session.listeningPart6 && ctx.session.listeningPart6.awaiting) {
-    return handleListeningPart6Answer(ctx);
+  if (ctx.session.listeningRun) {
+    const handled = await handleListeningTextAnswer(ctx);
+    if (handled) return;
   }
   // No active flow and text didn't match any menu button — gently redirect.
   await ctx.reply('Quyidagi menyudan bo\'limni tanlang 👇', mainMenu);
