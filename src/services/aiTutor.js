@@ -148,7 +148,7 @@ async function checkIeltsSpeaking(theme, transcript, hasAudioNotes) {
 
   const userMessage = `Theme: ${theme}\n\nFull transcript:\n"""\n${transcript}\n"""\n\nPlease evaluate according to the format above.`;
 
-  return callGemini([{ role: 'user', content: userMessage }], system, 900);
+  return callGemini([{ role: 'user', content: userMessage }], system, 1300);
 }
 
 /**
@@ -173,7 +173,7 @@ async function transcribeAndAssessPronunciation(audioBase64, mimeType) {
         parts: [{ text: prompt }, { inlineData: { mimeType, data: audioBase64 } }],
       },
     ],
-    generationConfig: { maxOutputTokens: 500, temperature: 0.4 },
+    generationConfig: { maxOutputTokens: 2000, temperature: 0.4 },
   };
 
   const response = await fetch(`${API_URL}?key=${config.geminiApiKey}`, {
