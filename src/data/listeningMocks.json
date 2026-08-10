@@ -345,5 +345,315 @@
         ]
       }
     ]
+  },
+  {
+    "id": "mock2",
+    "title": "Listening Mock Test 2 (Full Mock — haqiqiy audio)",
+    "audioFile": "mock2_full.mp3",
+    "parts": [
+      {
+        "partNumber": 1,
+        "taskType": "sentence_reply",
+        "title": "Part 1 — Gapga javob tanlash",
+        "items": [
+          {
+            "number": 1,
+            "options": [
+              "I think so. It should be.",
+              "No, I think that's all that I need.",
+              "Sure, no problem."
+            ],
+            "correct": 1
+          },
+          {
+            "number": 2,
+            "options": [
+              "Sure, no problem.",
+              "When does it happen?",
+              "Why, we are in no rush!"
+            ],
+            "correct": 0
+          },
+          {
+            "number": 3,
+            "options": [
+              "You should take a class.",
+              "Read the manual.",
+              "There's nothing we can do."
+            ],
+            "correct": 1
+          },
+          {
+            "number": 4,
+            "options": [
+              "Should we cross it too?",
+              "Why did he do that?",
+              "When did it happen?"
+            ],
+            "correct": 1
+          },
+          {
+            "number": 5,
+            "options": [
+              "I'll try again next time.",
+              "Ok, I'll pick them up.",
+              "Of course, I fed them today."
+            ],
+            "correct": 2
+          },
+          {
+            "number": 6,
+            "options": [
+              "I live with my grandparents.",
+              "We went to party with my family yesterday.",
+              "Yes, We do. Always."
+            ],
+            "correct": 2
+          },
+          {
+            "number": 7,
+            "options": [
+              "That is her sister.",
+              "Where?",
+              "Marie is so sad today."
+            ],
+            "correct": 0
+          },
+          {
+            "number": 8,
+            "options": [
+              "Ok, I will",
+              "Yes, he remembers",
+              "No, it can't be"
+            ],
+            "correct": 0
+          }
+        ]
+      },
+      {
+        "partNumber": 2,
+        "taskType": "note_completion",
+        "title": "Part 2 — Note Completion",
+        "notesTemplate": "LONDON TAXIS AND PRIVATE HIRE VEHICLES\n\nMethods of payment: (9)___, or with credit and debit cards\nWhere to stop a cab: in the (10)___, or at cab ranks\nTariff 2: Monday – Friday: 8 pm – 10 pm\n(11)___ & Sunday: 6 am – 10 pm\nTariff 3: every night: 10 pm – 6 am & on (12)___ holidays\nRequirements: taxi drivers to complete a (13)___ examination\nNotice: Private hire vehicles must always be (14)___ either at an operator's office, or by phone",
+        "gaps": [
+          {
+            "number": 9,
+            "answers": [
+              "cash"
+            ]
+          },
+          {
+            "number": 10,
+            "answers": [
+              "street"
+            ]
+          },
+          {
+            "number": 11,
+            "answers": [
+              "Saturday"
+            ]
+          },
+          {
+            "number": 12,
+            "answers": [
+              "public"
+            ]
+          },
+          {
+            "number": 13,
+            "answers": [
+              "medical"
+            ]
+          },
+          {
+            "number": 14,
+            "answers": [
+              "booked"
+            ]
+          }
+        ]
+      },
+      {
+        "partNumber": 3,
+        "taskType": "speaker_matching",
+        "title": "Part 3 — Speaker Matching",
+        "speakers": [
+          {
+            "number": 15
+          },
+          {
+            "number": 16
+          },
+          {
+            "number": 17
+          },
+          {
+            "number": 18
+          }
+        ],
+        "options": [
+          {
+            "label": "A",
+            "text": "a doctor"
+          },
+          {
+            "label": "B",
+            "text": "a circus trainer"
+          },
+          {
+            "label": "C",
+            "text": "a retired person"
+          },
+          {
+            "label": "D",
+            "text": "a zoo keeper"
+          },
+          {
+            "label": "E",
+            "text": "a pet shop owner"
+          },
+          {
+            "label": "F",
+            "text": "a blind person"
+          }
+        ],
+        "answers": {
+          "15": "D",
+          "16": "C",
+          "17": "F",
+          "18": "A"
+        }
+      },
+      {
+        "partNumber": 5,
+        "taskType": "extracts_mc",
+        "title": "Part 5 — Extractlar",
+        "extracts": [
+          {
+            "extractNumber": 1,
+            "label": "Extract One — Two people talking about a play they saw at the theatre",
+            "questions": [
+              {
+                "number": 24,
+                "q": "What do we learn about the writer of the play?",
+                "options": [
+                  "He died.",
+                  "He is dying.",
+                  "He nearly died."
+                ],
+                "correct": 2
+              },
+              {
+                "number": 25,
+                "q": "What do the speakers agree on?",
+                "options": [
+                  "The writer is quite predictable.",
+                  "The writer's style has changed direction.",
+                  "The play wasn't as funny as some of the writer's earlier plays."
+                ],
+                "correct": 1
+              }
+            ]
+          },
+          {
+            "extractNumber": 2,
+            "label": "Extract Two — A radio interview with a trade and commerce researcher",
+            "questions": [
+              {
+                "number": 26,
+                "q": "According to Pablo Jenson,",
+                "options": [
+                  "a variety of different shops tends to boost sales.",
+                  "traders that have something in common can boost each other's sales.",
+                  "butchers are the most successful traders."
+                ],
+                "correct": 1
+              },
+              {
+                "number": 27,
+                "q": "Jenson's theory...",
+                "options": [
+                  "advertised for similar retailers to open shops in one particular area.",
+                  "works better for bakers and butchers than for other kinds of retailers.",
+                  "seems to have been proved to be credible."
+                ],
+                "correct": 2
+              }
+            ]
+          },
+          {
+            "extractNumber": 3,
+            "label": "Extract Three — A report about holiday homes in the Mediterranean",
+            "questions": [
+              {
+                "number": 28,
+                "q": "The Costa de la Cruz...",
+                "options": [
+                  "is being spoiled by developers.",
+                  "is the cheapest area of Spain in which you can buy a holiday home.",
+                  "is close to Portugal."
+                ],
+                "correct": 2
+              },
+              {
+                "number": 29,
+                "q": "According to Chris Mercer,",
+                "options": [
+                  "there is a danger that the Costa de la Cruz will lose its appeal.",
+                  "the Costa de la Cruz can be developed without the area being damaged.",
+                  "the government has put a stop to the Costa de la Cruz being developed further."
+                ],
+                "correct": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "partNumber": 6,
+        "taskType": "note_completion",
+        "title": "Part 6 — Note Completion",
+        "notesTemplate": "THE GRAND UNION CANAL\n\nThe canals were built despite the fact that there was no public (30)___ and very little technology.\nFrom 1790 to 1929, there were many canals that were (31)___ with each other but which were not uniform in size.\nThe new union of canals provided a (32)___ link between major industrial cities.\nThere are plenty of natural habitats for a variety of wildlife on and around the canals.\nWalkers can go to the nearest waterway office to get information on circular (33)___ so they can start and end at the same place.\nAnglers can fish in the canals and (34)___.\nIf you want to go fishing, you must buy a rod license.\nThe waterways authority request that people are (35)___ towards the canal users.",
+        "gaps": [
+          {
+            "number": 30,
+            "answers": [
+              "finance"
+            ]
+          },
+          {
+            "number": 31,
+            "answers": [
+              "competing"
+            ]
+          },
+          {
+            "number": 32,
+            "answers": [
+              "continuous"
+            ]
+          },
+          {
+            "number": 33,
+            "answers": [
+              "walks"
+            ]
+          },
+          {
+            "number": 34,
+            "answers": [
+              "reservoirs"
+            ]
+          },
+          {
+            "number": 35,
+            "answers": [
+              "considerate"
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]
