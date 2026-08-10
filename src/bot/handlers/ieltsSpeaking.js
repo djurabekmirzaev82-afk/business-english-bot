@@ -17,10 +17,9 @@ const endKeyboard = Markup.keyboard([['🛑 Suhbatni tugatish']]).resize();
 async function showIeltsSpeakingMenu(ctx) {
   await ctx.reply(
     '🎓 IELTS Speaking (Part 1 → Part 2 → Part 3)\n\n' +
-      "Mavzuni tanlang. Har bir savolga **matn yozib** yoki **ovozli xabar (🎤) yuborib** javob berishingiz mumkin " +
-      "— ovozli javob yuborsangiz, AI talaffuzingizni ham baholaydi!\n\n" +
-      "Avval qisqa savollar (Part 1), so'ng Cue Card bo'yicha 1-2 daqiqalik nutq (Part 2), " +
-      "oxirida chuqurroq muhokama savollari (Part 3) beriladi.",
+      "Mavzuni tanlang. Har bir Part barcha savollari bilan bitta karta sifatida ko'rsatiladi — " +
+      "shundan so'ng faqat 🎤 mikrofonni bosib, barcha savollarga ketma-ket gapirib javob bering " +
+      "(yoki xohlasangiz matn yozing).",
     { parse_mode: 'Markdown', ...topicKeyboard() }
   );
 }
@@ -46,91 +45,70 @@ async function startTopic(ctx) {
   ctx.session.ieltsSpeaking = {
     topicId,
     stage: 'part1',
-    p1Index: 0,
-    transcript: [], // { part, question, answer, pronunciationNote? }
+    transcript: [], // { part, answer, pronunciationNote? }
   };
 
-  await ctx.reply(
-    `🎬 Mavzu: *${topic.theme}*\n\n*Part 1* — qisqa savollar boshlandi.\n` +
-      "Javobingizni matn yoki ovozli xabar (🎤) sifatida yuboring.",
-    { parse_mode: 'Markdown', ...endKeyboard }
-  );
-  await sendPart1Question(ctx, topic);
+  await ctx.reply(`🎬 Mavzu: *${topic.theme}*`, { parse_mode: 'Markdown', ...endKeyboard });
+  await sendPart1Card(ctx, topic);
 }
 
-async function sendPart1Question(ctx, topic) {
-  const state = ctx.session.ieltsSpeaking;
-  const q = topic.part1Questions[state.p1Index];
-  await ctx.reply(`❓ ${q}`);
-}
-
-async function sendPart2CueCard(ctx, topic) {
-  const state = ctx.session.ieltsSpeaking;
-  state.stage = 'part2';
-  const bullets = topic.part2.bulletPoints.map((b) => `— ${b}`).join('\n');
+async function sendPart1Card(ctx, topic) {
+  const questionsList = topic.part1Questions.map((q, i) => `${i + 1}) ${q}`).join('\n');
   await ctx.reply(
-    `🎬 *Part 2* — Cue Card\n\n` +
-      `*${topic.part2.cueCardTitle}*\n\n` +
-      `Quyidagilarni aytib bering:\n${bullets}\n\n` +
-      "Real imtihonda 1 daqiqa tayyorlanib, 1-2 daqiqa gapirasiz. Javobingizni matn yoki ovozli xabar " +
-      "sifatida yuboring (kamida 100 so'z / ~1 daqiqa tavsiya etiladi).",
+    `🗂 *Part 1*\n\n${questionsList}\n\n` +
+      "🎤 Endi mikrofonni bosib, shu savollarning barchasiga ketma-ket gapirib javob bering " +
+      "(yoki matn yozing).",
     { parse_mode: 'Markdown' }
   );
 }
 
-async function sendPart3Questions(ctx, topic) {
+async function sendPart2Card(ctx, topic) {
   const state = ctx.session.ieltsSpeaking;
-  state.stage = 'part3';
-  state.p3Index = 0;
-  await ctx.reply("🎬 *Part 3* — chuqurroq muhokama savollari boshlandi.", { parse_mode: 'Markdown' });
-  await sendPart3Question(ctx, topic);
+  state.stage = 'part2';
+  const bullets = topic.part2.bulletPoints.map((b) => `— ${b}`).join('\n');
+  await ctx.reply(
+    `🗂 *Part 2* — Cue Card\n\n` +
+      `*${topic.part2.cueCardTitle}*\n\n` +
+      `Quyidagilarni aytib bering:\n${bullets}\n\n` +
+      "🎤 Real imtihonda 1 daqiqa tayyorlanib, 1-2 daqiqa gapirasiz. Mikrofonni bosib javob bering " +
+      "(yoki matn yozing, kamida 100 so'z tavsiya etiladi).",
+    { parse_mode: 'Markdown' }
+  );
 }
 
-async function sendPart3Question(ctx, topic) {
+async function sendPart3Card(ctx, topic) {
   const state = ctx.session.ieltsSpeaking;
-  const q = topic.part3Questions[state.p3Index];
-  await ctx.reply(`❓ ${q}`);
+  state.stage = 'part3';
+  const questionsList = topic.part3Questions.map((q, i) => `${i + 1}) ${q}`).join('\n');
+  await ctx.reply(
+    `🗂 *Part 3*\n\n${questionsList}\n\n` +
+      "🎤 Mikrofonni bosib, shu savollarning barchasiga ketma-ket gapirib javob bering (yoki matn yozing).",
+    { parse_mode: 'Markdown' }
+  );
 }
 
 /**
- * Central place that records one answer (text or transcribed-from-audio) and
- * advances the flow to the next question/stage. Shared by both the text and
- * voice/audio input paths.
+ * Central place that records one part's full answer (text or transcribed-from-audio)
+ * and advances the flow to the next card. Shared by both the text and voice/audio paths.
  */
 async function recordAnswerAndAdvance(ctx, topic, answerText, pronunciationNote) {
   const state = ctx.session.ieltsSpeaking;
 
   if (state.stage === 'part1') {
-    const q = topic.part1Questions[state.p1Index];
-    state.transcript.push({ part: 'Part 1', question: q, answer: answerText, pronunciationNote });
-
-    const nextIdx = state.p1Index + 1;
-    if (nextIdx >= topic.part1Questions.length) {
-      await sendPart2CueCard(ctx, topic);
-    } else {
-      state.p1Index = nextIdx;
-      await sendPart1Question(ctx, topic);
-    }
+    state.transcript.push({ part: 'Part 1', answer: answerText, pronunciationNote });
+    await sendPart2Card(ctx, topic);
     return;
   }
 
   if (state.stage === 'part2') {
-    state.transcript.push({ part: 'Part 2', question: topic.part2.cueCardTitle, answer: answerText, pronunciationNote });
-    await sendPart3Questions(ctx, topic);
+    state.transcript.push({ part: 'Part 2', answer: answerText, pronunciationNote });
+    await sendPart3Card(ctx, topic);
     return;
   }
 
   if (state.stage === 'part3') {
-    const q = topic.part3Questions[state.p3Index];
-    state.transcript.push({ part: 'Part 3', question: q, answer: answerText, pronunciationNote });
-
-    const nextIdx = state.p3Index + 1;
-    if (nextIdx >= topic.part3Questions.length) {
-      await finishSession(ctx, topic);
-    } else {
-      state.p3Index = nextIdx;
-      await sendPart3Question(ctx, topic);
-    }
+    state.transcript.push({ part: 'Part 3', answer: answerText, pronunciationNote });
+    await finishSession(ctx, topic);
     return;
   }
 }
@@ -190,7 +168,12 @@ async function finishSession(ctx, topic) {
 
   const transcriptText = state.transcript
     .map((t) => {
-      let block = `[${t.part}] Q: ${t.question}\nA: ${t.answer}`;
+      let questionsContext = '';
+      if (t.part === 'Part 1') questionsContext = `Questions asked: ${topic.part1Questions.join(' / ')}\n`;
+      if (t.part === 'Part 2') questionsContext = `Cue card: ${topic.part2.cueCardTitle}\n`;
+      if (t.part === 'Part 3') questionsContext = `Questions asked: ${topic.part3Questions.join(' / ')}\n`;
+
+      let block = `[${t.part}]\n${questionsContext}Student's combined answer: ${t.answer}`;
       if (t.pronunciationNote) block += `\n(Pronunciation note for this answer: ${t.pronunciationNote})`;
       return block;
     })
