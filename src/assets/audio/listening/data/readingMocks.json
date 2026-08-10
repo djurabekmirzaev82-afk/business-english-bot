@@ -1,0 +1,698 @@
+[
+  {
+    "id": "mock1",
+    "title": "Reading Mock Test 1",
+    "parts": [
+      {
+        "partNumber": 1,
+        "taskType": "open_cloze",
+        "title": "Part 1 — Open Cloze",
+        "skillNote": "Bo'shliqlarni bitta so'z bilan to'ldiring (odatda grammatik so'zlar: predlog, artikl, yordamchi fe'l, olmosh). Matnning umumiy grammatik mantig'iga e'tibor bering.",
+        "textTemplate": "The handshake is one of the oldest greetings in the world. Historians believe it began (1)___ ancient times as a way (2)___ show that a person was not carrying a weapon. By offering an open hand, two strangers could prove (3)___ they meant no harm to each other. Over the centuries, the gesture spread across many cultures and became (4)___ standard way of greeting someone in business and social situations. Today, a firm handshake is often seen (5)___ a sign of confidence, while a weak one can leave a negative impression. In some countries, however, physical greetings like handshakes are becoming less common, and many people now prefer a simple nod or wave instead. Whether this trend (6)___ continue or the handshake will remain popular for centuries to come is difficult to predict.",
+        "gaps": [
+          {
+            "number": 1,
+            "answers": [
+              "in"
+            ]
+          },
+          {
+            "number": 2,
+            "answers": [
+              "to"
+            ]
+          },
+          {
+            "number": 3,
+            "answers": [
+              "that"
+            ]
+          },
+          {
+            "number": 4,
+            "answers": [
+              "a"
+            ]
+          },
+          {
+            "number": 5,
+            "answers": [
+              "as"
+            ]
+          },
+          {
+            "number": 6,
+            "answers": [
+              "will"
+            ]
+          }
+        ]
+      },
+      {
+        "partNumber": 2,
+        "taskType": "multiple_matching",
+        "title": "Part 2 — Multiple Matching",
+        "skillNote": "To'rtta qisqa matn (A-D) beriladi. Har bir gap qaysi matnga tegishli ekanini aniqlang. Diqqat: bir matn bir necha marta ishlatilishi mumkin.",
+        "texts": [
+          {
+            "label": "A",
+            "title": "Amira",
+            "text": "Amira runs a small graphic design studio from her home in Termiz. She started freelancing five years ago and now works with clients across Central Asia. She says the hardest part of running her own business was learning to manage her time, since nobody was telling her what to do each day. She now uses a strict weekly schedule and never works on Sundays, no matter how much work is waiting."
+          },
+          {
+            "label": "B",
+            "title": "Sardor",
+            "text": "Sardor manages a logistics company that delivers goods between Surkhandarya and Tashkent. He took over the business from his father ten years ago and has since doubled the number of trucks. His biggest challenge has been finding reliable drivers, so he now offers extra training and a bonus system to keep good employees from leaving for competitors."
+          },
+          {
+            "label": "C",
+            "title": "Nilufar",
+            "text": "Nilufar co-founded an online marketplace for local farmers to sell their produce directly to city customers, cutting out expensive middlemen. In the beginning, many farmers were suspicious of selling online and preferred traditional markets. Nilufar spent months visiting villages in person to explain how the platform worked before farmers started trusting it."
+          },
+          {
+            "label": "D",
+            "title": "Bekzod",
+            "text": "Bekzod opened a language center offering English and business courses in his hometown. Demand grew so quickly that within a year he had to move to a bigger building and hire three more teachers. He believes the key to his success has been word-of-mouth recommendations from satisfied students rather than paid advertising."
+          }
+        ],
+        "questions": [
+          {
+            "number": 7,
+            "statement": "Who found it difficult to organize their own working hours?",
+            "answer": "A"
+          },
+          {
+            "number": 8,
+            "statement": "Who took charge of a business that was already established by a family member?",
+            "answer": "B"
+          },
+          {
+            "number": 9,
+            "statement": "Who had to convince people in person before they trusted a new service?",
+            "answer": "C"
+          },
+          {
+            "number": 10,
+            "statement": "Who has grown their business mainly through recommendations rather than advertising?",
+            "answer": "D"
+          },
+          {
+            "number": 11,
+            "statement": "Who offers rewards to stop employees from moving to rival companies?",
+            "answer": "B"
+          },
+          {
+            "number": 12,
+            "statement": "Who protects their personal time by refusing to work on a certain day?",
+            "answer": "A"
+          },
+          {
+            "number": 13,
+            "statement": "Who removes an unnecessary step between producers and buyers?",
+            "answer": "C"
+          },
+          {
+            "number": 14,
+            "statement": "Who needed larger premises soon after starting the business?",
+            "answer": "D"
+          }
+        ]
+      },
+      {
+        "partNumber": 3,
+        "taskType": "gapped_text",
+        "title": "Part 3 — Matching Headings",
+        "text": "Adapting to Remote Work\n\n15) When offices around the world closed almost overnight, most companies had no formal policy for remote work at all. Managers who had always relied on walking over to a colleague's desk suddenly found themselves unable to gauge how their teams were really doing, and many admitted, in later interviews, that the first few weeks felt closer to guesswork than management.\n\n16) Some companies responded by monitoring employees more closely, installing software that tracked keystrokes or took periodic screenshots. While this approach reassured a handful of nervous executives, employee surveys consistently showed that surveillance tools damaged trust far more than they improved output, often making staff feel like suspects rather than colleagues.\n\n17) A smaller group of companies took the opposite approach, focusing entirely on results rather than hours logged. Managers set clear weekly goals and largely left employees to organize their own schedules. Early data suggested this approach worked well for experienced staff, though newer employees sometimes struggled without the informal guidance office life used to provide.\n\n18) One unexpected challenge was the disappearance of casual, unplanned conversations — the kind that happen in a hallway or over coffee, rather than in a scheduled meeting. Several companies tried to recreate this with virtual \"coffee chat\" software, with mixed success; some employees found the forced scheduling made spontaneous conversation feel oddly artificial.\n\n19) As remote work continued for months rather than weeks, a new concern emerged: many employees reported working longer hours than they had in the office, unable to draw a clear line between work and home life. Companies that ignored this often saw a rise in resignations several months later, once the initial novelty of working from home had worn off.\n\n20) By the time many offices reopened, a significant number of employees requested to keep working remotely, at least part of the time. Businesses that treated the shift as temporary found themselves negotiating from a weaker position than those that had already begun redesigning their long-term policies around flexibility.",
+        "options": [
+          {
+            "label": "A",
+            "text": "A cautious approach that backfired"
+          },
+          {
+            "label": "B",
+            "text": "Managing without visual confirmation"
+          },
+          {
+            "label": "C",
+            "text": "Freedom that suited some more than others"
+          },
+          {
+            "label": "D",
+            "text": "The loss of unplanned interaction"
+          },
+          {
+            "label": "E",
+            "text": "Blurred boundaries between work and rest"
+          },
+          {
+            "label": "F",
+            "text": "A shift that outlasted expectations"
+          },
+          {
+            "label": "G",
+            "text": "A return to the traditional office"
+          },
+          {
+            "label": "H",
+            "text": "The financial cost of new software"
+          }
+        ],
+        "answers": {
+          "15": "B",
+          "16": "A",
+          "17": "C",
+          "18": "D",
+          "19": "E",
+          "20": "F"
+        }
+      },
+      {
+        "partNumber": 4,
+        "taskType": "multiple_choice",
+        "title": "Part 4 — Multiple Choice + True/False/No Info",
+        "text": "The Unlikely Rise of a Local Bookshop\n\nWhen Malika opened a small bookshop in Termiz eight years ago, most people in her family thought she was making a mistake. Online retailers had already begun undercutting small bookshops on price, and her own relatives suggested she open a clothing store instead, arguing that books were a dying business in the age of smartphones.\n\nMalika disagreed, but not because she thought people would stop buying from online retailers entirely. Instead, she noticed that many of her friends complained about not knowing what to read next among the millions of titles available online. She decided her shop would sell something online retailers could not easily replicate: personal recommendations from someone who had actually read the books.\n\nFor the first two years, the shop barely broke even. Malika spent most evenings reading late into the night so she could speak knowledgeably about as many books as possible. Slowly, word spread that her recommendations were unusually accurate, and customers began returning specifically to ask, \"What should I read next?\" rather than searching for a specific title.\n\nThe shop's turning point came when Malika started a small monthly book club, initially just eight people meeting in the shop after closing hours. Members paid a small fee to join, which covered light refreshments, and Malika chose a different book each month based on the group's evolving tastes. Within eighteen months, the club had grown so large that she had to run two separate sessions to fit everyone in.\n\nToday, book club memberships account for nearly a third of the shop's total income, and Malika has hired two part-time staff to help manage the growing membership. She still personally chooses every book club title herself, insisting that this personal touch is the one thing a large online retailer could never fully copy, no matter how sophisticated their recommendation algorithms become.",
+        "questions": [
+          {
+            "number": 21,
+            "q": "Why did some of Malika's relatives think opening a bookshop was a mistake?",
+            "options": [
+              "They believed books were losing popularity because of smartphones",
+              "They thought a clothing store would need less starting capital",
+              "They had tried running a bookshop themselves and failed",
+              "They believed Malika did not enjoy reading"
+            ],
+            "correct": 0
+          },
+          {
+            "number": 22,
+            "q": "What gap did Malika notice among her friends?",
+            "options": [
+              "They did not know what to read next among so many online options",
+              "They could not afford to buy books online",
+              "They did not have time to visit physical bookshops",
+              "They preferred audiobooks to printed books"
+            ],
+            "correct": 0
+          },
+          {
+            "number": 23,
+            "q": "What caused the turning point in the shop's success?",
+            "options": [
+              "Starting a small monthly book club",
+              "Lowering her prices to compete with online retailers",
+              "Moving to a larger location in the city centre",
+              "Hiring additional staff to serve more customers"
+            ],
+            "correct": 0
+          },
+          {
+            "number": 24,
+            "q": "According to the text, what does Malika believe online retailers cannot easily replicate?",
+            "options": [
+              "Her personal, individually chosen book recommendations",
+              "Her shop's low prices",
+              "Her fast delivery service",
+              "Her large selection of titles"
+            ],
+            "correct": 0
+          },
+          {
+            "number": 25,
+            "q": "The shop was profitable from its very first year.",
+            "options": [
+              "True",
+              "False",
+              "No Information"
+            ],
+            "correct": 1
+          },
+          {
+            "number": 26,
+            "q": "Malika read extensively in the evenings to improve her recommendations.",
+            "options": [
+              "True",
+              "False",
+              "No Information"
+            ],
+            "correct": 0
+          },
+          {
+            "number": 27,
+            "q": "The book club charges a fee that covers refreshments.",
+            "options": [
+              "True",
+              "False",
+              "No Information"
+            ],
+            "correct": 0
+          },
+          {
+            "number": 28,
+            "q": "Malika plans to open a second bookshop in another city.",
+            "options": [
+              "True",
+              "False",
+              "No Information"
+            ],
+            "correct": 2
+          },
+          {
+            "number": 29,
+            "q": "Book club memberships now make up less than a third of the shop's income.",
+            "options": [
+              "True",
+              "False",
+              "No Information"
+            ],
+            "correct": 1
+          }
+        ]
+      },
+      {
+        "partNumber": 5,
+        "taskType": "open_cloze",
+        "title": "Part 5 — Note Completion",
+        "textTemplate": "(Continuing from the bookshop article above.) Complete the notes below.\n\nMalika's shop opened (30)___ years ago in Termiz.\nHer main product, besides books, was personal (31)___.\nThe book club originally had (32)___ members.\nBook club fees cover light (33)___.",
+        "gaps": [
+          {
+            "number": 30,
+            "answers": [
+              "eight"
+            ]
+          },
+          {
+            "number": 31,
+            "answers": [
+              "recommendations"
+            ]
+          },
+          {
+            "number": 32,
+            "answers": [
+              "eight"
+            ]
+          },
+          {
+            "number": 33,
+            "answers": [
+              "refreshments"
+            ]
+          }
+        ]
+      },
+      {
+        "partNumber": 5,
+        "taskType": "multiple_choice",
+        "title": "Part 5 — Multiple Choice",
+        "text": "(Still about the same bookshop article.)",
+        "questions": [
+          {
+            "number": 34,
+            "q": "What is the writer's main purpose in this text?",
+            "options": [
+              "To criticize online book retailers",
+              "To describe how a small bookshop found a way to compete by offering something unique",
+              "To give instructions on how to start a book club",
+              "To compare prices between bookshops and online retailers"
+            ],
+            "correct": 1
+          },
+          {
+            "number": 35,
+            "q": "Which title best summarizes the whole text?",
+            "options": [
+              "The Decline of Physical Bookshops",
+              "How to Choose the Right Book to Read",
+              "Finding a Niche: One Bookshop's Answer to Online Competition",
+              "The History of Book Clubs in Uzbekistan"
+            ],
+            "correct": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mock2",
+    "title": "Reading Mock Test 2 (Full Mock)",
+    "parts": [
+      {
+        "partNumber": 1,
+        "taskType": "open_cloze",
+        "title": "Part 1 — Open Cloze",
+        "skillNote": "Bo'shliqlarni bitta so'z bilan to'ldiring (odatda matnning boshqa joyida ishlatilgan so'z). Matnning umumiy grammatik va mazmun mantig'iga e'tibor bering.",
+        "textTemplate": "Early risers are people who naturally wake up early in the morning. Their body clock causes them to get up while most of us are still in deep sleep. Researchers at the University of California said early (1)___ could have some shared DNA from Neanderthals – our ancestors who lived over 40,000 years ago. Neanderthals lived in northern parts of Europe and Asia. They (2)___ up earlier to hunt for or gather food as the sun rose. Researcher Dr Tony Capra said: \"At higher latitudes it is beneficial to have a body (3)___ that is better able to anticipate and change to match the changing seasonal light levels.\" He added: \"Having a 'faster' body clock…makes individuals more likely to rise early.\"\n\nScientists have spent a long time looking at why some people are early birds, while others are night owls. They looked at a medical database with genetic information for hundreds of thousands of (4)___. They compared the DNA of people who said they were early risers with the Neanderthal DNA. The (5)___ found more examples of Neanderthal DNA existed in the early risers. However, it is likely that the Neanderthal gene is not so strong in many people. The effect of the Neanderthal DNA may be weakening as the centuries pass. Our modern lifestyles mean many of us prefer sleeping in to leaving the comfort of our bed. Nevertheless, it may still be true that the early (6)___ catches the worm.",
+        "gaps": [
+          {
+            "number": 1,
+            "answers": [
+              "risers"
+            ]
+          },
+          {
+            "number": 2,
+            "answers": [
+              "woke"
+            ]
+          },
+          {
+            "number": 3,
+            "answers": [
+              "clock"
+            ]
+          },
+          {
+            "number": 4,
+            "answers": [
+              "people"
+            ]
+          },
+          {
+            "number": 5,
+            "answers": [
+              "researchers"
+            ]
+          },
+          {
+            "number": 6,
+            "answers": [
+              "bird"
+            ]
+          }
+        ]
+      },
+      {
+        "partNumber": 2,
+        "taskType": "multiple_matching",
+        "title": "Part 2 — Multiple Matching",
+        "skillNote": "O'nta o'yin tavsifi (A-J) beriladi. Har bir gap qaysi o'yinga tegishli ekanini aniqlang. Ikkita ortiqcha variant bor — ularni ishlatmang.",
+        "texts": [
+          {
+            "label": "A",
+            "title": "Galactic Alliances",
+            "text": "Connect with friends and forge alliances in 'Galactic Alliances,' a multiplayer space adventure where teamwork is the key to dominance."
+          },
+          {
+            "label": "B",
+            "title": "Cosmic Odyssey",
+            "text": "Immerse yourself in the futuristic world of 'Cosmic Odyssey,' a sci-fi epic with breathtaking visuals and an immersive storyline."
+          },
+          {
+            "label": "C",
+            "title": "Nightmare Manor",
+            "text": "Brace yourself for heart-pounding terror in 'Nightmare Manor,' a horror game that will test your courage as you navigate through a haunted mansion."
+          },
+          {
+            "label": "D",
+            "title": "Realm of Legends",
+            "text": "Embark on an epic journey in 'Realm of Legends,' where mystical realms and undiscovered treasures await the boldest adventurers!"
+          },
+          {
+            "label": "E",
+            "title": "Sports Showdown",
+            "text": "Step onto the virtual field in 'Ultimate Sports Showdown,' where you can compete in a variety of sports, from soccer to extreme sports challenges."
+          },
+          {
+            "label": "F",
+            "title": "Happy Town Builder",
+            "text": "Enjoy a relaxing gaming experience with 'Happy Town Builder,' where you can create and manage your own charming town at your own pace."
+          },
+          {
+            "label": "G",
+            "title": "Enigma Quest",
+            "text": "Challenge your mind with mind-bending puzzles in 'Enigma Quest,' where every level is a unique brain teaser waiting to be unraveled."
+          },
+          {
+            "label": "H",
+            "title": "Rhythm Revolution",
+            "text": "Become a virtual rockstar in 'Rhythm Revolution,' a music game that lets you play along with your favorite tunes and rise to musical stardom."
+          },
+          {
+            "label": "I",
+            "title": "Epic Ages",
+            "text": "Step back in time and rewrite history in 'Epic Ages,' a turn-based strategy game that allows you to shape the course of civilizations through the ages."
+          },
+          {
+            "label": "J",
+            "title": "Strategic Empires",
+            "text": "Command your forces and conquer new lands in 'Strategic Empires,' the ultimate real-time strategy game for tactical masterminds."
+          }
+        ],
+        "questions": [
+          {
+            "number": 7,
+            "statement": "You prefer to get rich rewards by doing active explorations.",
+            "answer": "D"
+          },
+          {
+            "number": 8,
+            "statement": "You need something which you control armies and manage them to defeat enemies.",
+            "answer": "J"
+          },
+          {
+            "number": 9,
+            "statement": "You're a casual gamer but you want something to use your mind.",
+            "answer": "G"
+          },
+          {
+            "number": 10,
+            "statement": "You and your pals from school want to try something which you join forces with them and conquer rivals.",
+            "answer": "A"
+          },
+          {
+            "number": 11,
+            "statement": "You are looking for a competition game that doesn't involve violence but a lot of fun.",
+            "answer": "E"
+          },
+          {
+            "number": 12,
+            "statement": "You are trying to get a game which has rich plot elements, a lot of quests and fantastic graphics.",
+            "answer": "B"
+          },
+          {
+            "number": 13,
+            "statement": "You don't want to force yourself into video games. Instead you just want something to play when you're free.",
+            "answer": "F"
+          },
+          {
+            "number": 14,
+            "statement": "You want to impress yourself and conquer your fears.",
+            "answer": "C"
+          }
+        ]
+      },
+      {
+        "partNumber": 3,
+        "taskType": "gapped_text",
+        "title": "Part 3 — Matching Headings",
+        "text": "15) The world's first university was established in India in 700 BC, where more than 10,500 students from around the world studied more than 60 different subjects. The training was conducted in Sanskrit. Nowadays, Sanskrit is considered to be the mother of all the European languages. Its elements can be traced in most of them.\n\n16) The most frequently visited place in India is Delhi, the capital city of the country. It seems to be divided into two parts. New Delhi is a modern city with hi-tech architecture, tourist attractions and modern facilities. Old Delhi is several centuries old, with narrow streets, ancient churches and noisy bazaars. Lots of people live in slums without the most essential facilities like toilets and running water.\n\n17) People all over the world know of India's greatest river, the Ganges. The river looks extremely beautiful in the morning light. It is the subject of thousands of prayers. It has become a common ritual for pilgrims to gather by the holy river in the mornings. It is believed that bathing in the Ganges helps to cure all kinds of diseases and can improve your life in general.\n\n18) Indian climate differs from one part of the country to another. The air is cool and fresh in the mountains, but in the plains it is usually very hot and dry, so even a short trip can be very hard for an inexperienced traveller. That is why tourists are always glad to have a rest at one of the numerous stations in the hills. There they can enjoy a nice cup of real Indian tea, the most refreshing drink in such a climate.\n\n19) India is not all history. It is also famous for its Bollywood industry, which produces different films. Indian films have always had their own style; they are rich in music and dancing. Though the industry is still developing, many Indian film stars have received Oscar prizes and are known throughout the world. The home of Bollywood is Mumbai, also known as a busy port and the country's commercial centre.\n\n20) There is an unusual treasure hidden in the Indian mountains. These are striking ancient temples cut in the rocks. For example, the Buddhist cave temples at Ajanta were built at least 2,000 years ago. Inside the caves on the walls, tourists can see animal images and pictures of people's lives. Some researchers believe that the interpretation of the images can help us to learn a lot about people's lives in ancient times.",
+        "options": [
+          {
+            "label": "A",
+            "text": "An ancient place"
+          },
+          {
+            "label": "B",
+            "text": "Holy water"
+          },
+          {
+            "label": "C",
+            "text": "Famous industry"
+          },
+          {
+            "label": "D",
+            "text": "Ajanta in the modern day"
+          },
+          {
+            "label": "E",
+            "text": "Resisting the heat"
+          },
+          {
+            "label": "F",
+            "text": "Things about Mumbai"
+          },
+          {
+            "label": "G",
+            "text": "City of contrasts"
+          },
+          {
+            "label": "H",
+            "text": "Modern languages' ancestor"
+          }
+        ],
+        "answers": {
+          "15": "H",
+          "16": "G",
+          "17": "B",
+          "18": "E",
+          "19": "C",
+          "20": "A"
+        }
+      },
+      {
+        "partNumber": 4,
+        "taskType": "multiple_choice",
+        "title": "Part 4 — Multiple Choice + True/False/No Info",
+        "text": "PIRATES\n\nThere have always been people who robbed ships in the open sea. We know them as pirates or corsairs. Many of them were sailors who lost their jobs, others were just young men and women looking for adventure. Thousands of pirates were active from 1650–1720. These years are sometimes known as the 'Golden Age' of piracy. Probably the most famous pirates of this period are Blackbeard, Henry Morgan, William 'Captain' Kidd, and the Barbarossa brothers.\n\nThe \"Jolly Roger\" is the well-known pirate flag. There are a number of theories about its origin. It is thought that the first pirates used a red flag, which was common in sea attacks. A red flag told other ships that there would be no pity and no prisoners would be taken. This red flag was called Joli Rouge (pretty red) in French. Most probably, English people pronounced it in their own way \"Jolly Roger\". Another theory says that \"old Roger\" was another name for the devil.\n\nAnother popular image from the pirate world is a parrot, sitting on the captain's shoulder. Well, there's no historical proof of that. No doubt, pirates often travelled to faraway exotic lands and brought unusual animals as souvenirs with them. Parrots were particularly popular because they were colourful, could be taught to speak, and were easier to care for than, say, monkeys. However, you can't imagine a pirate fighting with a bird on the shoulder. This image possibly began with the book \"Treasure Island\". In the book, the ever famous Long John Silver carried a parrot as a pet.\n\nBefore joining a ship each pirate signed an agreement called \"Articles\". This explained the rights and laws on board the ship, how much a person was paid, what to do in case of emergency, etc. For example, playing cards for money was not allowed. For breaking the rules a pirate would be shot or left on a desert island with a bottle of water and a gun.\n\nA pirate ship was organized democratically. After a successful attack they divided the treasures equally, only the captain and the cook got more. They sometimes decided together which ship to attack or where to sail next. Most pirates were paid four times more than they had when they were sailors. But on land they were criminals and lots of money was offered to those who caught them.\n\nHowever, for some time the English government supported pirates. There were lots of pirates in the sixteenth century when England was at war with Spain and the Dutch Republic. Queen Elizabeth I ordered them to rob Spanish ships and bring gold, silver and jewels to the country. Sir Francis Drake was one of the most famous pirates. He brought lots of treasures to England and also was the first Englishman to sail all the way around the world. Because of this, he was made a knight by Queen Elizabeth I.",
+        "questions": [
+          {
+            "number": 21,
+            "q": "\"Golden age\" of piracy lasted…",
+            "options": [
+              "for a century",
+              "for 70 years",
+              "until XIX century",
+              "until James Kidd died"
+            ],
+            "correct": 1
+          },
+          {
+            "number": 22,
+            "q": "A red flag symbolizes…",
+            "options": [
+              "French pirate ships",
+              "the first pirates that used them",
+              "no kindness, no prisoners",
+              "Jolly Roger - the devil"
+            ],
+            "correct": 2
+          },
+          {
+            "number": 23,
+            "q": "Parrots, according to the author…",
+            "options": [
+              "sat on captain's shoulder",
+              "were nothing more than souvenirs to them",
+              "were taught to train monkeys",
+              "has possibly become fashionable after the book - \"Treasure Island\""
+            ],
+            "correct": 1
+          },
+          {
+            "number": 24,
+            "q": "The pirates who decide whom to attack next were…",
+            "options": [
+              "criminals",
+              "boardsmen and captains",
+              "captains and cooks",
+              "sailors"
+            ],
+            "correct": 2
+          },
+          {
+            "number": 25,
+            "q": "The flag \"Jolly Roger\" meant death for ships' sailors and passengers.",
+            "options": [
+              "True",
+              "False",
+              "No Information"
+            ],
+            "correct": 0
+          },
+          {
+            "number": 26,
+            "q": "The name for the flag \"Jolly Roger\" is of English origin.",
+            "options": [
+              "True",
+              "False",
+              "No Information"
+            ],
+            "correct": 2
+          },
+          {
+            "number": 27,
+            "q": "Parrots brought luck to pirates at sea.",
+            "options": [
+              "True",
+              "False",
+              "No Information"
+            ],
+            "correct": 1
+          },
+          {
+            "number": 28,
+            "q": "In the past pirates did some jobs for the English queens and kings.",
+            "options": [
+              "True",
+              "False",
+              "No Information"
+            ],
+            "correct": 0
+          },
+          {
+            "number": 29,
+            "q": "Francis Drake was the richest English pirate.",
+            "options": [
+              "True",
+              "False",
+              "No Information"
+            ],
+            "correct": 2
+          }
+        ]
+      },
+      {
+        "partNumber": 5,
+        "taskType": "open_cloze",
+        "title": "Part 5 — Note Completion",
+        "textTemplate": "IS GRAFFITI ART OR CRIME?\n\nThe term graffiti derives from the Italian graffito meaning 'scratching' and can be defined as uninvited marking or writing scratched or applied to objects, built structures and natural features. It is not a new phenomenon: examples can be found on ancient structures around the world, in some cases predating the Greeks and Romans. In such circumstances it has acquired invaluable historical and archaeological significance, providing a social history of life and events at that time.\n\nIt is usually considered a priority to remove graffiti as quickly as possible after it appears, partly to prevent 'copy-cat' emulation, and because it may be of a racist or otherwise offensive nature. The police should be informed as there may be other related attacks occurring locally; stylised signatures or nicknames, known as 'tags', may already be familiar to local police.\n\nOperatives ought to comply with relevant health and safety rules during removal, following product guidelines and wearing the appropriate protective equipment.\n\nOne of the most significant problems associated with graffiti removal is the need to remove it from surfaces that are repeatedly attacked, which can ultimately damage the surface material. Anti-graffiti coatings are usually applied by brush or spray, leaving a thin veneer that isolates the graffiti from the surface. Removal of graffiti from a surface that has been treated in this way is much easier, usually using low-pressure water, which reduces the possibility of damage.\n\nComplete the notes below.\n\nAncient graffiti is of significance and records the (30)___ history of details of life for that period.\nThe police can recognize newly committed incidents of graffiti by the signature which is called a (31)___ that they are familiar with.\nOperatives ought to comply with relevant rules during the operation, and put on the suitable protective (32)___.\nRemoval of graffiti from a new type of coating surface can be much more convenient by using (33)___.",
+        "gaps": [
+          {
+            "number": 30,
+            "answers": [
+              "social"
+            ]
+          },
+          {
+            "number": 31,
+            "answers": [
+              "tag"
+            ]
+          },
+          {
+            "number": 32,
+            "answers": [
+              "equipment"
+            ]
+          },
+          {
+            "number": 33,
+            "answers": [
+              "water"
+            ]
+          }
+        ]
+      },
+      {
+        "partNumber": 5,
+        "taskType": "multiple_choice",
+        "title": "Part 5 — Multiple Choice",
+        "text": "(Yuqoridagi GRAFFITI matni asosida.)",
+        "questions": [
+          {
+            "number": 34,
+            "q": "Which statement is true concerning the removal of graffiti?",
+            "options": [
+              "cocktail removal can be safer than water treatment",
+              "small patch trial before applying large scale of removing",
+              "Chemical treatments are the most expensive way of removing",
+              "mechanical removals are much more applicable than Chemical treatments."
+            ],
+            "correct": 1
+          },
+          {
+            "number": 35,
+            "q": "Which of the following preventive measures against graffiti is mentioned effectively in the passage?",
+            "options": [
+              "organise more anti-graffiti movement in the city communities",
+              "Build a new building with material repelling to water",
+              "installing more visible security cameras",
+              "Provide a whole new surface with a chemical coat"
+            ],
+            "correct": 2
+          }
+        ]
+      }
+    ]
+  }
+]
