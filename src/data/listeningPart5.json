@@ -1,0 +1,88 @@
+{
+  "extracts": [
+    {
+      "extractNumber": 1,
+      "label": "Extract One — Two colleagues discussing remote work",
+      "script": "A: Honestly, I love working from home, no commute, more focus time.\nB: Really? I actually miss the office. I get distracted so easily at home, my cat, the fridge, everything.\nA: I get that, but for me the quiet is exactly what I need to concentrate.\nB: Fair enough. I think it really depends on how disciplined you are.",
+      "questions": [
+        {
+          "number": 24,
+          "q": "Why does speaker A prefer working from home?",
+          "options": [
+            "The quiet helps concentration",
+            "It saves money",
+            "The office is too noisy for everyone"
+          ],
+          "correct": 0
+        },
+        {
+          "number": 25,
+          "q": "What does speaker B say is a problem when working from home?",
+          "options": [
+            "Slow internet",
+            "Easy distractions at home",
+            "Too many meetings"
+          ],
+          "correct": 1
+        }
+      ],
+      "isDialogue": true
+    },
+    {
+      "extractNumber": 2,
+      "label": "Extract Two — A manager giving feedback",
+      "script": "Say naturally, as a manager speaking calmly to an employee: Overall your report was solid, the data was accurate and well organized. However, the conclusion section felt a bit rushed, I think it needed one more paragraph explaining the recommendations more clearly. Other than that, good work, keep it up.",
+      "questions": [
+        {
+          "number": 26,
+          "q": "What does the manager say was good about the report?",
+          "options": [
+            "It was accurate and well organized",
+            "It was submitted early",
+            "It included many charts"
+          ],
+          "correct": 0
+        },
+        {
+          "number": 27,
+          "q": "What does the manager suggest improving?",
+          "options": [
+            "The introduction",
+            "The conclusion section",
+            "The formatting"
+          ],
+          "correct": 1
+        }
+      ],
+      "isDialogue": false
+    },
+    {
+      "extractNumber": 3,
+      "label": "Extract Three — Two friends discussing a job offer",
+      "script": "A: So, are you going to accept the job offer?\nB: I'm still deciding. The salary is great, but it means relocating to another city.\nA: That's a big decision. Do you know anyone there?\nB: Not really, that's what worries me most, starting completely fresh, no friends nearby.",
+      "questions": [
+        {
+          "number": 28,
+          "q": "What is speaker B unsure about?",
+          "options": [
+            "Whether the salary is high enough",
+            "Whether to accept a job that requires relocating",
+            "Whether to ask for a promotion instead"
+          ],
+          "correct": 1
+        },
+        {
+          "number": 29,
+          "q": "What worries speaker B the most?",
+          "options": [
+            "Not knowing anyone in the new city",
+            "The cost of moving",
+            "Losing the current job"
+          ],
+          "correct": 0
+        }
+      ],
+      "isDialogue": true
+    }
+  ]
+}

@@ -13,5 +13,11 @@ module.exports = {
   databaseUrl: requireEnv('DATABASE_URL'),
   databaseSsl: process.env.DATABASE_SSL === 'true',
   geminiApiKey: process.env.GEMINI_API_KEY || null,
+  // Comma-separated Telegram numeric user IDs that get auto-promoted to role='admin'.
+  // Find your own ID by messaging @userinfobot on Telegram.
+  adminTelegramIds: (process.env.ADMIN_TELEGRAM_IDS || '')
+    .split(',')
+    .map((s) => s.trim())
+    .filter(Boolean),
   nodeEnv: process.env.NODE_ENV || 'development',
 };

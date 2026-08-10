@@ -34,6 +34,45 @@ async function setLanguage(userId, language) {
   await pool.query('UPDATE users SET language = $1, updated_at = now() WHERE id = $2', [language, userId]);
 }
 
+async function promoteToAdmin(userId) {
+  const { rows } = await pool.query(
+    "UPDATE users SET role = 'admin', updated_at = now() WHERE id = $1 RETURNING *",
+    [userId]
+  );
+  return rows[0];
+}
+
+/**
+ * Returns aggregate stats for the /admin dashboard: total users, new users
+ * today/this week, and the most recently joined users.
+ */
+async function getAdminStats() {
+  const totals = await pool.query(`
+    SELECT
+      COUNT(*)::int AS total_users,
+      COUNT(*) FILTER (WHERE created_at >= now() - interval '1 day')::int AS new_today,
+      COUNT(*) FILTER (WHERE created_at >= now() - interval '7 days')::int AS new_this_week
+    FROM users
+  `);
+
+  const recent = await pool.query(
+    `SELECT telegram_id, username, first_name, last_name, cefr_level, created_at
+     FROM users
+     ORDER BY created_at DESC
+     LIMIT 10`
+  );
+
+  const testStats = await pool.query(
+    `SELECT COUNT(*)::int AS total_attempts FROM test_attempts WHERE status = 'completed'`
+  );
+
+  return {
+    ...totals.rows[0],
+    totalAttempts: testStats.rows[0].total_attempts,
+    recentUsers: recent.rows,
+  };
+}
+
 /**
  * Returns cabinet data: profile + most recent completed placement attempt + attempt history count.
  */
@@ -57,5 +96,7 @@ module.exports = {
   getUserByTelegramId,
   setUserLevel,
   setLanguage,
+  promoteToAdmin,
+  getAdminStats,
   getCabinetSummary,
 };

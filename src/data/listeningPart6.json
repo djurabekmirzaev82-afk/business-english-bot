@@ -1,0 +1,12 @@
+{
+  "script": "Say naturally, as a lecturer speaking to students: Today I want to talk about the invention of instant noodles. The product was invented by Momofuku Ando, a Japanese businessman, in nineteen fifty-eight. Before that, Ando had actually experienced business failure several times, including the collapse of his previous company. He noticed long queues of people waiting outside ramen stalls after the war and wondered if noodles could be made faster and cheaper at home. His first successful product was called Chikin Ramen. To preserve the noodles, Ando used a method called flash frying, which removed moisture and allowed long-term storage. The product was initially considered a luxury item, since it was priced higher than fresh noodles at the time. Sales only increased significantly once the price dropped closer to that of regular noodles. Today, instant noodles are sold in over one hundred countries around the world.",
+  "notesTemplate": "INSTANT NOODLES — LECTURE NOTES\n\nInvented by Momofuku Ando in: (30)___\nAndo had experienced several business (31)___ before this invention.\nFirst successful product name: (32)___\nPreservation method used: (33)___\nInitially considered a (34)___ item due to high price.\nToday sold in over (35)___ countries.",
+  "gaps": [
+    { "number": 30, "answers": ["1958", "nineteen fifty-eight", "nineteen fifty eight"] },
+    { "number": 31, "answers": ["failures", "failure"] },
+    { "number": 32, "answers": ["chikin ramen", "chicken ramen"] },
+    { "number": 33, "answers": ["flash frying", "flash-frying"] },
+    { "number": 34, "answers": ["luxury"] },
+    { "number": 35, "answers": ["100", "one hundred", "a hundred"] }
+  ]
+}

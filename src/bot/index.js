@@ -14,6 +14,10 @@ const { showIeltsSpeakingMenu, startTopic: startIeltsSpeakingTopic, handleAnswer
 const { showListening, showResources } = require('./handlers/listening');
 const { startListeningPart1, handleAnswer: handleListeningPart1Answer } = require('./handlers/listeningPart1');
 const { startListeningPart2, handleAnswer: handleListeningPart2Answer } = require('./handlers/listeningPart2');
+const { startListeningPart3, handleAnswer: handleListeningPart3Answer } = require('./handlers/listeningPart3');
+const { startListeningPart5, handleAnswer: handleListeningPart5Answer } = require('./handlers/listeningPart5');
+const { startListeningPart6, handleAnswer: handleListeningPart6Answer } = require('./handlers/listeningPart6');
+const { showAdminStats } = require('./handlers/admin');
 const {
   showReadingMenu: showReadingMockMenu,
   showDrillMenu,
@@ -41,6 +45,8 @@ bot.command('test', startTest);
 
 bot.hears('👨‍🎓 Mening kabinetim', showCabinet);
 bot.command('cabinet', showCabinet);
+
+bot.command('admin', showAdminStats);
 
 bot.hears('🏠 Asosiy menu', (ctx) => ctx.reply('Asosiy menyu:', mainMenu));
 
@@ -72,6 +78,11 @@ bot.hears('🎧 Listening', showListening);
 bot.action('lpart1:start', startListeningPart1);
 bot.action(/^lpart1:(\d+)$/, handleListeningPart1Answer);
 bot.action('lpart2:start', startListeningPart2);
+bot.action('lpart3:start', startListeningPart3);
+bot.action(/^lpart3:([A-F])$/, handleListeningPart3Answer);
+bot.action('lpart5:start', startListeningPart5);
+bot.action(/^lpart5:(\d+):(\d+):(\d+)$/, handleListeningPart5Answer);
+bot.action('lpart6:start', startListeningPart6);
 bot.action('lresources:show', showResources);
 
 // Speaking Club (text-based AI roleplay)
@@ -103,6 +114,9 @@ bot.on('text', async (ctx) => {
   }
   if (ctx.session.listeningPart2 && ctx.session.listeningPart2.awaiting) {
     return handleListeningPart2Answer(ctx);
+  }
+  if (ctx.session.listeningPart6 && ctx.session.listeningPart6.awaiting) {
+    return handleListeningPart6Answer(ctx);
   }
   // No active flow and text didn't match any menu button — gently redirect.
   await ctx.reply('Quyidagi menyudan bo\'limni tanlang 👇', mainMenu);

@@ -1,0 +1,30 @@
+{
+  "speakers": [
+    {
+      "number": 15,
+      "script": "Say naturally, as if a bit frustrated: Every time my colleague presents a plan, I always find at least three or four problems with it. I mean, I just can't help pointing out what's wrong, even in small details. My team says I never seem fully satisfied with anyone's work, including my own."
+    },
+    {
+      "number": 16,
+      "script": "Say naturally, in a hesitant tone: Honestly, I agreed with the marketing plan at first, but then a colleague said it wouldn't work, so I changed my mind. Later someone else convinced me it actually was a good idea after all. I guess I just go along with whoever spoke to me most recently."
+    },
+    {
+      "number": 17,
+      "script": "Say naturally, in a firm, no-nonsense tone: I don't accept late submissions, no exceptions, no excuses. If the deadline is Friday at noon, it's Friday at noon. My team knows I won't bend the rules, even for a good reason, because standards matter more than comfort.",
+      "note": "Speaker 3"
+    },
+    {
+      "number": 18,
+      "script": "Say naturally, sounding a little unpredictable: One morning I was thrilled about the new project, joking with everyone in the office. By the afternoon, I didn't want to talk to anyone at all, and nobody really knew why. My assistant says she never knows which version of me she'll get each day."
+    }
+  ],
+  "options": [
+    { "label": "A", "text": "critical" },
+    { "label": "B", "text": "easily influenced" },
+    { "label": "C", "text": "tough" },
+    { "label": "D", "text": "careless" },
+    { "label": "E", "text": "moody" },
+    { "label": "F", "text": "arrogant" }
+  ],
+  "answers": { "15": "A", "16": "B", "17": "C", "18": "E" }
+}
