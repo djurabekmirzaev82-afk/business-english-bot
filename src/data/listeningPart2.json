@@ -1,0 +1,12 @@
+{
+  "script": "Say naturally, as someone giving a short talk to a group of visitors: Good afternoon everyone, and welcome to the Termiz Regional History Museum. My name is Aziza, and I'll be your guide today. The museum was originally built in nineteen fifty-two, and it was fully renovated in twenty nineteen. We currently have twelve permanent exhibition halls. The most popular hall is the Silk Road hall, which attracts around forty thousand visitors every year. Please note that photography is allowed in most areas, but it is strictly forbidden in the manuscripts room, due to the sensitivity of the old documents. If you'd like a private guided tour, it costs twenty five thousand som per person, and must be booked at least two days in advance. The museum closes at six in the evening, but the gift shop stays open until seven.",
+  "notesTemplate": "MUSEUM VISIT — NOTES\n\nMuseum fully renovated in: (9)___\nNumber of permanent exhibition halls: (10)___\nMost popular hall: the (11)___ hall\nAnnual visitors to that hall: around (12)___\nPrivate tour price: (13)___ som per person\nGift shop closing time: (14)___",
+  "gaps": [
+    { "number": 9, "answers": ["2019", "twenty nineteen"] },
+    { "number": 10, "answers": ["12", "twelve"] },
+    { "number": 11, "answers": ["silk road", "silk-road"] },
+    { "number": 12, "answers": ["40000", "40,000", "forty thousand"] },
+    { "number": 13, "answers": ["25000", "25,000", "twenty five thousand", "twenty-five thousand"] },
+    { "number": 14, "answers": ["7", "seven", "7pm", "7 pm"] }
+  ]
+}

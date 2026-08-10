@@ -13,6 +13,7 @@ const { showSpeakingMenu, selectScenario, handleSpeakingMessage, endSpeaking } =
 const { showIeltsSpeakingMenu, startTopic: startIeltsSpeakingTopic, handleAnswer: handleIeltsSpeakingAnswer, handleAudioAnswer: handleIeltsSpeakingAudio } = require('./handlers/ieltsSpeaking');
 const { showListening, showResources } = require('./handlers/listening');
 const { startListeningPart1, handleAnswer: handleListeningPart1Answer } = require('./handlers/listeningPart1');
+const { startListeningPart2, handleAnswer: handleListeningPart2Answer } = require('./handlers/listeningPart2');
 const {
   showReadingMenu: showReadingMockMenu,
   showDrillMenu,
@@ -70,6 +71,7 @@ bot.action(/^rread:gap:(.+)$/, handleGapAnswer);
 bot.hears('🎧 Listening', showListening);
 bot.action('lpart1:start', startListeningPart1);
 bot.action(/^lpart1:(\d+)$/, handleListeningPart1Answer);
+bot.action('lpart2:start', startListeningPart2);
 bot.action('lresources:show', showResources);
 
 // Speaking Club (text-based AI roleplay)
@@ -98,6 +100,9 @@ bot.on('text', async (ctx) => {
   }
   if (ctx.session.pendingSpeaking) {
     return handleSpeakingMessage(ctx);
+  }
+  if (ctx.session.listeningPart2 && ctx.session.listeningPart2.awaiting) {
+    return handleListeningPart2Answer(ctx);
   }
   // No active flow and text didn't match any menu button — gently redirect.
   await ctx.reply('Quyidagi menyudan bo\'limni tanlang 👇', mainMenu);

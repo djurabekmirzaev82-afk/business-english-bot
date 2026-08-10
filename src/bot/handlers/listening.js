@@ -10,11 +10,12 @@ async function showListening(ctx) {
   await ctx.reply(
     '🎧 Listening (Multilevel format)\n\n' +
       "6 qismdan iborat (Part 1-6, jami 35 savol). Bot audio'ni jonli (AI orqali) yaratadi.\n\n" +
-      "⏳ Hozircha *Part 1* tayyor. Qolgan qismlar (2-6) keyingi bosqichlarda qo'shiladi.",
+      "⏳ Hozircha *Part 1-2* tayyor. Qolgan qismlar (3-6) keyingi bosqichlarda qo'shiladi.",
     {
       parse_mode: 'Markdown',
       ...Markup.inlineKeyboard([
-        [Markup.button.callback('🎧 Part 1 — Qisqa savollar (8 ta)', 'lpart1:start')],
+        [Markup.button.callback('🎧 Part 1 — Gapga javob tanlash (8 ta)', 'lpart1:start')],
+        [Markup.button.callback('🎧 Part 2 — Note Completion (6 ta)', 'lpart2:start')],
         [Markup.button.callback('🔗 Qo\'shimcha manbalar (BBC, TED va h.k.)', 'lresources:show')],
       ]),
     }
