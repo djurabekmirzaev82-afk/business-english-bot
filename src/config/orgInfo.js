@@ -21,8 +21,8 @@ const contact = {
     '☎ Aloqa\n\n' +
     '👤 Djurabek Mirzayev — Bosh mutaxassis\n' +
     '🏫 Biznes va tadbirkorlik oliy maktabi, Surxondaryo viloyat filiali\n\n' +
-    '📞 Telefon: +998 XX XXX XX XX\n' +
-    '📧 Email: example@bsse.uz\n' +
+    '📞 Telefon: +998 919022302\n' +
+    '📧 Email: djurabekmirzaev@gmail.com\n' +
     '📍 Manzil: Surxondaryo viloyati, Termiz shahri\n\n' +
     'Ro\'yxatdan o\'tish yoki savollar bo\'yicha yuqoridagi raqam/email orqali murojaat qiling.',
 };
