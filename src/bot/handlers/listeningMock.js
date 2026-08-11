@@ -56,14 +56,21 @@ async function startMock(ctx) {
   await ctx.answerCbQuery();
 
   // "Real audio" mocks ship one continuous recording (like the real exam) instead of
-  // per-item TTS clips. No GEMINI key needed for these — the audio is bundled.
-  if (mock.audioFile) {
-    await ctx.reply(
-      `🏁 ${mock.title} boshlandi!\n\n🎧 Bu — haqiqiy imtihon yozuvi: barcha qismlar birin-ketin shu audioda keladi. ` +
-        `Diqqat bilan tinglang (savollar pastda ketma-ket chiqadi), zarur bo'lsa audio faylni qayta eshiting.`
-    );
-    const ok = await sendFullMockAudio(ctx, mock);
-    if (!ok) return;
+  // per-item TTS clips. Audio/PDF are hosted externally — the bot just sends the link,
+  // so it never downloads or holds the (large) file itself. No GEMINI key needed.
+  if (mock.audioUrl) {
+    const lines = [
+      `🏁 ${mock.title} boshlandi!`,
+      '',
+      "🎧 Bu — haqiqiy imtihon yozuvi. Quyidagi havolani bosib, brauzerda audioni tinglang (barcha qismlar birin-ketin shu audioda keladi).",
+      '',
+      `🎧 Audio: ${mock.audioUrl}`,
+    ];
+    if (mock.pdfUrl) {
+      lines.push(`📄 Savollar varag'i (PDF): ${mock.pdfUrl}`);
+    }
+    lines.push('', "Audioni tinglab bo'lgach, shu yerga qaytib savollarga javob berishni davom ettiring 👇");
+    await ctx.reply(lines.join('\n'));
     ctx.session.listeningRun = {
       mode: 'mock',
       label: mock.title,
@@ -85,19 +92,6 @@ async function startMock(ctx) {
   await ctx.reply(`🏁 ${mock.title} boshlandi!`);
   ctx.session.listeningRun = { mode: 'mock', label: mock.title, queue: mock.parts, index: 0, scores: {}, state: {} };
   await runQueue(ctx);
-}
-
-async function sendFullMockAudio(ctx, mock) {
-  await ctx.reply('⏳ Audio yuklanmoqda (bir necha o\'n daqiqa davomida bo\'lishi mumkin)...');
-  try {
-    const buffer = await engine.resolveAudio({ audioFile: mock.audioFile });
-    await ctx.replyWithAudio({ source: buffer, filename: mock.audioFile }, { caption: "🎧 To'liq Listening yozuvi (barcha qismlar)" });
-    return true;
-  } catch (err) {
-    console.error('Full mock audio resolution failed:', err.message);
-    await ctx.reply("Audio bilan ishlashda texnik xatolik yuz berdi. Birozdan so'ng qayta urinib ko'ring.");
-    return false;
-  }
 }
 
 // ==================== GENERIC PART RUNNER ====================
