@@ -64,7 +64,11 @@ async function startMock(ctx) {
   }
   await ctx.answerCbQuery();
 
-  await ctx.reply(`🏁 ${mock.title} boshlandi! Omad tilaymiz.`);
+  const introLines = [`🏁 ${mock.title} boshlandi! Omad tilaymiz.`];
+  if (mock.pdfUrl) {
+    introLines.push('', `📄 Asl savollar varag'i (PDF): ${mock.pdfUrl}`);
+  }
+  await ctx.reply(introLines.join('\n'));
   ctx.session.readingRun = {
     mode: 'mock',
     label: mock.title,
