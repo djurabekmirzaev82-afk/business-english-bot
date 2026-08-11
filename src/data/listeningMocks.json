@@ -349,7 +349,6 @@
   {
     "id": "mock2",
     "title": "Listening Mock Test 2 (Full Mock — haqiqiy audio)",
-    "audioFile": "mock2_full.mp3",
     "parts": [
       {
         "partNumber": 1,
@@ -654,6 +653,8 @@
           }
         ]
       }
-    ]
+    ],
+    "audioUrl": "https://business-english-platform.vercel.app/media/audio/part-1-6_A8Lb4IYR.mp3",
+    "pdfUrl": "https://business-english-platform.vercel.app/media/pdf/Full%20Mock%208%2018.03.2026.pdf"
   }
 ]
