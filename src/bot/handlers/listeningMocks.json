@@ -1,660 +1,388 @@
-[
-  {
-    "id": "mock1",
-    "title": "Listening Mock Test 1",
-    "parts": [
-      {
-        "partNumber": 1,
-        "taskType": "sentence_reply",
-        "title": "Part 1 — Gapga javob tanlash",
-        "items": [
-          {
-            "number": 1,
-            "script": "Say naturally: I'm afraid the meeting has been moved to Thursday.",
-            "options": [
-              "Yes, please do.",
-              "Oh, that's fine with me.",
-              "No, I haven't."
-            ],
-            "correct": 1
-          },
-          {
-            "number": 2,
-            "script": "Say naturally: Would you like some more coffee?",
-            "options": [
-              "No, I wouldn't.",
-              "It's on the table.",
-              "Yes, please."
-            ],
-            "correct": 2
-          },
-          {
-            "number": 3,
-            "script": "Say naturally: I heard the new manager starts on Monday.",
-            "options": [
-              "Really? That's soon.",
-              "No, he doesn't.",
-              "Where is she?"
-            ],
-            "correct": 0
-          },
-          {
-            "number": 4,
-            "script": "Say naturally: Did you manage to finish the report last night?",
-            "options": [
-              "Yes, it does.",
-              "No, it wouldn't.",
-              "Yes, I did."
-            ],
-            "correct": 2
-          },
-          {
-            "number": 5,
-            "script": "Say naturally: I'm exhausted after that presentation.",
-            "options": [
-              "You too!",
-              "So am I.",
-              "Cheer up!"
-            ],
-            "correct": 1
-          },
-          {
-            "number": 6,
-            "script": "Say naturally: We finally closed the deal with the client!",
-            "options": [
-              "Hurry up!",
-              "Never mind.",
-              "Well done!"
-            ],
-            "correct": 2
-          },
-          {
-            "number": 7,
-            "script": "Say naturally: Do you think it will rain during the conference?",
-            "options": [
-              "You tell me!",
-              "Maybe, I'm not sure.",
-              "Oh, don't be shy!"
-            ],
-            "correct": 1
-          },
-          {
-            "number": 8,
-            "script": "Say naturally: Could I borrow your laptop for a moment?",
-            "options": [
-              "Well, you didn't.",
-              "Um, no it can't.",
-              "Sure, go ahead."
-            ],
-            "correct": 2
-          }
-        ]
-      },
-      {
-        "partNumber": 2,
-        "taskType": "note_completion",
-        "title": "Part 2 — Note Completion",
-        "script": "Say naturally: Say naturally, as someone giving a short talk to a group of visitors: Good afternoon everyone, and welcome to the Termiz Regional History Museum. My name is Aziza, and I'll be your guide today. The museum was originally built in nineteen fifty-two, and it was fully renovated in twenty nineteen. We currently have twelve permanent exhibition halls. The most popular hall is the Silk Road hall, which attracts around forty thousand visitors every year. Please note that photography is allowed in most areas, but it is strictly forbidden in the manuscripts room, due to the sensitivity of the old documents. If you'd like a private guided tour, it costs twenty five thousand som per person, and must be booked at least two days in advance. The museum closes at six in the evening, but the gift shop stays open until seven.",
-        "notesTemplate": "MUSEUM VISIT — NOTES\n\nMuseum fully renovated in: (9)___\nNumber of permanent exhibition halls: (10)___\nMost popular hall: the (11)___ hall\nAnnual visitors to that hall: around (12)___\nPrivate tour price: (13)___ som per person\nGift shop closing time: (14)___",
-        "gaps": [
-          {
-            "number": 9,
-            "answers": [
-              "2019",
-              "twenty nineteen"
-            ]
-          },
-          {
-            "number": 10,
-            "answers": [
-              "12",
-              "twelve"
-            ]
-          },
-          {
-            "number": 11,
-            "answers": [
-              "silk road",
-              "silk-road"
-            ]
-          },
-          {
-            "number": 12,
-            "answers": [
-              "40000",
-              "40,000",
-              "forty thousand"
-            ]
-          },
-          {
-            "number": 13,
-            "answers": [
-              "25000",
-              "25,000",
-              "twenty five thousand",
-              "twenty-five thousand"
-            ]
-          },
-          {
-            "number": 14,
-            "answers": [
-              "7",
-              "seven",
-              "7pm",
-              "7 pm"
-            ]
-          }
-        ]
-      },
-      {
-        "partNumber": 3,
-        "taskType": "speaker_matching",
-        "title": "Part 3 — Speaker Matching",
-        "speakers": [
-          {
-            "number": 15,
-            "script": "Say naturally, as if a bit frustrated: Every time my colleague presents a plan, I always find at least three or four problems with it. I mean, I just can't help pointing out what's wrong, even in small details. My team says I never seem fully satisfied with anyone's work, including my own."
-          },
-          {
-            "number": 16,
-            "script": "Say naturally, in a hesitant tone: Honestly, I agreed with the marketing plan at first, but then a colleague said it wouldn't work, so I changed my mind. Later someone else convinced me it actually was a good idea after all. I guess I just go along with whoever spoke to me most recently."
-          },
-          {
-            "number": 17,
-            "script": "Say naturally, in a firm, no-nonsense tone: I don't accept late submissions, no exceptions, no excuses. If the deadline is Friday at noon, it's Friday at noon. My team knows I won't bend the rules, even for a good reason, because standards matter more than comfort."
-          },
-          {
-            "number": 18,
-            "script": "Say naturally, sounding a little unpredictable: One morning I was thrilled about the new project, joking with everyone in the office. By the afternoon, I didn't want to talk to anyone at all, and nobody really knew why. My assistant says she never knows which version of me she'll get each day."
-          }
-        ],
-        "options": [
-          {
-            "label": "A",
-            "text": "critical"
-          },
-          {
-            "label": "B",
-            "text": "easily influenced"
-          },
-          {
-            "label": "C",
-            "text": "tough"
-          },
-          {
-            "label": "D",
-            "text": "careless"
-          },
-          {
-            "label": "E",
-            "text": "moody"
-          },
-          {
-            "label": "F",
-            "text": "arrogant"
-          }
-        ],
-        "answers": {
-          "15": "A",
-          "16": "B",
-          "17": "C",
-          "18": "E"
-        }
-      },
-      {
-        "partNumber": 5,
-        "taskType": "extracts_mc",
-        "title": "Part 5 — Extractlar",
-        "extracts": [
-          {
-            "extractNumber": 1,
-            "label": "Extract One — Two colleagues discussing remote work",
-            "script": "A: Honestly, I love working from home, no commute, more focus time.\nB: Really? I actually miss the office. I get distracted so easily at home, my cat, the fridge, everything.\nA: I get that, but for me the quiet is exactly what I need to concentrate.\nB: Fair enough. I think it really depends on how disciplined you are.",
-            "isDialogue": true,
-            "questions": [
-              {
-                "number": 24,
-                "q": "Why does speaker A prefer working from home?",
-                "options": [
-                  "The quiet helps concentration",
-                  "It saves money",
-                  "The office is too noisy for everyone"
-                ],
-                "correct": 0
-              },
-              {
-                "number": 25,
-                "q": "What does speaker B say is a problem when working from home?",
-                "options": [
-                  "Slow internet",
-                  "Easy distractions at home",
-                  "Too many meetings"
-                ],
-                "correct": 1
-              }
-            ]
-          },
-          {
-            "extractNumber": 2,
-            "label": "Extract Two — A manager giving feedback",
-            "script": "Say naturally, as a manager speaking calmly to an employee: Overall your report was solid, the data was accurate and well organized. However, the conclusion section felt a bit rushed, I think it needed one more paragraph explaining the recommendations more clearly. Other than that, good work, keep it up.",
-            "isDialogue": false,
-            "questions": [
-              {
-                "number": 26,
-                "q": "What does the manager say was good about the report?",
-                "options": [
-                  "It was accurate and well organized",
-                  "It was submitted early",
-                  "It included many charts"
-                ],
-                "correct": 0
-              },
-              {
-                "number": 27,
-                "q": "What does the manager suggest improving?",
-                "options": [
-                  "The introduction",
-                  "The conclusion section",
-                  "The formatting"
-                ],
-                "correct": 1
-              }
-            ]
-          },
-          {
-            "extractNumber": 3,
-            "label": "Extract Three — Two friends discussing a job offer",
-            "script": "A: So, are you going to accept the job offer?\nB: I'm still deciding. The salary is great, but it means relocating to another city.\nA: That's a big decision. Do you know anyone there?\nB: Not really, that's what worries me most, starting completely fresh, no friends nearby.",
-            "isDialogue": true,
-            "questions": [
-              {
-                "number": 28,
-                "q": "What is speaker B unsure about?",
-                "options": [
-                  "Whether the salary is high enough",
-                  "Whether to accept a job that requires relocating",
-                  "Whether to ask for a promotion instead"
-                ],
-                "correct": 1
-              },
-              {
-                "number": 29,
-                "q": "What worries speaker B the most?",
-                "options": [
-                  "Not knowing anyone in the new city",
-                  "The cost of moving",
-                  "Losing the current job"
-                ],
-                "correct": 0
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "partNumber": 6,
-        "taskType": "note_completion",
-        "title": "Part 6 — Note Completion",
-        "script": "Say naturally: Say naturally, as a lecturer speaking to students: Today I want to talk about the invention of instant noodles. The product was invented by Momofuku Ando, a Japanese businessman, in nineteen fifty-eight. Before that, Ando had actually experienced business failure several times, including the collapse of his previous company. He noticed long queues of people waiting outside ramen stalls after the war and wondered if noodles could be made faster and cheaper at home. His first successful product was called Chikin Ramen. To preserve the noodles, Ando used a method called flash frying, which removed moisture and allowed long-term storage. The product was initially considered a luxury item, since it was priced higher than fresh noodles at the time. Sales only increased significantly once the price dropped closer to that of regular noodles. Today, instant noodles are sold in over one hundred countries around the world.",
-        "notesTemplate": "INSTANT NOODLES — LECTURE NOTES\n\nInvented by Momofuku Ando in: (30)___\nAndo had experienced several business (31)___ before this invention.\nFirst successful product name: (32)___\nPreservation method used: (33)___\nInitially considered a (34)___ item due to high price.\nToday sold in over (35)___ countries.",
-        "gaps": [
-          {
-            "number": 30,
-            "answers": [
-              "1958",
-              "nineteen fifty-eight",
-              "nineteen fifty eight"
-            ]
-          },
-          {
-            "number": 31,
-            "answers": [
-              "failures",
-              "failure"
-            ]
-          },
-          {
-            "number": 32,
-            "answers": [
-              "chikin ramen",
-              "chicken ramen"
-            ]
-          },
-          {
-            "number": 33,
-            "answers": [
-              "flash frying",
-              "flash-frying"
-            ]
-          },
-          {
-            "number": 34,
-            "answers": [
-              "luxury"
-            ]
-          },
-          {
-            "number": 35,
-            "answers": [
-              "100",
-              "one hundred",
-              "a hundred"
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "mock2",
-    "title": "Listening Mock Test 2 (Full Mock — haqiqiy audio)",
-    "parts": [
-      {
-        "partNumber": 1,
-        "taskType": "sentence_reply",
-        "title": "Part 1 — Gapga javob tanlash",
-        "items": [
-          {
-            "number": 1,
-            "options": [
-              "I think so. It should be.",
-              "No, I think that's all that I need.",
-              "Sure, no problem."
-            ],
-            "correct": 1
-          },
-          {
-            "number": 2,
-            "options": [
-              "Sure, no problem.",
-              "When does it happen?",
-              "Why, we are in no rush!"
-            ],
-            "correct": 0
-          },
-          {
-            "number": 3,
-            "options": [
-              "You should take a class.",
-              "Read the manual.",
-              "There's nothing we can do."
-            ],
-            "correct": 1
-          },
-          {
-            "number": 4,
-            "options": [
-              "Should we cross it too?",
-              "Why did he do that?",
-              "When did it happen?"
-            ],
-            "correct": 1
-          },
-          {
-            "number": 5,
-            "options": [
-              "I'll try again next time.",
-              "Ok, I'll pick them up.",
-              "Of course, I fed them today."
-            ],
-            "correct": 2
-          },
-          {
-            "number": 6,
-            "options": [
-              "I live with my grandparents.",
-              "We went to party with my family yesterday.",
-              "Yes, We do. Always."
-            ],
-            "correct": 2
-          },
-          {
-            "number": 7,
-            "options": [
-              "That is her sister.",
-              "Where?",
-              "Marie is so sad today."
-            ],
-            "correct": 0
-          },
-          {
-            "number": 8,
-            "options": [
-              "Ok, I will",
-              "Yes, he remembers",
-              "No, it can't be"
-            ],
-            "correct": 0
-          }
-        ]
-      },
-      {
-        "partNumber": 2,
-        "taskType": "note_completion",
-        "title": "Part 2 — Note Completion",
-        "notesTemplate": "LONDON TAXIS AND PRIVATE HIRE VEHICLES\n\nMethods of payment: (9)___, or with credit and debit cards\nWhere to stop a cab: in the (10)___, or at cab ranks\nTariff 2: Monday – Friday: 8 pm – 10 pm\n(11)___ & Sunday: 6 am – 10 pm\nTariff 3: every night: 10 pm – 6 am & on (12)___ holidays\nRequirements: taxi drivers to complete a (13)___ examination\nNotice: Private hire vehicles must always be (14)___ either at an operator's office, or by phone",
-        "gaps": [
-          {
-            "number": 9,
-            "answers": [
-              "cash"
-            ]
-          },
-          {
-            "number": 10,
-            "answers": [
-              "street"
-            ]
-          },
-          {
-            "number": 11,
-            "answers": [
-              "Saturday"
-            ]
-          },
-          {
-            "number": 12,
-            "answers": [
-              "public"
-            ]
-          },
-          {
-            "number": 13,
-            "answers": [
-              "medical"
-            ]
-          },
-          {
-            "number": 14,
-            "answers": [
-              "booked"
-            ]
-          }
-        ]
-      },
-      {
-        "partNumber": 3,
-        "taskType": "speaker_matching",
-        "title": "Part 3 — Speaker Matching",
-        "speakers": [
-          {
-            "number": 15
-          },
-          {
-            "number": 16
-          },
-          {
-            "number": 17
-          },
-          {
-            "number": 18
-          }
-        ],
-        "options": [
-          {
-            "label": "A",
-            "text": "a doctor"
-          },
-          {
-            "label": "B",
-            "text": "a circus trainer"
-          },
-          {
-            "label": "C",
-            "text": "a retired person"
-          },
-          {
-            "label": "D",
-            "text": "a zoo keeper"
-          },
-          {
-            "label": "E",
-            "text": "a pet shop owner"
-          },
-          {
-            "label": "F",
-            "text": "a blind person"
-          }
-        ],
-        "answers": {
-          "15": "D",
-          "16": "C",
-          "17": "F",
-          "18": "A"
-        }
-      },
-      {
-        "partNumber": 5,
-        "taskType": "extracts_mc",
-        "title": "Part 5 — Extractlar",
-        "extracts": [
-          {
-            "extractNumber": 1,
-            "label": "Extract One — Two people talking about a play they saw at the theatre",
-            "questions": [
-              {
-                "number": 24,
-                "q": "What do we learn about the writer of the play?",
-                "options": [
-                  "He died.",
-                  "He is dying.",
-                  "He nearly died."
-                ],
-                "correct": 2
-              },
-              {
-                "number": 25,
-                "q": "What do the speakers agree on?",
-                "options": [
-                  "The writer is quite predictable.",
-                  "The writer's style has changed direction.",
-                  "The play wasn't as funny as some of the writer's earlier plays."
-                ],
-                "correct": 1
-              }
-            ]
-          },
-          {
-            "extractNumber": 2,
-            "label": "Extract Two — A radio interview with a trade and commerce researcher",
-            "questions": [
-              {
-                "number": 26,
-                "q": "According to Pablo Jenson,",
-                "options": [
-                  "a variety of different shops tends to boost sales.",
-                  "traders that have something in common can boost each other's sales.",
-                  "butchers are the most successful traders."
-                ],
-                "correct": 1
-              },
-              {
-                "number": 27,
-                "q": "Jenson's theory...",
-                "options": [
-                  "advertised for similar retailers to open shops in one particular area.",
-                  "works better for bakers and butchers than for other kinds of retailers.",
-                  "seems to have been proved to be credible."
-                ],
-                "correct": 2
-              }
-            ]
-          },
-          {
-            "extractNumber": 3,
-            "label": "Extract Three — A report about holiday homes in the Mediterranean",
-            "questions": [
-              {
-                "number": 28,
-                "q": "The Costa de la Cruz...",
-                "options": [
-                  "is being spoiled by developers.",
-                  "is the cheapest area of Spain in which you can buy a holiday home.",
-                  "is close to Portugal."
-                ],
-                "correct": 2
-              },
-              {
-                "number": 29,
-                "q": "According to Chris Mercer,",
-                "options": [
-                  "there is a danger that the Costa de la Cruz will lose its appeal.",
-                  "the Costa de la Cruz can be developed without the area being damaged.",
-                  "the government has put a stop to the Costa de la Cruz being developed further."
-                ],
-                "correct": 1
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "partNumber": 6,
-        "taskType": "note_completion",
-        "title": "Part 6 — Note Completion",
-        "notesTemplate": "THE GRAND UNION CANAL\n\nThe canals were built despite the fact that there was no public (30)___ and very little technology.\nFrom 1790 to 1929, there were many canals that were (31)___ with each other but which were not uniform in size.\nThe new union of canals provided a (32)___ link between major industrial cities.\nThere are plenty of natural habitats for a variety of wildlife on and around the canals.\nWalkers can go to the nearest waterway office to get information on circular (33)___ so they can start and end at the same place.\nAnglers can fish in the canals and (34)___.\nIf you want to go fishing, you must buy a rod license.\nThe waterways authority request that people are (35)___ towards the canal users.",
-        "gaps": [
-          {
-            "number": 30,
-            "answers": [
-              "finance"
-            ]
-          },
-          {
-            "number": 31,
-            "answers": [
-              "competing"
-            ]
-          },
-          {
-            "number": 32,
-            "answers": [
-              "continuous"
-            ]
-          },
-          {
-            "number": 33,
-            "answers": [
-              "walks"
-            ]
-          },
-          {
-            "number": 34,
-            "answers": [
-              "reservoirs"
-            ]
-          },
-          {
-            "number": 35,
-            "answers": [
-              "considerate"
-            ]
-          }
-        ]
-      }
-    ],
-    "audioUrl": "https://business-english-platform.vercel.app/media/audio/part-1-6_A8Lb4IYR.mp3",
-    "pdfUrl": "https://business-english-platform.vercel.app/media/pdf/Full%20Mock%208%2018.03.2026.pdf"
+const { Markup } = require('telegraf');
+const engine = require('../../services/listeningMockEngine');
+
+// ==================== MENUS ====================
+
+async function showListeningMenu(ctx) {
+  const buttons = [1, 2, 3, 5, 6].map((n) => {
+    const exp = engine.getExplanation(n);
+    return [Markup.button.callback(exp.title, `lmock:startpart:${n}`)];
+  });
+  const mocksList = engine.getAllMocks();
+  mocksList.forEach((m) => buttons.push([Markup.button.callback(`🏆 ${m.title} (to'liq)`, `lmock:startmock:${m.id}`)]));
+  buttons.push([Markup.button.callback('🔗 Qo\'shimcha manbalar (BBC, TED va h.k.)', 'lresources:show')]);
+
+  await ctx.reply(
+    "🎧 Listening (Multilevel format)\n\n" +
+      "Har bir Part'ni alohida mashq qiling, yoki to'liq Mock testni sinang. " +
+      "Part 4 (Xarita) rasm talab qilgani uchun keyinroq qo'shiladi.",
+    Markup.inlineKeyboard(buttons)
+  );
+}
+
+async function showResources(ctx) {
+  const { showResources: showRes } = require('./listening');
+  await showRes(ctx);
+}
+
+// ==================== START (part practice = 1 part, mock = all parts) ====================
+
+async function startPart(ctx) {
+  const partNumber = parseInt(ctx.match[1], 10);
+  const mock = engine.getMock('mock1'); // parts are currently only defined in mock1
+  const part = mock.parts.find((p) => p.partNumber === partNumber);
+  if (!part) {
+    await ctx.answerCbQuery('Mashq topilmadi.');
+    return;
   }
-]
+  await ctx.answerCbQuery();
+
+  if (!process.env.GEMINI_API_KEY) {
+    await ctx.reply("⚠️ AI Tutor hali sozlanmagan (GEMINI_API_KEY yo'q). Administrator .env faylga API kalitni qo'shishi kerak.");
+    return;
+  }
+
+  ctx.session.listeningRun = { mode: 'part', label: part.title, queue: [part], index: 0, scores: {}, state: {} };
+  await runQueue(ctx);
+}
+
+async function startMock(ctx) {
+  const mockId = ctx.match[1];
+  const mock = engine.getMock(mockId);
+  if (!mock) {
+    await ctx.answerCbQuery('Mock topilmadi.');
+    return;
+  }
+  await ctx.answerCbQuery();
+
+  // "Real audio" mocks ship one continuous recording (like the real exam) instead of
+  // per-item TTS clips. Audio/PDF are hosted externally — the bot just sends the link,
+  // so it never downloads or holds the (large) file itself. No GEMINI key needed.
+  if (mock.audioUrl) {
+    const lines = [
+      `🏁 ${mock.title} boshlandi!`,
+      '',
+      "🎧 Bu — haqiqiy imtihon yozuvi. Quyidagi havolani bosib, brauzerda audioni tinglang (barcha qismlar birin-ketin shu audioda keladi).",
+      '',
+      `🎧 Audio: ${mock.audioUrl}`,
+    ];
+    if (mock.pdfUrl) {
+      lines.push(`📄 Savollar varag'i (PDF): ${mock.pdfUrl}`);
+    }
+    lines.push('', "Audioni tinglab bo'lgach, shu yerga qaytib savollarga javob berishni davom ettiring 👇");
+    await ctx.reply(lines.join('\n'));
+    ctx.session.listeningRun = {
+      mode: 'mock',
+      label: mock.title,
+      queue: mock.parts,
+      index: 0,
+      scores: {},
+      state: {},
+      skipPerItemAudio: true,
+    };
+    await runQueue(ctx);
+    return;
+  }
+
+  if (!process.env.GEMINI_API_KEY) {
+    await ctx.reply("⚠️ AI Tutor hali sozlanmagan (GEMINI_API_KEY yo'q). Administrator .env faylga API kalitni qo'shishi kerak.");
+    return;
+  }
+
+  await ctx.reply(`🏁 ${mock.title} boshlandi!`);
+  ctx.session.listeningRun = { mode: 'mock', label: mock.title, queue: mock.parts, index: 0, scores: {}, state: {} };
+  await runQueue(ctx);
+}
+
+// ==================== GENERIC PART RUNNER ====================
+
+function addScore(run, partNumber, correct, total) {
+  const existing = run.scores[partNumber];
+  if (existing) {
+    existing.correct += correct;
+    existing.total += total;
+  } else {
+    run.scores[partNumber] = { correct, total };
+  }
+}
+
+async function runQueue(ctx) {
+  const run = ctx.session.listeningRun;
+  if (run.index >= run.queue.length) return finishRun(ctx);
+
+  const part = run.queue[run.index];
+  run.state = {};
+
+  const exp = engine.getExplanation(part.partNumber);
+  await ctx.reply(`${exp.title}\n\n${exp.explanation}`, { parse_mode: 'Markdown' });
+
+  if (part.taskType === 'sentence_reply') return startSentenceReply(ctx, part);
+  if (part.taskType === 'note_completion') return startNoteCompletion(ctx, part);
+  if (part.taskType === 'speaker_matching') return startSpeakerMatching(ctx, part);
+  if (part.taskType === 'extracts_mc') return startExtractsMc(ctx, part);
+}
+
+async function advanceToNextPart(ctx) {
+  ctx.session.listeningRun.index += 1;
+  await runQueue(ctx);
+}
+
+async function sendAudioSafely(ctx, item, filenameHint) {
+  const run = ctx.session.listeningRun;
+  if (run && run.skipPerItemAudio) return true; // full recording already played once at mock start
+  await ctx.reply('⏳ Audio tayyorlanmoqda...');
+  try {
+    const buffer = await engine.resolveAudio(item);
+    await ctx.replyWithAudio({ source: buffer, filename: filenameHint });
+    return true;
+  } catch (err) {
+    console.error('Listening audio resolution failed:', err.message);
+    await ctx.reply("Audio bilan ishlashda texnik xatolik yuz berdi. Birozdan so'ng qayta urinib ko'ring.");
+    return false;
+  }
+}
+
+// ---------- SENTENCE REPLY (Part 1 style) ----------
+
+async function startSentenceReply(ctx, part) {
+  ctx.session.listeningRun.state = { index: 0, correct: 0 };
+  await sendSentenceItem(ctx, part);
+}
+
+async function sendSentenceItem(ctx, part) {
+  const state = ctx.session.listeningRun.state;
+  const item = part.items[state.index];
+  const ok = await sendAudioSafely(ctx, item, `listening_${item.number}.wav`);
+  if (!ok) return;
+
+  const letters = ['A', 'B', 'C'];
+  const buttons = item.options.map((opt, i) => [Markup.button.callback(`${letters[i]}) ${opt}`, `lmock:sr:${i}`)]);
+  await ctx.reply(`❓ ${item.number}) Eng mos javobni tanlang:`, Markup.inlineKeyboard(buttons));
+}
+
+async function handleSentenceReplyAnswer(ctx) {
+  const selected = parseInt(ctx.match[1], 10);
+  const run = ctx.session.listeningRun;
+  const part = run.queue[run.index];
+  const state = run.state;
+  const item = part.items[state.index];
+
+  const isCorrect = selected === item.correct;
+  if (isCorrect) state.correct += 1;
+
+  const letters = ['A', 'B', 'C'];
+  await ctx.answerCbQuery(isCorrect ? "✅ To'g'ri!" : `❌ Noto'g'ri. To'g'ri javob: ${letters[item.correct]}) ${item.options[item.correct]}`);
+  await ctx.editMessageReplyMarkup(undefined).catch(() => {});
+
+  const nextIdx = state.index + 1;
+  if (nextIdx >= part.items.length) {
+    addScore(run, part.partNumber, state.correct, part.items.length);
+    await ctx.reply(`📊 ${part.title} natijasi: ${state.correct}/${part.items.length}`);
+    await advanceToNextPart(ctx);
+    return;
+  }
+  state.index = nextIdx;
+  await sendSentenceItem(ctx, part);
+}
+
+// ---------- NOTE COMPLETION (Part 2 / 6 style) ----------
+
+async function startNoteCompletion(ctx, part) {
+  await ctx.reply(part.notesTemplate);
+  const ok = await sendAudioSafely(ctx, part, `listening_part${part.partNumber}.wav`);
+  if (!ok) return;
+
+  const gapNumbers = part.gaps.map((g) => g.number);
+  await ctx.reply(
+    `✍ Tinglab, yuqoridagi ${part.gaps.length} ta bo'shliqni (${gapNumbers[0]}-${gapNumbers[gapNumbers.length - 1]}) to'ldiring. ` +
+      `Javoblaringizni vergul bilan ajratib, tartibda yuboring:`
+  );
+  ctx.session.listeningRun.state = { awaitingNotes: true };
+}
+
+async function handleNoteCompletionAnswer(ctx) {
+  const run = ctx.session.listeningRun;
+  if (!run || !run.state || !run.state.awaitingNotes) return false;
+  const part = run.queue[run.index];
+
+  const words = ctx.message.text.split(',').map((w) => w.trim());
+  let correct = 0;
+  let feedback = '';
+
+  part.gaps.forEach((gap, i) => {
+    const userWord = engine.normalizeWord(words[i] || '');
+    const isCorrect = gap.answers.some((a) => engine.normalizeWord(a) === userWord);
+    if (isCorrect) correct += 1;
+    feedback += `${isCorrect ? '✅' : '❌'} ${gap.number}) siz: "${words[i] || "(bo'sh)"}"`;
+    if (!isCorrect) feedback += ` — to'g'ri: "${gap.answers[0]}"`;
+    feedback += '\n';
+  });
+
+  addScore(run, part.partNumber, correct, part.gaps.length);
+  await ctx.reply(`📊 ${part.title} natijasi: ${correct}/${part.gaps.length}\n\n${feedback}`);
+  await advanceToNextPart(ctx);
+  return true;
+}
+
+// ---------- SPEAKER MATCHING (Part 3 style) ----------
+
+async function startSpeakerMatching(ctx, part) {
+  let optionsMsg = 'Variantlar:\n';
+  part.options.forEach((o) => (optionsMsg += `${o.label}) ${o.text}\n`));
+  await ctx.reply(optionsMsg);
+
+  for (const speaker of part.speakers) {
+    await ctx.reply(`🎙 Speaker ${part.speakers.indexOf(speaker) + 1}`);
+    const ok = await sendAudioSafely(ctx, speaker, `listening_p${part.partNumber}_speaker${speaker.number}.wav`);
+    if (!ok) return;
+  }
+
+  ctx.session.listeningRun.state = { index: 0, correct: 0, used: [] };
+  await sendSpeakerQuestion(ctx, part);
+}
+
+function speakerOptionsKeyboard(part, usedLabels) {
+  const available = part.options.filter((o) => !usedLabels.includes(o.label));
+  const buttons = available.map((o) => [Markup.button.callback(`${o.label}) ${o.text}`, `lmock:sm:${o.label}`)]);
+  return Markup.inlineKeyboard(buttons);
+}
+
+async function sendSpeakerQuestion(ctx, part) {
+  const state = ctx.session.listeningRun.state;
+  const speaker = part.speakers[state.index];
+  await ctx.reply(`❓ Speaker ${state.index + 1} (${speaker.number})`, speakerOptionsKeyboard(part, state.used));
+}
+
+async function handleSpeakerMatchingAnswer(ctx) {
+  const chosenLabel = ctx.match[1];
+  const run = ctx.session.listeningRun;
+  const part = run.queue[run.index];
+  const state = run.state;
+  const speaker = part.speakers[state.index];
+
+  const isCorrect = part.answers[speaker.number] === chosenLabel;
+  if (isCorrect) state.correct += 1;
+  state.used.push(chosenLabel);
+
+  await ctx.answerCbQuery(isCorrect ? "✅ To'g'ri!" : `❌ Noto'g'ri. To'g'ri javob: ${part.answers[speaker.number]}`);
+  await ctx.editMessageReplyMarkup(undefined).catch(() => {});
+
+  const nextIdx = state.index + 1;
+  if (nextIdx >= part.speakers.length) {
+    addScore(run, part.partNumber, state.correct, part.speakers.length);
+    await ctx.reply(`📊 ${part.title} natijasi: ${state.correct}/${part.speakers.length}`);
+    await advanceToNextPart(ctx);
+    return;
+  }
+  state.index = nextIdx;
+  await sendSpeakerQuestion(ctx, part);
+}
+
+// ---------- EXTRACTS MC (Part 5 style) ----------
+
+async function startExtractsMc(ctx, part) {
+  ctx.session.listeningRun.state = { extractIndex: 0, qIndex: 0, correct: 0 };
+  await playExtractAndAsk(ctx, part);
+}
+
+async function playExtractAndAsk(ctx, part) {
+  const state = ctx.session.listeningRun.state;
+  const extract = part.extracts[state.extractIndex];
+  await ctx.reply(`🎙 ${extract.label}`);
+  const ok = await sendAudioSafely(ctx, extract, `listening_p${part.partNumber}_extract${extract.extractNumber}.wav`);
+  if (!ok) return;
+  await sendExtractQuestion(ctx, part);
+}
+
+function extractMcKeyboard(extractIdx, qIdx, options) {
+  const buttons = options.map((opt, i) => [Markup.button.callback(opt, `lmock:emc:${extractIdx}:${qIdx}:${i}`)]);
+  return Markup.inlineKeyboard(buttons);
+}
+
+async function sendExtractQuestion(ctx, part) {
+  const state = ctx.session.listeningRun.state;
+  const extract = part.extracts[state.extractIndex];
+  const q = extract.questions[state.qIndex];
+  await ctx.reply(`❓ ${q.number}) ${q.q}`, extractMcKeyboard(state.extractIndex, state.qIndex, q.options));
+}
+
+async function handleExtractsMcAnswer(ctx) {
+  const extractIdx = parseInt(ctx.match[1], 10);
+  const qIdx = parseInt(ctx.match[2], 10);
+  const selected = parseInt(ctx.match[3], 10);
+
+  const run = ctx.session.listeningRun;
+  const part = run.queue[run.index];
+  const state = run.state;
+  const extract = part.extracts[extractIdx];
+  const q = extract.questions[qIdx];
+
+  const isCorrect = selected === q.correct;
+  if (isCorrect) state.correct += 1;
+
+  await ctx.answerCbQuery(isCorrect ? "✅ To'g'ri!" : `❌ Noto'g'ri. To'g'ri javob: ${q.options[q.correct]}`);
+  await ctx.editMessageReplyMarkup(undefined).catch(() => {});
+
+  const nextQIdx = qIdx + 1;
+  if (nextQIdx < extract.questions.length) {
+    state.qIndex = nextQIdx;
+    await sendExtractQuestion(ctx, part);
+    return;
+  }
+
+  const nextExtractIdx = extractIdx + 1;
+  if (nextExtractIdx >= part.extracts.length) {
+    const total = part.extracts.reduce((sum, e) => sum + e.questions.length, 0);
+    addScore(run, part.partNumber, state.correct, total);
+    await ctx.reply(`📊 ${part.title} natijasi: ${state.correct}/${total}`);
+    await advanceToNextPart(ctx);
+    return;
+  }
+
+  state.extractIndex = nextExtractIdx;
+  state.qIndex = 0;
+  await playExtractAndAsk(ctx, part);
+}
+
+// ==================== FINISH ====================
+
+async function finishRun(ctx) {
+  const { mainMenu } = require('../keyboards');
+  const run = ctx.session.listeningRun;
+  const scores = run.scores;
+  const total = Object.values(scores).reduce((sum, s) => sum + s.correct, 0);
+  const totalMax = Object.values(scores).reduce((sum, s) => sum + s.total, 0);
+
+  let summary = `🏆 ${run.label} yakunlandi!\n\n`;
+  Object.entries(scores).forEach(([partNum, s]) => {
+    summary += `Part ${partNum}: ${s.correct}/${s.total}\n`;
+  });
+  summary += `\n📊 JAMI: ${total}/${totalMax}`;
+
+  await ctx.reply(summary, mainMenu);
+  ctx.session.listeningRun = null;
+}
+
+// ==================== TEXT ROUTER ENTRYPOINT ====================
+
+/** Called from the generic text handler; returns true if it handled the message. */
+async function handleTextAnswer(ctx) {
+  const run = ctx.session.listeningRun;
+  if (!run) return false;
+  const part = run.queue[run.index];
+  if (part.taskType === 'note_completion') {
+    return handleNoteCompletionAnswer(ctx);
+  }
+  return false;
+}
+
+module.exports = {
+  showListeningMenu,
+  showResources,
+  startPart,
+  startMock,
+  handleSentenceReplyAnswer,
+  handleSpeakerMatchingAnswer,
+  handleExtractsMcAnswer,
+  handleTextAnswer,
+};
