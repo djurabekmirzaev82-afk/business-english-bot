@@ -62,11 +62,16 @@ router.post('/check', requireAuth, async (req, res) => {
     `Required word count for this task: ${cat.wordCountMin}-${cat.wordCountMax} words. ` +
     `The student's submission has ${wordCount} words — factor this into your BALL score if it is outside the range.`;
 
+  // IELTS Academic Task 1 (grafik/jarayon) — IELTS Band shkalasi (0-9).
+  // Multilevel (xat/insho) — O'zbekiston rasmiy Multilevel imtihoni shkalasi (0-75).
+  const scoreFormat = cat.category.startsWith('academic_task1') ? 'ieltsBand' : 'multilevel75';
+
   try {
     const feedback = await aiTutor.checkWriting(
       `${cat.task} — ${cat.title}`,
       text,
-      criteriaWithWordCount
+      criteriaWithWordCount,
+      scoreFormat
     );
     await pool.query(
       `INSERT INTO xp_events (user_id, module, amount, reason) VALUES ($1, 'writing', 15, $2)`,
