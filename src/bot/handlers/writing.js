@@ -11,6 +11,24 @@ function findLesson(id) {
   return lessons.find((l) => l.id === id);
 }
 
+function pickRandom(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function formatChartAsText(chart) {
+  let out = `📊 *${chart.title}* (${chart.unit})\n\n`;
+  chart.series.forEach((s) => {
+    out += `${s.name}: `;
+    out += chart.categories.map((c, i) => `${c}=${s.data[i]}`).join(', ');
+    out += '\n';
+  });
+  return out;
+}
+
+function formatStepsAsText(steps) {
+  return steps.map((s, i) => `${i + 1}) ${s}`).join(' → ');
+}
+
 function countWords(text) {
   return text.trim().split(/\s+/).filter(Boolean).length;
 }
@@ -32,7 +50,7 @@ function essayMenuKeyboard() {
 }
 
 function academicMenuKeyboard() {
-  const academicLessons = lessons.filter((l) => l.category === 'academic_task1');
+  const academicLessons = lessons.filter((l) => l.category === 'academic_task1_chart' || l.category === 'academic_task1_process');
   const buttons = academicLessons.map((l) => [Markup.button.callback(l.title, `wlesson:${l.id}`)]);
   buttons.push([Markup.button.callback('⬅ Orqaga', 'wsubmenu:main')]);
   return Markup.inlineKeyboard(buttons);
@@ -66,18 +84,32 @@ async function selectLesson(ctx) {
   }
   await ctx.answerCbQuery();
 
+  // Har safar tasodifiy bitta vazifa tanlanadi — shu bilan foydalanuvchi
+  // xuddi shu bo'limga qayta kirganda boshqa mashqni ko'radi.
+  const picked = pickRandom(lesson.prompts);
+  const isStructured = typeof picked === 'object';
+  const taskPromptText = isStructured ? picked.text : picked;
+
   // Store lesson context so the free-text handler knows what to check against.
   ctx.session.pendingWriting = {
     taskType: `${lesson.task} — ${lesson.title}`,
     lessonId: lesson.id,
     criteria: lesson.lesson,
+    taskPrompt: taskPromptText,
+    chart: isStructured ? picked.chart : undefined,
+    steps: isStructured ? picked.steps : undefined,
     wordCountMin: lesson.wordCountMin,
     wordCountMax: lesson.wordCountMax,
   };
   ctx.session.pendingSpeaking = null; // only one active flow at a time
 
   await ctx.reply(lesson.lesson, { parse_mode: 'Markdown' });
-  await ctx.reply(lesson.taskPrompt, { parse_mode: 'Markdown' });
+  await ctx.reply(taskPromptText, { parse_mode: 'Markdown' });
+  if (isStructured && picked.chart) {
+    await ctx.reply(formatChartAsText(picked.chart), { parse_mode: 'Markdown' });
+  } else if (isStructured && picked.steps) {
+    await ctx.reply(`⚙️ Bosqichlar: ${formatStepsAsText(picked.steps)}`);
+  }
   await ctx.reply(
     `📏 Eslatma: bu vazifa uchun so'z soni ${lesson.wordCountMin}-${lesson.wordCountMax} oralig'ida bo'lishi kerak.\n\n` +
       "Tayyor bo'lgach, matningizni shu chatga yuboring — AI tekshirib beradi."
@@ -88,7 +120,7 @@ async function selectLesson(ctx) {
  * Called from the generic text handler when ctx.session.pendingWriting is set.
  */
 async function handleWritingSubmission(ctx) {
-  const { taskType, criteria, wordCountMin, wordCountMax } = ctx.session.pendingWriting;
+  const { taskType, criteria, taskPrompt, chart, steps, wordCountMin, wordCountMax } = ctx.session.pendingWriting;
   const userText = ctx.message.text;
   const wordCount = countWords(userText);
 
@@ -111,8 +143,15 @@ async function handleWritingSubmission(ctx) {
   await ctx.reply('⏳ AI matningizni tekshirmoqda, biroz kuting...');
 
   try {
+    let dataContext = '';
+    if (chart) {
+      dataContext = `\n\nUnderlying chart data the student was asked to describe (use this to verify accuracy):\nTitle: ${chart.title}\nType: ${chart.type}\nCategories: ${chart.categories.join(', ')}\n${chart.series.map((s) => `${s.name}: ${s.data.join(', ')}`).join('\n')}`;
+    } else if (steps) {
+      dataContext = `\n\nUnderlying process steps the student was asked to describe (use this to verify accuracy and completeness):\n${steps.map((s, i) => `${i + 1}. ${s}`).join('\n')}`;
+    }
     const criteriaWithWordCount =
-      `${criteria}\n\nRequired word count for this task: ${wordCountMin}-${wordCountMax} words. ` +
+      `${criteria}\n\nTask given to student: ${taskPrompt || ''}${dataContext}\n\n` +
+      `Required word count for this task: ${wordCountMin}-${wordCountMax} words. ` +
       `The student's submission has ${wordCount} words — factor this into your BALL score if it is outside the range.`;
     const feedback = await aiTutor.checkWriting(taskType, userText, criteriaWithWordCount);
     await ctx.reply(feedback);

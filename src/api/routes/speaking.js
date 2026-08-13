@@ -15,12 +15,22 @@ router.get('/topics', requireAuth, (req, res) => {
   res.json(topics.map(({ id, theme }) => ({ id, theme })));
 });
 
+router.get('/topics/random', requireAuth, (req, res) => {
+  const topic = topics[Math.floor(Math.random() * topics.length)];
+  res.json(topic);
+});
+
 router.get('/topics/:id', requireAuth, (req, res) => {
   const topic = topics.find((t) => t.id === req.params.id);
   if (!topic) return res.status(404).json({ error: 'Mavzu topilmadi.' });
   res.json(topic);
 });
 
+/**
+ * body: { audioBase64, mimeType }
+ * Reuses the bot's transcribeAndAssessPronunciation — same Gemini call, same
+ * pronunciation-note format, just exposed over HTTP for the web recorder.
+ */
 router.post('/transcribe', requireAuth, async (req, res) => {
   const { audioBase64, mimeType } = req.body;
   if (!audioBase64) {
@@ -38,6 +48,16 @@ router.post('/transcribe', requireAuth, async (req, res) => {
   }
 });
 
+/**
+ * body: {
+ *   topicId,
+ *   answers: { part1: "...", part2: "...", part3: "..." }  // combined text per part
+ * }
+ * Mirrors the bot's finishSession(): builds the same transcript format and calls
+ * the same aiTutor.checkIeltsSpeaking() used by the Telegram bot, so scoring is
+ * identical across both surfaces. Audio/pronunciation scoring is not wired up
+ * for the web yet (text-only), same as a text-only bot session.
+ */
 router.post('/submit', requireAuth, async (req, res) => {
   const { topicId, answers, pronunciationNotes } = req.body;
   const topic = topics.find((t) => t.id === topicId);

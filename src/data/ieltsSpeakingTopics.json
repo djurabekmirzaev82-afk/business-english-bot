@@ -73,5 +73,461 @@
       "What are the risks of relying too much on technology at work?",
       "How might artificial intelligence change everyday life in the next ten years?"
     ]
+  },
+  {
+    "id": "study_education",
+    "theme": "Ta'lim va o'qish (Study & Education)",
+    "part1Questions": [
+      "Are you a student now?",
+      "What subject do you enjoy studying most?",
+      "Do you prefer studying alone or in groups?",
+      "Is education in your country changing?"
+    ],
+    "part2": {
+      "cueCardTitle": "Describe a course or subject you found useful",
+      "bulletPoints": [
+        "what it was",
+        "where you studied it",
+        "what you learned",
+        "and explain why it was useful"
+      ]
+    },
+    "part3Questions": [
+      "Why is lifelong learning becoming more important?",
+      "Do you think online education will replace traditional classrooms?",
+      "What skills should schools teach that they currently don't?"
+    ]
+  },
+  {
+    "id": "shopping_business",
+    "theme": "Xarid va biznes (Shopping & Business)",
+    "part1Questions": [
+      "Do you enjoy shopping?",
+      "Do you prefer shopping online or in stores?",
+      "What was the last thing you bought?",
+      "Do you often compare prices before buying?"
+    ],
+    "part2": {
+      "cueCardTitle": "Describe a successful small business you know",
+      "bulletPoints": [
+        "what the business sells",
+        "how it started",
+        "why it is successful",
+        "and explain what you admire about it"
+      ]
+    },
+    "part3Questions": [
+      "How has online shopping changed local businesses?",
+      "Do you think small businesses can compete with large companies?",
+      "What makes a business successful in your opinion?"
+    ]
+  },
+  {
+    "id": "environment",
+    "theme": "Atrof-muhit (Environment)",
+    "part1Questions": [
+      "Do you try to protect the environment?",
+      "Is recycling common in your city?",
+      "Do you use public transport or a car?",
+      "What environmental problems worry you most?"
+    ],
+    "part2": {
+      "cueCardTitle": "Describe an environmental problem in your area",
+      "bulletPoints": [
+        "what the problem is",
+        "what causes it",
+        "how it affects people",
+        "and explain what could be done about it"
+      ]
+    },
+    "part3Questions": [
+      "Should companies be responsible for reducing pollution?",
+      "Do individuals or governments have more responsibility for the environment?",
+      "How can businesses become more environmentally friendly?"
+    ]
+  },
+  {
+    "id": "food_health",
+    "theme": "Ovqatlanish va sog'liq (Food & Health)",
+    "part1Questions": [
+      "Do you cook at home often?",
+      "What is a typical meal in your country?",
+      "Do you think fast food is popular where you live?",
+      "Do you try to eat healthily?"
+    ],
+    "part2": {
+      "cueCardTitle": "Describe a healthy habit you have",
+      "bulletPoints": [
+        "what the habit is",
+        "when you started it",
+        "how you maintain it",
+        "and explain how it benefits you"
+      ]
+    },
+    "part3Questions": [
+      "Why do you think fast food is so popular nowadays?",
+      "Should governments tax unhealthy food?",
+      "How has technology changed the way people eat?"
+    ]
+  },
+  {
+    "id": "communication_tech",
+    "theme": "Muloqot va texnologiya (Communication & Technology)",
+    "part1Questions": [
+      "How do you usually communicate with friends?",
+      "Do you prefer calling or texting?",
+      "How much time do you spend on your phone daily?",
+      "Has technology changed how you communicate?"
+    ],
+    "part2": {
+      "cueCardTitle": "Describe an app or piece of technology you find useful",
+      "bulletPoints": [
+        "what it is",
+        "how you use it",
+        "when you started using it",
+        "and explain why it is useful"
+      ]
+    },
+    "part3Questions": [
+      "Has technology made communication better or worse?",
+      "Do you think face-to-face communication is disappearing?",
+      "How might communication change in the future?"
+    ]
+  },
+  {
+    "id": "money_finance",
+    "theme": "Pul va moliya (Money & Finance)",
+    "part1Questions": [
+      "Do you save money regularly?",
+      "Do you prefer paying by cash or card?",
+      "Do you plan a budget each month?",
+      "What do you usually spend most money on?"
+    ],
+    "part2": {
+      "cueCardTitle": "Describe a time you saved money for something important",
+      "bulletPoints": [
+        "what you saved for",
+        "how long it took",
+        "how you managed your money",
+        "and explain how you felt when you achieved it"
+      ]
+    },
+    "part3Questions": [
+      "Why do some people struggle to save money?",
+      "Should financial literacy be taught in schools?",
+      "How has the use of cash changed in recent years?"
+    ]
+  },
+  {
+    "id": "leadership_teamwork",
+    "theme": "Yetakchilik va jamoaviy ish (Leadership & Teamwork)",
+    "part1Questions": [
+      "Do you prefer working alone or in a team?",
+      "Have you ever led a group or project?",
+      "What makes a good leader in your opinion?",
+      "Do you find teamwork easy or difficult?"
+    ],
+    "part2": {
+      "cueCardTitle": "Describe a person you consider a good leader",
+      "bulletPoints": [
+        "who this person is",
+        "what they do",
+        "how they lead others",
+        "and explain why you admire them"
+      ]
+    },
+    "part3Questions": [
+      "What qualities are most important for a leader today?",
+      "Is leadership something people are born with or can learn?",
+      "How does good leadership affect a company's success?"
+    ]
+  },
+  {
+    "id": "advertising_marketing",
+    "theme": "Reklama va marketing (Advertising & Marketing)",
+    "part1Questions": [
+      "Do you notice advertisements often?",
+      "Which platform do you see the most ads on?",
+      "Have you ever bought something because of an ad?",
+      "Do you find advertising helpful or annoying?"
+    ],
+    "part2": {
+      "cueCardTitle": "Describe an advertisement you remember well",
+      "bulletPoints": [
+        "what it was for",
+        "where you saw it",
+        "what made it memorable",
+        "and explain whether it was effective"
+      ]
+    },
+    "part3Questions": [
+      "How has advertising changed with social media?",
+      "Do you think advertising influences children too much?",
+      "What makes an advertisement effective?"
+    ]
+  },
+  {
+    "id": "travel_business_trip",
+    "theme": "Sayohat va ish safari (Travel & Business Trips)",
+    "part1Questions": [
+      "Do you enjoy traveling?",
+      "Have you ever traveled for work?",
+      "What do you usually pack when traveling?",
+      "Do you prefer traveling alone or with others?"
+    ],
+    "part2": {
+      "cueCardTitle": "Describe a business trip or work-related travel experience",
+      "bulletPoints": [
+        "where you went",
+        "why you traveled there",
+        "what you did there",
+        "and explain how the experience was"
+      ]
+    },
+    "part3Questions": [
+      "How has business travel changed since online meetings became common?",
+      "Is traveling for work necessary in the modern business world?",
+      "What are the challenges of frequent business travel?"
+    ]
+  },
+  {
+    "id": "innovation_startups",
+    "theme": "Innovatsiya va startaplar (Innovation & Startups)",
+    "part1Questions": [
+      "Are you interested in starting your own business?",
+      "Do you know anyone who runs a startup?",
+      "What kind of business would you like to start?",
+      "Do you think starting a business is risky?"
+    ],
+    "part2": {
+      "cueCardTitle": "Describe an innovative product or service you find interesting",
+      "bulletPoints": [
+        "what it is",
+        "who created it",
+        "what makes it innovative",
+        "and explain why you find it interesting"
+      ]
+    },
+    "part3Questions": [
+      "What challenges do startups usually face?",
+      "Why do some startups succeed while others fail?",
+      "How important is innovation for a country's economy?"
+    ]
+  },
+  {
+    "id": "time_management",
+    "theme": "Vaqtni boshqarish (Time Management)",
+    "part1Questions": [
+      "Do you consider yourself well-organized?",
+      "How do you plan your day?",
+      "Do you often feel you have too much to do?",
+      "What helps you manage your time well?"
+    ],
+    "part2": {
+      "cueCardTitle": "Describe a time when you had to manage multiple tasks at once",
+      "bulletPoints": [
+        "what the tasks were",
+        "how you organized your time",
+        "what challenges you faced",
+        "and explain how you managed to finish"
+      ]
+    },
+    "part3Questions": [
+      "Why do some people struggle with time management?",
+      "Do you think technology helps or hurts time management?",
+      "How does poor time management affect a workplace?"
+    ]
+  },
+  {
+    "id": "customer_service",
+    "theme": "Mijozlarga xizmat ko'rsatish (Customer Service)",
+    "part1Questions": [
+      "Have you ever worked in customer service?",
+      "What makes good customer service, in your opinion?",
+      "Have you had a bad customer service experience?",
+      "Do you think customer service is important for a business?"
+    ],
+    "part2": {
+      "cueCardTitle": "Describe a time you received excellent customer service",
+      "bulletPoints": [
+        "where it happened",
+        "what the staff did",
+        "how it made you feel",
+        "and explain why it was memorable"
+      ]
+    },
+    "part3Questions": [
+      "Why is customer service important for business success?",
+      "How has technology changed customer service?",
+      "Should companies invest more in training customer service staff?"
+    ]
+  },
+  {
+    "id": "remote_work",
+    "theme": "Masofaviy ish (Remote Work)",
+    "part1Questions": [
+      "Have you ever worked or studied from home?",
+      "Do you think remote work is effective?",
+      "What equipment do you need to work from home?",
+      "Do you prefer working from home or in an office?"
+    ],
+    "part2": {
+      "cueCardTitle": "Describe the advantages of working remotely",
+      "bulletPoints": [
+        "what remote work involves",
+        "what benefits it offers",
+        "who benefits most from it",
+        "and explain why you think it is useful"
+      ]
+    },
+    "part3Questions": [
+      "Will remote work become more common in the future?",
+      "What are the disadvantages of remote work for companies?",
+      "How does remote work affect team communication?"
+    ]
+  },
+  {
+    "id": "negotiation_skills",
+    "theme": "Muzokara ko'nikmalari (Negotiation Skills)",
+    "part1Questions": [
+      "Have you ever negotiated a price or deal?",
+      "Do you find negotiating easy or difficult?",
+      "What was the last thing you negotiated about?",
+      "Do you think negotiation is an important life skill?"
+    ],
+    "part2": {
+      "cueCardTitle": "Describe a successful negotiation you were part of",
+      "bulletPoints": [
+        "what you were negotiating",
+        "who was involved",
+        "what strategy you used",
+        "and explain the result"
+      ]
+    },
+    "part3Questions": [
+      "What skills are needed to be a good negotiator?",
+      "Why is negotiation important in business?",
+      "How does culture affect negotiation styles?"
+    ]
+  },
+  {
+    "id": "work_life_balance",
+    "theme": "Ish va shaxsiy hayot muvozanati (Work-Life Balance)",
+    "part1Questions": [
+      "Do you think you have a good work-life balance?",
+      "How many hours do you usually work or study each day?",
+      "What do you do to relax after work?",
+      "Is work-life balance important to you?"
+    ],
+    "part2": {
+      "cueCardTitle": "Describe how you relax after a busy day",
+      "bulletPoints": [
+        "what you usually do",
+        "how often you do it",
+        "who you do it with",
+        "and explain why it helps you relax"
+      ]
+    },
+    "part3Questions": [
+      "Why do many people struggle to balance work and personal life?",
+      "Should companies be responsible for employees' work-life balance?",
+      "How does poor work-life balance affect productivity?"
+    ]
+  },
+  {
+    "id": "decision_making",
+    "theme": "Qaror qabul qilish (Decision Making)",
+    "part1Questions": [
+      "Do you find it easy to make decisions?",
+      "Do you ask others for advice before deciding?",
+      "What was a recent decision you had to make?",
+      "Do you prefer quick decisions or careful planning?"
+    ],
+    "part2": {
+      "cueCardTitle": "Describe an important decision you made",
+      "bulletPoints": [
+        "what the decision was",
+        "when you made it",
+        "what factors you considered",
+        "and explain the outcome"
+      ]
+    },
+    "part3Questions": [
+      "What makes decision-making difficult for some people?",
+      "How do successful business leaders make decisions?",
+      "Is it better to make decisions quickly or take time?"
+    ]
+  },
+  {
+    "id": "globalization",
+    "theme": "Globallashuv (Globalization)",
+    "part1Questions": [
+      "Do you think your country is affected by globalization?",
+      "Do you use products made in other countries?",
+      "Have you worked with people from other countries?",
+      "Do you think globalization is generally positive?"
+    ],
+    "part2": {
+      "cueCardTitle": "Describe how globalization has affected your country",
+      "bulletPoints": [
+        "what has changed",
+        "which industries are affected",
+        "how people's lives have changed",
+        "and explain whether the changes are positive"
+      ]
+    },
+    "part3Questions": [
+      "What are the advantages and disadvantages of globalization?",
+      "How does globalization affect small local businesses?",
+      "Will globalization continue to increase in the future?"
+    ]
+  },
+  {
+    "id": "career_choice",
+    "theme": "Kasb tanlash (Career Choice)",
+    "part1Questions": [
+      "What do you do, or what do you plan to do, for work?",
+      "Why did you choose this field?",
+      "Did your family influence your career choice?",
+      "Would you consider changing careers in the future?"
+    ],
+    "part2": {
+      "cueCardTitle": "Describe a job you would like to have in the future",
+      "bulletPoints": [
+        "what the job is",
+        "what skills it requires",
+        "why you would like to do it",
+        "and explain how you could get this job"
+      ]
+    },
+    "part3Questions": [
+      "Why do some people change their careers several times in their life?",
+      "Do you think salary is the most important factor when choosing a job?",
+      "How is technology changing the job market?"
+    ]
+  },
+  {
+    "id": "digital_marketing",
+    "theme": "Raqamli marketing (Digital Marketing)",
+    "part1Questions": [
+      "Do you follow any brands on social media?",
+      "Have you ever bought something after seeing an online ad?",
+      "Which social media platform do you use most?",
+      "Do you think digital marketing is effective?"
+    ],
+    "part2": {
+      "cueCardTitle": "Describe a brand that uses social media effectively",
+      "bulletPoints": [
+        "what the brand is",
+        "how it uses social media",
+        "what makes its marketing effective",
+        "and explain why you noticed it"
+      ]
+    },
+    "part3Questions": [
+      "How has digital marketing changed traditional advertising?",
+      "What are the risks of relying too much on digital marketing?",
+      "Will digital marketing continue to grow in importance?"
+    ]
   }
 ]

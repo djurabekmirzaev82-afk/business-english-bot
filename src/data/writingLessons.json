@@ -7,7 +7,28 @@
     "wordCountMin": 40,
     "wordCountMax": 60,
     "lesson": "✉️ *Task 1.1 — Do'stona (Informal) xat*\n\n📏 *Hajmi: 50 so'z atrofida (40-60 so'z oralig'ida)*\n\n1️⃣ *Salomlashish:* Dear [Ism],\n2️⃣ *Kirish:* Qisqa hol-ahvol so'rash yoki xat sababini aytish\n3️⃣ *Asosiy qism:* 1-2 gapda asosiy xabar — do'stona, erkin uslubda, qisqartmalar (I'm, it's) ishlatiladi\n4️⃣ *Yakunlash:* Qisqa yakuniy gap\n5️⃣ *Imzo:* Best wishes, / Love, — so'ng ismingiz\n\n⚠️ *Muhim:* Task 1.1 juda qisqa — faqat asosiy fikrni yeting, ortiqcha tafsilotga o'tmang. So'z sonidan oshib ketish ball kamaytiradi.\n\n🗣 *Foydali iboralar:*\n— It was great to hear from you!\n— Just a quick note to say...\n— Anyway, I'd better go now.\n— Write back soon!",
-    "taskPrompt": "✍ *Vazifa (Task 1.1, ~50 so'z):* Do'stingizga xat yozing va uni tug'ilgan kuningizga taklif qiling. Sana va joyni aniq ko'rsating."
+    "prompts": [
+      "✍ *Vazifa (Task 1.1, ~50 so'z):* Do'stingizga xat yozing va uni tug'ilgan kuningizga taklif qiling. Sana va joyni aniq ko'rsating.",
+      "✍ *Vazifa (Task 1.1, ~50 so'z):* Xorijda yashovchi do'stingizga yozing, yangi ish joyingiz haqida gapirib bering va u yerga tashrif buyurishga taklif qiling.",
+      "✍ *Vazifa (Task 1.1, ~50 so'z):* Universitet do'stingizga xat yozing, birgalikda sayohatga chiqishni taklif qiling va sanani so'rang.",
+      "✍ *Vazifa (Task 1.1, ~50 so'z):* Do'stingizga yozing va uning yangi uyiga ko'chib o'tgani bilan tabriklang, tashrif buyurish sanasini so'rang.",
+      "✍ *Vazifa (Task 1.1, ~50 so'z):* Xorijdagi hamkasbingizga xat yozing, kelayotgan konferensiyada uchrashishni taklif qiling.",
+      "✍ *Vazifa (Task 1.1, ~50 so'z):* Do'stingizga yozing va sizga yordam bergani uchun rahmat bildiring, buning o'rniga nima qila olishingizni ayting.",
+      "✍ *Vazifa (Task 1.1, ~50 so'z):* Sobiq sinfdoshingizga yozing va sinf yig'ilishini (reunion) tashkil qilishni taklif qiling.",
+      "✍ *Vazifa (Task 1.1, ~50 so'z):* Do'stingizga yozing, u bilan birga yangi ochilgan kafeda uchrashishni taklif qiling.",
+      "✍ *Vazifa (Task 1.1, ~50 so'z):* Xorijdagi qarindoshingizga xat yozing, oilaviy bayramga taklif qiling, sana va vaqtni ayting.",
+      "✍ *Vazifa (Task 1.1, ~50 so'z):* Do'stingizga yozing, u og'ir kunlarni boshdan kechirayotganini bilib, uni qo'llab-quvvatlang.",
+      "✍ *Vazifa (Task 1.1, ~50 so'z):* Ish joyidagi yangi hamkasbingizga norasmiy xat yozing, birga tushlik qilishni taklif qiling.",
+      "✍ *Vazifa (Task 1.1, ~50 so'z):* Do'stingizga yozing, uning yangi ishga joylashgani bilan tabriklang.",
+      "✍ *Vazifa (Task 1.1, ~50 so'z):* Xorijdagi do'stingizga xat yozing, siz tashrif buyuradigan sanalarni ayting va uchrashish rejasini so'rang.",
+      "✍ *Vazifa (Task 1.1, ~50 so'z):* Do'stingizga yozing, birga sport zaliga (fitness) yozilishni taklif qiling.",
+      "✍ *Vazifa (Task 1.1, ~50 so'z):* Qarindoshingizga xat yozing, kelayotgan to'y marosimiga taklif qiling, sana va joyni ko'rsating.",
+      "✍ *Vazifa (Task 1.1, ~50 so'z):* Do'stingizga yozing, undan kitob/noutbuk qarzga so'rang, qachon qaytarishingizni ayting.",
+      "✍ *Vazifa (Task 1.1, ~50 so'z):* Xorijdagi ustozingizga xat yozing, o'qishdagi yutuqlaringiz haqida gapirib bering.",
+      "✍ *Vazifa (Task 1.1, ~50 so'z):* Do'stingizga yozing, birgalikda startap g'oyasini muhokama qilishni taklif qiling.",
+      "✍ *Vazifa (Task 1.1, ~50 so'z):* Yaqin do'stingizga xat yozing, kelgusi hafta kinoteatrga borishni taklif qiling.",
+      "✍ *Vazifa (Task 1.1, ~50 so'z):* Xorijdagi hamkoringizga norasmiy xat yozing, loyihadagi yangiliklarni baham ko'ring."
+    ]
   },
   {
     "id": "task1_2_formal_letter",
@@ -17,7 +38,28 @@
     "wordCountMin": 120,
     "wordCountMax": 150,
     "lesson": "📄 *Task 1.2 — Rasmiy/Yarim-rasmiy xat (Formal/Semi-formal Letter)*\n\n📏 *Hajmi: 120-150 so'z*\n\n1️⃣ *Salomlashish:* Dear Mr./Ms. [Familiya], yoki Dear Sir/Madam,\n2️⃣ *Kirish:* Xat maqsadini aniq bildiring — \"I am writing to inform/request/complain...\"\n3️⃣ *Asosiy qism (2-3 paragraf):* Har bir paragraf — bitta fikr, dalil bilan. Rasmiy uslub: qisqartmalar ishlatilmaydi.\n4️⃣ *Yakunlash:* \"I look forward to your response.\" / \"Please do not hesitate to contact me.\"\n5️⃣ *Imzo:* Yours faithfully, (ism noma'lum) / Yours sincerely, (ism ma'lum) — to'liq ism\n\n⚠️ *Muhim:* 120 so'zdan kam yozsangiz — fikringiz yetarli rivojlantirilmagan hisoblanadi; 150 so'zdan oshsangiz — vaqtni noto'g'ri taqsimlagan bo'lasiz.\n\n🗣 *Foydali iboralar:*\n— I am writing to inform you that...\n— I would be grateful if you could...\n— Please find attached...\n— Should you require further information, please contact me.",
-    "taskPrompt": "✍ *Vazifa (Task 1.2, 120-150 so'z):* Muassasa ma'muriyatiga xat yozing — talabalar uchun qo'shimcha Business English kursi ochish taklifini bildiring, buning foydalarini kamida 2 ta dalil bilan asoslang."
+    "prompts": [
+      "✍ *Vazifa (Task 1.2, 120-150 so'z):* Muassasa ma'muriyatiga xat yozing — talabalar uchun qo'shimcha Business English kursi ochish taklifini bildiring, buning foydalarini kamida 2 ta dalil bilan asoslang.",
+      "✍ *Vazifa (Task 1.2, 120-150 so'z):* Mahalliy kompaniya rahbariga xat yozing, amaliyot (internship) dasturiga qabul qilishni so'rang.",
+      "✍ *Vazifa (Task 1.2, 120-150 so'z):* Mehmonxona ma'muriyatiga shikoyat xati yozing — xonangizda uchragan muammoni tasvirlab, kompensatsiya so'rang.",
+      "✍ *Vazifa (Task 1.2, 120-150 so'z):* Universitet dekanatiga xat yozing, imtihon sanasini o'zgartirishni so'rang, sababini tushuntiring.",
+      "✍ *Vazifa (Task 1.2, 120-150 so'z):* Kompaniya HR bo'limiga xat yozing, ochiq vakansiyaga nomzodingizni taqdim eting.",
+      "✍ *Vazifa (Task 1.2, 120-150 so'z):* Mahalliy hokimiyatga xat yozing, hududingizdagi yo'l muammosi haqida xabar bering va yechim taklif qiling.",
+      "✍ *Vazifa (Task 1.2, 120-150 so'z):* Yetkazib beruvchi kompaniyaga xat yozing, buyurtmangiz kechikkani haqida shikoyat qiling.",
+      "✍ *Vazifa (Task 1.2, 120-150 so'z):* Bank bo'limiga xat yozing, hisobingizda noto'g'ri yechim (transaction) haqida xabar bering.",
+      "✍ *Vazifa (Task 1.2, 120-150 so'z):* Konferensiya tashkilotchilariga xat yozing, spiker sifatida qatnashish istagingizni bildiring.",
+      "✍ *Vazifa (Task 1.2, 120-150 so'z):* Ish beruvchingizga rasmiy ariza yozing, ta'til so'rab, sanalarni ko'rsating.",
+      "✍ *Vazifa (Task 1.2, 120-150 so'z):* Mijozga xat yozing, xizmat narxlari o'zgargani haqida rasmiy xabar bering.",
+      "✍ *Vazifa (Task 1.2, 120-150 so'z):* Ta'lim markaziga xat yozing, kursni bekor qilish va pulni qaytarishni so'rang, sababini tushuntiring.",
+      "✍ *Vazifa (Task 1.2, 120-150 so'z):* Ijaraga oluvchi (landlord) ga xat yozing, kvartiradagi ta'mirlash zarur bo'lgan muammoni bildiring.",
+      "✍ *Vazifa (Task 1.2, 120-150 so'z):* Kompaniya direktoriga taklifnoma xati yozing, yangi hamkorlik loyihasini taqdim eting.",
+      "✍ *Vazifa (Task 1.2, 120-150 so'z):* Universitet kutubxonasiga xat yozing, kitobni kechiktirib qaytarganingiz uchun uzr so'rang va sababini tushuntiring.",
+      "✍ *Vazifa (Task 1.2, 120-150 so'z):* Sayohat agentligiga xat yozing, buyurtma qilingan turdagi o'zgarish kiritishni so'rang.",
+      "✍ *Vazifa (Task 1.2, 120-150 so'z):* Muassasa rahbariga xat yozing, ish joyida masofaviy ishlash (remote work) imkoniyatini so'rang.",
+      "✍ *Vazifa (Task 1.2, 120-150 so'z):* Yangi ishga kirish uchun tavsiyanoma (cover letter) yozing, tajribangizni qisqacha bayon eting.",
+      "✍ *Vazifa (Task 1.2, 120-150 so'z):* Kompaniya sifat nazorati bo'limiga shikoyat xati yozing — mahsulotdagi nuqsonni tasvirlab, almashtirish so'rang.",
+      "✍ *Vazifa (Task 1.2, 120-150 so'z):* Ta'sischilar kengashiga rasmiy xat yozing, byudjetni oshirishni so'rab, buning sabablarini asoslang."
+    ]
   },
   {
     "id": "essay_paraphrasing",
@@ -27,7 +69,28 @@
     "wordCountMin": 180,
     "wordCountMax": 200,
     "lesson": "🔄 *Paraphrasing — fikrni boshqa so'zlar bilan ifodalash*\n\n📏 *Task 2 insholari uchun hajm: 180-200 so'z*\n\nInsho savolini so'zma-so'z takrorlamaslik kerak — buning o'rniga uni **o'z so'zlaringiz bilan** qayta ifodalaysiz (odatda kirish qismida ishlatiladi).\n\n*Usullar:*\n1️⃣ *Sinonim ishlatish:* important → crucial/essential\n2️⃣ *So'z turkumini o'zgartirish:* to decide (fe'l) → decision (ot)\n3️⃣ *Gap tuzilishini o'zgartirish:* Active → Passive\n\n*Namuna:*\nOriginal: \"Many people think that social media has a negative effect on teenagers.\"\nParaphrase: \"It is widely believed that social networking platforms negatively influence young people.\"",
-    "taskPrompt": "✍ *Vazifa (180-200 so'z):* Quyidagi gapni avval paraphrase qiling, so'ng shu fikr asosida to'liq insho yozing: \"Companies should invest more in employee training to increase productivity.\""
+    "prompts": [
+      "✍ *Vazifa (180-200 so'z):* \"The advantages and disadvantages of globalization for local businesses.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is competition or cooperation more important for business success?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is online education as effective as traditional classroom learning?\"",
+      "✍ *Vazifa (180-200 so'z):* \"The influence of advertising on consumer behavior.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should governments regulate the use of artificial intelligence in businesses?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should companies be required to reduce their environmental impact?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Companies should invest more in employee training to increase productivity.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is it more important for a leader to be respected or liked?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should young people be encouraged to become entrepreneurs?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is it better to start your own business or work for someone else?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is remote work more productive than working in an office?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is it better for companies to hire experienced staff or train young graduates?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should companies prioritize profit or employee wellbeing?\"",
+      "✍ *Vazifa (180-200 so'z):* \"The impact of social media marketing on small businesses.\"",
+      "✍ *Vazifa (180-200 so'z):* \"The impact of e-commerce on traditional retail stores.\"",
+      "✍ *Vazifa (180-200 so'z):* \"The effects of automation on manufacturing jobs.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should employees be paid based on performance rather than fixed salary?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Advantages and disadvantages of working from home.\"",
+      "✍ *Vazifa (180-200 so'z):* \"The benefits and drawbacks of outsourcing business functions abroad.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should employees be allowed to choose their own working hours?\""
+    ]
   },
   {
     "id": "essay_conjunctions",
@@ -37,7 +100,28 @@
     "wordCountMin": 180,
     "wordCountMax": 200,
     "lesson": "🔗 *Insholarda bog'lovchilar (Linking Words)*\n\n📏 *Hajm: 180-200 so'z*\n\nFikrlarni bir-biriga bog'lash uchun ishlatiladi — matningizni mantiqiy va oqimli qiladi.\n\n*Qo'shimcha fikr:* Furthermore, Moreover, In addition, Also\n*Qarama-qarshilik:* However, On the other hand, Nevertheless, Although\n*Sabab-natija:* Therefore, As a result, Consequently, Due to\n*Misol keltirish:* For example, For instance, Such as\n*Xulosa:* In conclusion, To sum up, Overall\n\n*Namuna:*\n\"Remote work offers flexibility. **However**, it can also lead to isolation. **Therefore**, companies should organize regular team meetings.\"",
-    "taskPrompt": "✍ *Vazifa (180-200 so'z):* \"Advantages and disadvantages of working from home\" mavzusida to'liq insho yozing, kamida 5 xil bog'lovchi ishlatib."
+    "prompts": [
+      "✍ *Vazifa (180-200 so'z):* \"Is it better for companies to hire experienced staff or train young graduates?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is it better to start your own business or work for someone else?\"",
+      "✍ *Vazifa (180-200 so'z):* \"The benefits and drawbacks of outsourcing business functions abroad.\"",
+      "✍ *Vazifa (180-200 so'z):* \"The role of foreign investment in developing countries' economies.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should young people be encouraged to become entrepreneurs?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is online education as effective as traditional classroom learning?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is remote work more productive than working in an office?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Companies should invest more in employee training to increase productivity.\"",
+      "✍ *Vazifa (180-200 so'z):* \"The effects of automation on manufacturing jobs.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should governments provide financial support to struggling small businesses?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Small businesses versus large corporations: which contribute more to the economy?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is competition or cooperation more important for business success?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should employees be allowed to choose their own working hours?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should companies prioritize profit or employee wellbeing?\"",
+      "✍ *Vazifa (180-200 so'z):* \"The impact of e-commerce on traditional retail stores.\"",
+      "✍ *Vazifa (180-200 so'z):* \"The advantages and disadvantages of globalization for local businesses.\"",
+      "✍ *Vazifa (180-200 so'z):* \"The influence of advertising on consumer behavior.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is a university degree necessary for career success today?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should governments regulate the use of artificial intelligence in businesses?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should university education be free for all students?\""
+    ]
   },
   {
     "id": "essay_supporting_ideas",
@@ -47,7 +131,28 @@
     "wordCountMin": 180,
     "wordCountMax": 200,
     "lesson": "💡 *Fikrni dalillar bilan qo'llab-quvvatlash*\n\n📏 *Hajm: 180-200 so'z*\n\nHar bir fikringiz **dalil, misol yoki statistika** bilan asoslanishi kerak — aks holda insho zaif ko'rinadi.\n\n*Tuzilma:* Fikr (Topic sentence) → Tushuntirish (Explanation) → Misol/dalil (Example/Evidence)\n\n*Foydali iboralar:*\n— This is mainly because...\n— A good example of this is...\n— Research shows that...\n— This can be illustrated by...",
-    "taskPrompt": "✍ *Vazifa (180-200 so'z):* \"Investing in staff training improves company performance\" fikrini oling va to'liq insho yozing, kamida 2 ta dalil/misol bilan asoslab."
+    "prompts": [
+      "✍ *Vazifa (180-200 so'z):* \"Should governments provide financial support to struggling small businesses?\"",
+      "✍ *Vazifa (180-200 so'z):* \"The impact of social media marketing on small businesses.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Companies should invest more in employee training to increase productivity.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is it more important for a leader to be respected or liked?\"",
+      "✍ *Vazifa (180-200 so'z):* \"The advantages and disadvantages of globalization for local businesses.\"",
+      "✍ *Vazifa (180-200 so'z):* \"The influence of advertising on consumer behavior.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should companies be required to reduce their environmental impact?\"",
+      "✍ *Vazifa (180-200 so'z):* \"The benefits and drawbacks of outsourcing business functions abroad.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should employees be allowed to choose their own working hours?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is competition or cooperation more important for business success?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is it better for companies to hire experienced staff or train young graduates?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is it better to start your own business or work for someone else?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should young people be encouraged to become entrepreneurs?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should companies prioritize profit or employee wellbeing?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Small businesses versus large corporations: which contribute more to the economy?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Advantages and disadvantages of working from home.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is online education as effective as traditional classroom learning?\"",
+      "✍ *Vazifa (180-200 so'z):* \"The role of foreign investment in developing countries' economies.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should governments regulate the use of artificial intelligence in businesses?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should employees be paid based on performance rather than fixed salary?\""
+    ]
   },
   {
     "id": "essay_problem_solution",
@@ -57,7 +162,28 @@
     "wordCountMin": 180,
     "wordCountMax": 200,
     "lesson": "⚖ *Problem and Solution Essay — tuzilishi*\n\n📏 *Hajm: 180-200 so'z*\n\n1️⃣ *Kirish:* Muammoni tanishtiring\n2️⃣ *Asosiy qism 1:* Muammo(lar)ni tasvirlang va sabablarini tushuntiring\n3️⃣ *Asosiy qism 2:* Yechim(lar)ni taklif qiling, har birini asoslang\n4️⃣ *Xulosa:* Fikrlarni umumlashtiring, eng samarali yechimni ta'kidlang\n\n*Foydali iboralar:*\n— One of the main problems is...\n— This has led to...\n— A possible solution would be to...\n— In order to solve this issue...",
-    "taskPrompt": "✍ *Vazifa (180-200 so'z):* \"Unemployment among young graduates in Uzbekistan\" mavzusida muammoni tasvirlab, 2 ta yechim taklif qiling."
+    "prompts": [
+      "✍ *Vazifa (180-200 so'z):* \"The impact of social media marketing on small businesses.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is it more important for a leader to be respected or liked?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should companies prioritize profit or employee wellbeing?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is remote work more productive than working in an office?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Advantages and disadvantages of working from home.\"",
+      "✍ *Vazifa (180-200 so'z):* \"The impact of e-commerce on traditional retail stores.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Small businesses versus large corporations: which contribute more to the economy?\"",
+      "✍ *Vazifa (180-200 so'z):* \"The influence of advertising on consumer behavior.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should employees be allowed to choose their own working hours?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is it better for companies to hire experienced staff or train young graduates?\"",
+      "✍ *Vazifa (180-200 so'z):* \"The advantages and disadvantages of globalization for local businesses.\"",
+      "✍ *Vazifa (180-200 so'z):* \"The benefits and drawbacks of outsourcing business functions abroad.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Companies should invest more in employee training to increase productivity.\"",
+      "✍ *Vazifa (180-200 so'z):* \"The role of foreign investment in developing countries' economies.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should companies be required to reduce their environmental impact?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should employees be paid based on performance rather than fixed salary?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is a university degree necessary for career success today?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is online education as effective as traditional classroom learning?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is it better to start your own business or work for someone else?\"",
+      "✍ *Vazifa (180-200 so'z):* \"The effects of automation on manufacturing jobs.\""
+    ]
   },
   {
     "id": "essay_agree_disagree",
@@ -67,7 +193,28 @@
     "wordCountMin": 180,
     "wordCountMax": 200,
     "lesson": "🤝 *Agree or Disagree Essay — tuzilishi*\n\n📏 *Hajm: 180-200 so'z*\n\n1️⃣ *Kirish:* Mavzuni tanishtiring, o'z pozitsiyangizni bildiring\n2️⃣ *Asosiy qism 1:* Birinchi dalil + misol\n3️⃣ *Asosiy qism 2:* Ikkinchi dalil + misol\n4️⃣ *Xulosa:* Pozitsiyangizni qayta tasdiqlang\n\n*Foydali iboralar:*\n— I completely/partly agree that...\n— From my point of view...\n— Although some people argue that..., I believe...",
-    "taskPrompt": "✍ *Vazifa (180-200 so'z):* \"Companies should allow employees to work remotely full-time\" fikri bilan roziligingizni/rozi emasligingizni yozing."
+    "prompts": [
+      "✍ *Vazifa (180-200 so'z):* \"Should university education be free for all students?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is it better for companies to hire experienced staff or train young graduates?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should companies be required to reduce their environmental impact?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Companies should invest more in employee training to increase productivity.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should employees be allowed to choose their own working hours?\"",
+      "✍ *Vazifa (180-200 so'z):* \"The role of foreign investment in developing countries' economies.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Advantages and disadvantages of working from home.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should governments provide financial support to struggling small businesses?\"",
+      "✍ *Vazifa (180-200 so'z):* \"The benefits and drawbacks of outsourcing business functions abroad.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is online education as effective as traditional classroom learning?\"",
+      "✍ *Vazifa (180-200 so'z):* \"The influence of advertising on consumer behavior.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is remote work more productive than working in an office?\"",
+      "✍ *Vazifa (180-200 so'z):* \"The effects of automation on manufacturing jobs.\"",
+      "✍ *Vazifa (180-200 so'z):* \"The impact of e-commerce on traditional retail stores.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is a university degree necessary for career success today?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should employees be paid based on performance rather than fixed salary?\"",
+      "✍ *Vazifa (180-200 so'z):* \"The impact of social media marketing on small businesses.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should young people be encouraged to become entrepreneurs?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should governments regulate the use of artificial intelligence in businesses?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is it better to start your own business or work for someone else?\""
+    ]
   },
   {
     "id": "essay_adv_disadv",
@@ -77,7 +224,28 @@
     "wordCountMin": 180,
     "wordCountMax": 200,
     "lesson": "📊 *Advantages and Disadvantages Essay — tuzilishi*\n\n📏 *Hajm: 180-200 so'z*\n\n1️⃣ *Kirish:* Mavzuni tanishtiring\n2️⃣ *Asosiy qism 1:* Afzalliklar (kamida 2 ta)\n3️⃣ *Asosiy qism 2:* Kamchiliklar (kamida 2 ta)\n4️⃣ *Xulosa:* Umumiy balansni bildiring\n\n*Foydali iboralar:*\n— One major advantage/benefit of... is that...\n— On the other hand, a significant drawback is...\n— Weighing up both sides, it seems that...",
-    "taskPrompt": "✍ *Vazifa (180-200 so'z):* \"Advantages and disadvantages of outsourcing business functions\" mavzusida to'liq insho yozing."
+    "prompts": [
+      "✍ *Vazifa (180-200 so'z):* \"Should governments provide financial support to struggling small businesses?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is online education as effective as traditional classroom learning?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should companies be required to reduce their environmental impact?\"",
+      "✍ *Vazifa (180-200 so'z):* \"The role of foreign investment in developing countries' economies.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is it better for companies to hire experienced staff or train young graduates?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is competition or cooperation more important for business success?\"",
+      "✍ *Vazifa (180-200 so'z):* \"The impact of e-commerce on traditional retail stores.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should employees be paid based on performance rather than fixed salary?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should young people be encouraged to become entrepreneurs?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should employees be allowed to choose their own working hours?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Advantages and disadvantages of working from home.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should companies prioritize profit or employee wellbeing?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should governments regulate the use of artificial intelligence in businesses?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is remote work more productive than working in an office?\"",
+      "✍ *Vazifa (180-200 so'z):* \"The advantages and disadvantages of globalization for local businesses.\"",
+      "✍ *Vazifa (180-200 so'z):* \"The impact of social media marketing on small businesses.\"",
+      "✍ *Vazifa (180-200 so'z):* \"The benefits and drawbacks of outsourcing business functions abroad.\"",
+      "✍ *Vazifa (180-200 so'z):* \"The effects of automation on manufacturing jobs.\"",
+      "✍ *Vazifa (180-200 so'z):* \"The influence of advertising on consumer behavior.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should university education be free for all students?\""
+    ]
   },
   {
     "id": "essay_comparison",
@@ -87,26 +255,852 @@
     "wordCountMin": 180,
     "wordCountMax": 200,
     "lesson": "🆚 *Comparison Essay — tuzilishi*\n\n📏 *Hajm: 180-200 so'z*\n\n1️⃣ *Kirish:* Ikkala variantni tanishtiring\n2️⃣ *Asosiy qism 1:* Birinchi variant\n3️⃣ *Asosiy qism 2:* Ikkinchi variant\n4️⃣ *Xulosa:* Qaysi biri afzalroq ekanini aniq bildiring\n\n*Foydali iboralar:*\n— Compared to..., ... is...\n— Both options have their merits, however...\n— All things considered, ... is the better choice because...",
-    "taskPrompt": "✍ *Vazifa (180-200 so'z):* \"Is it better to work for a large corporation or a small startup?\" mavzusida to'liq insho yozing."
+    "prompts": [
+      "✍ *Vazifa (180-200 so'z):* \"The effects of automation on manufacturing jobs.\"",
+      "✍ *Vazifa (180-200 so'z):* \"The benefits and drawbacks of outsourcing business functions abroad.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should young people be encouraged to become entrepreneurs?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is it better for companies to hire experienced staff or train young graduates?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is it more important for a leader to be respected or liked?\"",
+      "✍ *Vazifa (180-200 so'z):* \"The impact of e-commerce on traditional retail stores.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should governments provide financial support to struggling small businesses?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should employees be paid based on performance rather than fixed salary?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is it better to start your own business or work for someone else?\"",
+      "✍ *Vazifa (180-200 so'z):* \"The role of foreign investment in developing countries' economies.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should companies prioritize profit or employee wellbeing?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Companies should invest more in employee training to increase productivity.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Advantages and disadvantages of working from home.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is competition or cooperation more important for business success?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is a university degree necessary for career success today?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should governments regulate the use of artificial intelligence in businesses?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is remote work more productive than working in an office?\"",
+      "✍ *Vazifa (180-200 so'z):* \"The impact of social media marketing on small businesses.\"",
+      "✍ *Vazifa (180-200 so'z):* \"Should university education be free for all students?\"",
+      "✍ *Vazifa (180-200 so'z):* \"Is online education as effective as traditional classroom learning?\""
+    ]
   },
   {
     "id": "academic_task1_graph",
     "task": "IELTS Academic Task 1",
-    "category": "academic_task1",
+    "category": "academic_task1_chart",
     "title": "📊 Grafik/Diagrammani tasvirlash (Line/Bar Chart)",
     "wordCountMin": 150,
     "wordCountMax": 200,
     "lesson": "📊 *Academic Task 1 — Grafik/Diagrammani tasvirlash*\n\n📏 *Hajm: kamida 150 so'z*\n\nBu yerda insho yozilmaydi — sizga chizma (line/bar chart, jadval) beriladi, va siz undagi **ma'lumotlarni tasvirlaysiz** (o'z fikringizni bildirmaysiz).\n\n1️⃣ *Kirish (Introduction):* Chizma sarlavhasini o'z so'zlaringiz bilan qayta ifodalang (paraphrase) — nusxa ko'chirmang.\n2️⃣ *Umumiy tavsif (Overview):* 2 ta ENG MUHIM tendensiyani (eng yuqori, eng past, umumiy o'zgarish yo'nalishi) qisqa yozing — bu qism juda muhim, ko'pincha talabalar buni unutadi.\n3️⃣ *Tafsilotlar (Body 1-2):* Aniq raqamlar bilan taqqoslang, guruhlab tasvirlang (masalan, o'sayotgan ko'rsatkichlar / kamayayotganlar).\n\n🗣 *Tendensiya ifodalari:*\n— increased/rose/grew steadily/sharply/gradually\n— decreased/fell/declined slightly/dramatically\n— remained stable/constant\n— fluctuated\n— reached a peak of..., hit its lowest point at...\n\n⚠️ *Muhim qoidalar:*\n— Shaxsiy fikr bildirmang (\"I think...\" ishlatilmaydi)\n— Har bir raqamni tasvirlash shart emas — asosiy tendensiyalarni tanlab yozing\n— Kelajak haqida taxmin qilmang, faqat berilgan ma'lumotni tasvirlang",
-    "taskPrompt": "✍ *Vazifa (kamida 150 so'z):* Quyidagi ma'lumotlar asosida hisobot yozing:\n\n*Bir kompaniyaning yillik daromadi (million dollarda):*\n2019: 12\n2020: 8 (pandemiya)\n2021: 15\n2022: 22\n2023: 35\n\nTendensiyani tasvirlab, umumiy xulosa (overview) bilan boshlang."
+    "prompts": [
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi grafikda tasvirlangan ma'lumotlar asosida hisobot yozing: \"Kompaniya yillik daromadi\". Tendensiyani tasvirlab, umumiy xulosa (overview) bilan boshlang.",
+        "chart": {
+          "title": "Kompaniya yillik daromadi",
+          "type": "line",
+          "unit": "million $",
+          "categories": [
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023"
+          ],
+          "series": [
+            {
+              "name": "Daromad",
+              "data": [
+                12,
+                8,
+                15,
+                22,
+                35
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi grafikda tasvirlangan ma'lumotlar asosida hisobot yozing: \"To'rtta filialning choraklik savdosi\". Tendensiyani tasvirlab, umumiy xulosa (overview) bilan boshlang.",
+        "chart": {
+          "title": "To'rtta filialning choraklik savdosi",
+          "type": "bar",
+          "unit": "ming $",
+          "categories": [
+            "Q1",
+            "Q2",
+            "Q3",
+            "Q4"
+          ],
+          "series": [
+            {
+              "name": "Toshkent",
+              "data": [
+                120,
+                150,
+                135,
+                180
+              ]
+            },
+            {
+              "name": "Samarqand",
+              "data": [
+                90,
+                100,
+                95,
+                110
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi grafikda tasvirlangan ma'lumotlar asosida hisobot yozing: \"Bozor ulushi (mahsulot turlari bo'yicha)\". Tendensiyani tasvirlab, umumiy xulosa (overview) bilan boshlang.",
+        "chart": {
+          "title": "Bozor ulushi (mahsulot turlari bo'yicha)",
+          "type": "pie",
+          "unit": "%",
+          "categories": [
+            "Elektronika",
+            "Kiyim-kechak",
+            "Oziq-ovqat",
+            "Boshqa"
+          ],
+          "series": [
+            {
+              "name": "Ulush",
+              "data": [
+                35,
+                25,
+                30,
+                10
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi grafikda tasvirlangan ma'lumotlar asosida hisobot yozing: \"Ish bilan bandlik darajasi (yoshlar orasida)\". Tendensiyani tasvirlab, umumiy xulosa (overview) bilan boshlang.",
+        "chart": {
+          "title": "Ish bilan bandlik darajasi (yoshlar orasida)",
+          "type": "line",
+          "unit": "%",
+          "categories": [
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023"
+          ],
+          "series": [
+            {
+              "name": "Bandlik",
+              "data": [
+                62,
+                64,
+                58,
+                60,
+                65,
+                68
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi grafikda tasvirlangan ma'lumotlar asosida hisobot yozing: \"Onlayn va offlayn savdo taqqoslash\". Tendensiyani tasvirlab, umumiy xulosa (overview) bilan boshlang.",
+        "chart": {
+          "title": "Onlayn va offlayn savdo taqqoslash",
+          "type": "bar",
+          "unit": "million $",
+          "categories": [
+            "2020",
+            "2021",
+            "2022",
+            "2023"
+          ],
+          "series": [
+            {
+              "name": "Onlayn",
+              "data": [
+                5,
+                9,
+                14,
+                20
+              ]
+            },
+            {
+              "name": "Offlayn",
+              "data": [
+                25,
+                23,
+                20,
+                18
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi grafikda tasvirlangan ma'lumotlar asosida hisobot yozing: \"Xodimlar soni bo'limlar bo'yicha\". Tendensiyani tasvirlab, umumiy xulosa (overview) bilan boshlang.",
+        "chart": {
+          "title": "Xodimlar soni bo'limlar bo'yicha",
+          "type": "bar",
+          "unit": "kishi",
+          "categories": [
+            "Marketing",
+            "IT",
+            "Sotuv",
+            "Moliya",
+            "HR"
+          ],
+          "series": [
+            {
+              "name": "2023-yil",
+              "data": [
+                18,
+                32,
+                45,
+                12,
+                8
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi grafikda tasvirlangan ma'lumotlar asosida hisobot yozing: \"Mijozlar mamnunligi darajasi\". Tendensiyani tasvirlab, umumiy xulosa (overview) bilan boshlang.",
+        "chart": {
+          "title": "Mijozlar mamnunligi darajasi",
+          "type": "line",
+          "unit": "%",
+          "categories": [
+            "Yan",
+            "Fev",
+            "Mar",
+            "Apr",
+            "May",
+            "Iyun"
+          ],
+          "series": [
+            {
+              "name": "Mamnunlik",
+              "data": [
+                72,
+                75,
+                78,
+                74,
+                80,
+                85
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi grafikda tasvirlangan ma'lumotlar asosida hisobot yozing: \"Eksport hajmi mamlakatlar bo'yicha\". Tendensiyani tasvirlab, umumiy xulosa (overview) bilan boshlang.",
+        "chart": {
+          "title": "Eksport hajmi mamlakatlar bo'yicha",
+          "type": "bar",
+          "unit": "million $",
+          "categories": [
+            "Rossiya",
+            "Qozog'iston",
+            "Xitoy",
+            "Turkiya"
+          ],
+          "series": [
+            {
+              "name": "2023-yil",
+              "data": [
+                45,
+                30,
+                60,
+                20
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi grafikda tasvirlangan ma'lumotlar asosida hisobot yozing: \"Ijtimoiy tarmoqlardagi reklama byudjeti taqsimoti\". Tendensiyani tasvirlab, umumiy xulosa (overview) bilan boshlang.",
+        "chart": {
+          "title": "Ijtimoiy tarmoqlardagi reklama byudjeti taqsimoti",
+          "type": "pie",
+          "unit": "%",
+          "categories": [
+            "Instagram",
+            "Facebook",
+            "TikTok",
+            "YouTube"
+          ],
+          "series": [
+            {
+              "name": "Byudjet",
+              "data": [
+                40,
+                20,
+                25,
+                15
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi grafikda tasvirlangan ma'lumotlar asosida hisobot yozing: \"Startaplarga investitsiya hajmi\". Tendensiyani tasvirlab, umumiy xulosa (overview) bilan boshlang.",
+        "chart": {
+          "title": "Startaplarga investitsiya hajmi",
+          "type": "line",
+          "unit": "million $",
+          "categories": [
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023"
+          ],
+          "series": [
+            {
+              "name": "Investitsiya",
+              "data": [
+                3,
+                2,
+                6,
+                11,
+                18
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi grafikda tasvirlangan ma'lumotlar asosida hisobot yozing: \"Mahsulot ishlab chiqarish xarajatlari tarkibi\". Tendensiyani tasvirlab, umumiy xulosa (overview) bilan boshlang.",
+        "chart": {
+          "title": "Mahsulot ishlab chiqarish xarajatlari tarkibi",
+          "type": "pie",
+          "unit": "%",
+          "categories": [
+            "Xomashyo",
+            "Ish haqi",
+            "Logistika",
+            "Marketing"
+          ],
+          "series": [
+            {
+              "name": "Xarajat",
+              "data": [
+                45,
+                30,
+                15,
+                10
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi grafikda tasvirlangan ma'lumotlar asosida hisobot yozing: \"Uzoq muddatli va qisqa muddatli mijozlar nisbati\". Tendensiyani tasvirlab, umumiy xulosa (overview) bilan boshlang.",
+        "chart": {
+          "title": "Uzoq muddatli va qisqa muddatli mijozlar nisbati",
+          "type": "bar",
+          "unit": "%",
+          "categories": [
+            "2021",
+            "2022",
+            "2023"
+          ],
+          "series": [
+            {
+              "name": "Uzoq muddatli",
+              "data": [
+                55,
+                60,
+                68
+              ]
+            },
+            {
+              "name": "Qisqa muddatli",
+              "data": [
+                45,
+                40,
+                32
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi grafikda tasvirlangan ma'lumotlar asosida hisobot yozing: \"Kompaniyaning ish haqi fondi o'sishi\". Tendensiyani tasvirlab, umumiy xulosa (overview) bilan boshlang.",
+        "chart": {
+          "title": "Kompaniyaning ish haqi fondi o'sishi",
+          "type": "line",
+          "unit": "million so'm",
+          "categories": [
+            "2020",
+            "2021",
+            "2022",
+            "2023"
+          ],
+          "series": [
+            {
+              "name": "Fond",
+              "data": [
+                800,
+                950,
+                1200,
+                1500
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi grafikda tasvirlangan ma'lumotlar asosida hisobot yozing: \"Turli transport turlaridan foydalanish\". Tendensiyani tasvirlab, umumiy xulosa (overview) bilan boshlang.",
+        "chart": {
+          "title": "Turli transport turlaridan foydalanish",
+          "type": "pie",
+          "unit": "%",
+          "categories": [
+            "Avtomobil",
+            "Jamoat transporti",
+            "Piyoda",
+            "Velosiped"
+          ],
+          "series": [
+            {
+              "name": "Ulush",
+              "data": [
+                40,
+                35,
+                20,
+                5
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi grafikda tasvirlangan ma'lumotlar asosida hisobot yozing: \"Ikki kompaniyaning besh yillik foyda taqqoslash\". Tendensiyani tasvirlab, umumiy xulosa (overview) bilan boshlang.",
+        "chart": {
+          "title": "Ikki kompaniyaning besh yillik foyda taqqoslash",
+          "type": "line",
+          "unit": "million $",
+          "categories": [
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023"
+          ],
+          "series": [
+            {
+              "name": "A kompaniya",
+              "data": [
+                10,
+                12,
+                15,
+                18,
+                25
+              ]
+            },
+            {
+              "name": "B kompaniya",
+              "data": [
+                14,
+                13,
+                12,
+                15,
+                17
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi grafikda tasvirlangan ma'lumotlar asosida hisobot yozing: \"Talabalarning kelajakdagi kasb tanlovi\". Tendensiyani tasvirlab, umumiy xulosa (overview) bilan boshlang.",
+        "chart": {
+          "title": "Talabalarning kelajakdagi kasb tanlovi",
+          "type": "pie",
+          "unit": "%",
+          "categories": [
+            "IT",
+            "Tibbiyot",
+            "Biznes",
+            "Muhandislik",
+            "Boshqa"
+          ],
+          "series": [
+            {
+              "name": "Ulush",
+              "data": [
+                30,
+                20,
+                25,
+                15,
+                10
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi grafikda tasvirlangan ma'lumotlar asosida hisobot yozing: \"Mahsulot narxi va sotuv hajmi o'zgarishi\". Tendensiyani tasvirlab, umumiy xulosa (overview) bilan boshlang.",
+        "chart": {
+          "title": "Mahsulot narxi va sotuv hajmi o'zgarishi",
+          "type": "bar",
+          "unit": "birlik",
+          "categories": [
+            "2020",
+            "2021",
+            "2022",
+            "2023"
+          ],
+          "series": [
+            {
+              "name": "Sotuv (ming dona)",
+              "data": [
+                50,
+                65,
+                55,
+                80
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi grafikda tasvirlangan ma'lumotlar asosida hisobot yozing: \"Xorijiy sayyohlar oqimi\". Tendensiyani tasvirlab, umumiy xulosa (overview) bilan boshlang.",
+        "chart": {
+          "title": "Xorijiy sayyohlar oqimi",
+          "type": "line",
+          "unit": "ming kishi",
+          "categories": [
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023"
+          ],
+          "series": [
+            {
+              "name": "Sayyohlar",
+              "data": [
+                300,
+                50,
+                90,
+                220,
+                400
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi grafikda tasvirlangan ma'lumotlar asosida hisobot yozing: \"Kompaniyalar bo'yicha bozordagi ulush o'zgarishi\". Tendensiyani tasvirlab, umumiy xulosa (overview) bilan boshlang.",
+        "chart": {
+          "title": "Kompaniyalar bo'yicha bozordagi ulush o'zgarishi",
+          "type": "bar",
+          "unit": "%",
+          "categories": [
+            "A firma",
+            "B firma",
+            "C firma",
+            "D firma"
+          ],
+          "series": [
+            {
+              "name": "2022",
+              "data": [
+                30,
+                25,
+                20,
+                25
+              ]
+            },
+            {
+              "name": "2023",
+              "data": [
+                35,
+                20,
+                22,
+                23
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi grafikda tasvirlangan ma'lumotlar asosida hisobot yozing: \"Energiya iste'moli manbalar bo'yicha\". Tendensiyani tasvirlab, umumiy xulosa (overview) bilan boshlang.",
+        "chart": {
+          "title": "Energiya iste'moli manbalar bo'yicha",
+          "type": "pie",
+          "unit": "%",
+          "categories": [
+            "Neft/Gaz",
+            "Ko'mir",
+            "Qayta tiklanuvchi",
+            "Yadro"
+          ],
+          "series": [
+            {
+              "name": "Ulush",
+              "data": [
+                50,
+                20,
+                25,
+                5
+              ]
+            }
+          ]
+        }
+      }
+    ]
   },
   {
     "id": "academic_task1_process",
     "task": "IELTS Academic Task 1",
-    "category": "academic_task1",
+    "category": "academic_task1_process",
     "title": "⚙️ Jarayonni tasvirlash (Process Diagram)",
     "wordCountMin": 150,
     "wordCountMax": 200,
     "lesson": "⚙️ *Academic Task 1 — Jarayon diagrammasini tasvirlash*\n\n📏 *Hajm: kamida 150 so'z*\n\nSizga bosqichma-bosqich jarayon (masalan, ishlab chiqarish jarayoni) beriladi, uni tartib bilan tasvirlaysiz.\n\n1️⃣ *Kirish:* Jarayon nima haqida ekanini umumiy aytib o'ting.\n2️⃣ *Umumiy tavsif:* Jarayon nechta asosiy bosqichdan iboratligini va qayerdan boshlanib, qayerda tugashini ayting.\n3️⃣ *Bosqichlar:* Har bir bosqichni **Passive Voice** va ketma-ketlik so'zlari bilan tasvirlang.\n\n🗣 *Ketma-ketlik so'zlari:*\n— First/Initially, ... Then/Next/After that, ... Following this, ... Finally/Lastly, ...\n\n🗣 *Passive Voice namunasi:*\n— The raw material is collected.\n— It is then transported to the factory.\n— Once processed, it is packaged for distribution.\n\n⚠️ *Muhim:* Jarayon tasvirida deyarli har doim **Passive Voice** ishlatiladi (chunki kim bajarayotgani emas, nima sodir bo'layotgani muhim).",
-    "taskPrompt": "✍ *Vazifa (kamida 150 so'z):* Quyidagi jarayonni tasvirlab bering:\n\n*Choy ishlab chiqarish jarayoni:*\n1) Choy barglari terib olinadi → 2) Barglar quritiladi → 3) Barglar maydalanadi → 4) Fermentatsiya qilinadi → 5) Qayta quritiladi → 6) Saralanadi va qadoqlanadi → 7) Do'konlarga jo'natiladi."
+    "prompts": [
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi jarayonni tasvirlab bering: \"Choy ishlab chiqarish jarayoni\"",
+        "steps": [
+          "Choy barglari terib olinadi",
+          "Barglar quritiladi",
+          "Barglar maydalanadi",
+          "Fermentatsiya qilinadi",
+          "Qayta quritiladi",
+          "Saralanadi va qadoqlanadi",
+          "Do'konlarga jo'natiladi"
+        ]
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi jarayonni tasvirlab bering: \"Yangi xodimni ishga qabul qilish jarayoni\"",
+        "steps": [
+          "Vakansiya e'lon qilinadi",
+          "Nomzodlar arizasi qabul qilinadi",
+          "Birinchi suhbat o'tkaziladi",
+          "Test topshiriladi",
+          "Yakuniy suhbat o'tkaziladi",
+          "Taklifnoma yuboriladi",
+          "Xodim ishga qabul qilinadi"
+        ]
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi jarayonni tasvirlab bering: \"Onlayn buyurtma yetkazib berish jarayoni\"",
+        "steps": [
+          "Mijoz buyurtma beradi",
+          "To'lov amalga oshiriladi",
+          "Ombor buyurtmani tayyorlaydi",
+          "Mahsulot qadoqlanadi",
+          "Kuryerga topshiriladi",
+          "Mijozga yetkazib beriladi",
+          "Mijoz baho qoldiradi"
+        ]
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi jarayonni tasvirlab bering: \"Yangi mahsulot ishlab chiqish jarayoni\"",
+        "steps": [
+          "Bozor tadqiqoti o'tkaziladi",
+          "G'oya ishlab chiqiladi",
+          "Prototip yaratiladi",
+          "Sinov o'tkaziladi",
+          "Takomillashtiriladi",
+          "Ishlab chiqarishga tayyorlanadi",
+          "Bozorga chiqariladi"
+        ]
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi jarayonni tasvirlab bering: \"Non ishlab chiqarish jarayoni\"",
+        "steps": [
+          "Un tayyorlanadi",
+          "Xamir qorilladi",
+          "Xamir bijg'itiladi",
+          "Shakl beriladi",
+          "Pishiriladi",
+          "Sovutiladi",
+          "Qadoqlanadi va sotiladi"
+        ]
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi jarayonni tasvirlab bering: \"Bank krediti berish jarayoni\"",
+        "steps": [
+          "Mijoz ariza topshiradi",
+          "Hujjatlar tekshiriladi",
+          "Kredit tarixi baholanadi",
+          "Qaror qabul qilinadi",
+          "Shartnoma imzolanadi",
+          "Mablag' o'tkaziladi",
+          "To'lovlar boshlanadi"
+        ]
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi jarayonni tasvirlab bering: \"Suv tozalash jarayoni\"",
+        "steps": [
+          "Suv manbadan olinadi",
+          "Yirik chiqindilar filtrlanadi",
+          "Kimyoviy tozalash amalga oshiriladi",
+          "Cho'kma ajratiladi",
+          "Zararsizlantiriladi",
+          "Sifat tekshiriladi",
+          "Tarmoqqa yuboriladi"
+        ]
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi jarayonni tasvirlab bering: \"Avtomobil ishlab chiqarish konveyeri\"",
+        "steps": [
+          "Kузов shakllantiriladi",
+          "Bo'yash amalga oshiriladi",
+          "Dvigatel o'rnatiladi",
+          "Ichki jihozlash qilinadi",
+          "G'ildiraklar o'rnatiladi",
+          "Sifat nazorati o'tkaziladi",
+          "Yetkazib beriladi"
+        ]
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi jarayonni tasvirlab bering: \"Marketing kampaniyasini ishga tushirish jarayoni\"",
+        "steps": [
+          "Maqsadli auditoriya aniqlanadi",
+          "Strategiya ishlab chiqiladi",
+          "Kontent tayyorlanadi",
+          "Byudjet ajratiladi",
+          "Kampaniya ishga tushiriladi",
+          "Natijalar kuzatiladi",
+          "Tahlil qilinib yakunlanadi"
+        ]
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi jarayonni tasvirlab bering: \"Qog'oz qayta ishlash jarayoni\"",
+        "steps": [
+          "Chiqindi qog'oz yig'iladi",
+          "Saralanadi",
+          "Suvda eritiladi",
+          "Bo'tqa holiga keltiriladi",
+          "Tekislanadi va quritiladi",
+          "Presslanadi",
+          "Yangi qog'oz sifatida chiqariladi"
+        ]
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi jarayonni tasvirlab bering: \"Startap loyihasiga investitsiya jalb qilish jarayoni\"",
+        "steps": [
+          "Biznes-reja tayyorlanadi",
+          "Investorlar qidiriladi",
+          "Taqdimot o'tkaziladi",
+          "Muzokaralar olib boriladi",
+          "Shartnoma tuziladi",
+          "Mablag' o'tkaziladi",
+          "Loyiha rivojlantiriladi"
+        ]
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi jarayonni tasvirlab bering: \"Sut mahsulotlarini qayta ishlash jarayoni\"",
+        "steps": [
+          "Sut fermadan yig'iladi",
+          "Filtrlanadi",
+          "Pasterizatsiya qilinadi",
+          "Sovutiladi",
+          "Turli mahsulotlarga bo'linadi",
+          "Qadoqlanadi",
+          "Do'konlarga jo'natiladi"
+        ]
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi jarayonni tasvirlab bering: \"Kompaniyada byudjet tasdiqlash jarayoni\"",
+        "steps": [
+          "Bo'limlar so'rov yuboradi",
+          "Moliya bo'limi tahlil qiladi",
+          "Loyiha budjeti tuziladi",
+          "Rahbariyatga taqdim etiladi",
+          "Muhokama qilinadi",
+          "Tasdiqlanadi",
+          "Bo'limlarga taqsimlanadi"
+        ]
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi jarayonni tasvirlab bering: \"Shisha qayta ishlash jarayoni\"",
+        "steps": [
+          "Shisha idishlar yig'iladi",
+          "Ranglar bo'yicha saralanadi",
+          "Maydalanadi",
+          "Eritiladi",
+          "Yangi shakl beriladi",
+          "Sovutiladi",
+          "Yangi idish sifatida ishlatiladi"
+        ]
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi jarayonni tasvirlab bering: \"Onlayn kurs yaratish jarayoni\"",
+        "steps": [
+          "Mavzu tanlanadi",
+          "Dastur (silabus) tuziladi",
+          "Video darslar yoziladi",
+          "Materiallar tayyorlanadi",
+          "Platformaga yuklanadi",
+          "Sinov guruhida test qilinadi",
+          "Ommaga chiqariladi"
+        ]
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi jarayonni tasvirlab bering: \"Qishloq xo'jaligida g'alla yetishtirish jarayoni\"",
+        "steps": [
+          "Yer haydaladi",
+          "Urug' ekiladi",
+          "Sug'oriladi",
+          "O'g'itlanadi",
+          "O'stiriladi va parvarish qilinadi",
+          "O'rim-yig'im qilinadi",
+          "Saqlash uchun jo'natiladi"
+        ]
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi jarayonni tasvirlab bering: \"Mijozlar shikoyatini ko'rib chiqish jarayoni\"",
+        "steps": [
+          "Shikoyat qabul qilinadi",
+          "Ro'yxatga olinadi",
+          "Tegishli bo'limga yuboriladi",
+          "Muammo tahlil qilinadi",
+          "Yechim taklif qilinadi",
+          "Mijozga xabar beriladi",
+          "Natija kuzatiladi"
+        ]
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi jarayonni tasvirlab bering: \"Metall qayta ishlash jarayoni\"",
+        "steps": [
+          "Metall parchalari yig'iladi",
+          "Saralanadi",
+          "Maydalanadi",
+          "Eritiladi",
+          "Quyma shaklga keltiriladi",
+          "Sovutiladi",
+          "Yangi mahsulotga aylantiriladi"
+        ]
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi jarayonni tasvirlab bering: \"Yangi filial ochish jarayoni\"",
+        "steps": [
+          "Bozor tahlili o'tkaziladi",
+          "Joy tanlanadi",
+          "Ijaraga olinadi",
+          "Ta'mirlash ishlari qilinadi",
+          "Xodimlar yollanadi",
+          "Jihozlar o'rnatiladi",
+          "Ochilish tantanasi o'tkaziladi"
+        ]
+      },
+      {
+        "text": "✍ *Vazifa (kamida 150 so'z):* Quyidagi jarayonni tasvirlab bering: \"Elektron pochta marketing jarayoni\"",
+        "steps": [
+          "Obunachilar bazasi yig'iladi",
+          "Kontent tayyorlanadi",
+          "Xat dizayni tuziladi",
+          "Yuborish vaqti belgilanadi",
+          "Xat yuboriladi",
+          "Ochilish darajasi kuzatiladi",
+          "Natijalar tahlil qilinadi"
+        ]
+      }
+    ]
   }
 ]
