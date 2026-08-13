@@ -58,7 +58,23 @@ async function callGemini(messages, systemInstruction, maxOutputTokens = 900) {
  * `criteria` (optional) is the specific structure/rules the student was taught,
  * so the AI checks against that lesson's requirements rather than generically.
  */
-async function checkWriting(taskType, userText, criteria) {
+/**
+ * Checks a piece of business writing (letter, essay, etc.) and returns
+ * structured feedback in Uzbek: score, strengths, corrections, improved version.
+ * `criteria` (optional) is the specific structure/rules the student was taught,
+ * so the AI checks against that lesson's requirements rather than generically.
+ * `scoreFormat`:
+ *   'multilevel75' (default) — O'zbekiston Multilevel imtihonining rasmiy shkalasi:
+ *      har bir bo'lim (shu jumladan Writing) uchun maksimal 75 ball.
+ *   'ieltsBand' — IELTS Academic Task 1 (grafik/jarayon tasviri) uchun, 0-9 band shkalasi,
+ *      chunki bu topshiriq Multilevel emas, aynan IELTS formatiga xos.
+ */
+async function checkWriting(taskType, userText, criteria, scoreFormat = 'multilevel75') {
+  const scoreLine =
+    scoreFormat === 'ieltsBand'
+      ? "BALL (IELTS Band): <0-9 oralig'ida, masalan 6.5 — IELTS Task 1 band descriptorlariga ko'ra>"
+      : "BALL: <0-75 raqam — O'zbekiston Multilevel imtihonining rasmiy Writing bo'limi shkalasi bo'yicha>";
+
   const system =
     'You are a strict but encouraging Business English writing coach for adult students in Uzbekistan. ' +
     'You will receive a piece of writing for a specific task type, and optionally the specific structure/rules ' +
@@ -66,7 +82,7 @@ async function checkWriting(taskType, userText, criteria) {
     'and check their grammar, vocabulary, and coherence. Respond ONLY in Uzbek (except for quoting the ' +
     "student's original English text and corrected English text, which stay in English). " +
     'Structure your response exactly like this, with these exact section headers:\n\n' +
-    'BALL: <0-100 raqam>\n\n' +
+    `${scoreLine}\n\n` +
     'KUCHLI TOMONLAR:\n- ...\n\n' +
     "TUZATISHLAR KERAK BO'LGAN JOYLAR:\n- ...\n\n" +
     "TALAB QILINGAN TUZILMAGA MOSLIGI:\n- ...\n\n" +
