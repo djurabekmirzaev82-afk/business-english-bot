@@ -153,7 +153,8 @@ async function handleWritingSubmission(ctx) {
       `${criteria}\n\nTask given to student: ${taskPrompt || ''}${dataContext}\n\n` +
       `Required word count for this task: ${wordCountMin}-${wordCountMax} words. ` +
       `The student's submission has ${wordCount} words — factor this into your BALL score if it is outside the range.`;
-    const feedback = await aiTutor.checkWriting(taskType, userText, criteriaWithWordCount);
+    const scoreFormat = chart || steps ? 'ieltsBand' : 'multilevel75';
+    const feedback = await aiTutor.checkWriting(taskType, userText, criteriaWithWordCount, scoreFormat);
     await ctx.reply(feedback);
   } catch (err) {
     if (err.code === 'AI_NOT_CONFIGURED') {
