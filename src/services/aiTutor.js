@@ -6,11 +6,42 @@ const config = require('../config');
 const MODEL = 'gemini-flash-latest';
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`;
 
+// Har bir Gemini so'rovi shuncha vaqtdan keyin bekor qilinadi (bir marta qayta
+// urinib ko'rilmasdan oldin), aks holda tarmoq muammosi bo'lganda so'rov
+// cheksiz osilib qolib, foydalanuvchi umuman javob ololmay qoladi.
+const REQUEST_TIMEOUT_MS = 25000;
+const MAX_RETRIES = 1;
+
 function assertConfigured() {
   if (!config.geminiApiKey) {
     const err = new Error('GEMINI_API_KEY sozlanmagan. .env fayliga API kalitni qo\'shing.');
     err.code = 'AI_NOT_CONFIGURED';
     throw err;
+  }
+}
+
+/**
+ * Wraps fetch with a hard timeout (AbortController) and a single retry on
+ * failure/timeout, so a slow or flaky Gemini response fails fast with a clear
+ * error instead of leaving the user waiting indefinitely.
+ */
+async function fetchWithTimeout(url, options, attempt = 0) {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+  try {
+    const response = await fetch(url, { ...options, signal: controller.signal });
+    return response;
+  } catch (err) {
+    if (attempt < MAX_RETRIES) {
+      console.warn(`Gemini so'rovi muvaffaqiyatsiz (${err.message}), qayta urinilmoqda...`);
+      return fetchWithTimeout(url, options, attempt + 1);
+    }
+    if (err.name === 'AbortError') {
+      throw new Error(`Gemini API ${REQUEST_TIMEOUT_MS / 1000} soniyada javob bermadi (timeout).`);
+    }
+    throw err;
+  } finally {
+    clearTimeout(timeoutId);
   }
 }
 
@@ -35,7 +66,7 @@ async function callGemini(messages, systemInstruction, maxOutputTokens = 900) {
     body.systemInstruction = { parts: [{ text: systemInstruction }] };
   }
 
-  const response = await fetch(`${API_URL}?key=${config.geminiApiKey}`, {
+  const response = await fetchWithTimeout(`${API_URL}?key=${config.geminiApiKey}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body),
@@ -189,10 +220,12 @@ async function transcribeAndAssessPronunciation(audioBase64, mimeType) {
         parts: [{ text: prompt }, { inlineData: { mimeType, data: audioBase64 } }],
       },
     ],
-    generationConfig: { maxOutputTokens: 2000, temperature: 0.4 },
+    // 2000 → 900: transcript + qisqa talaffuz izohi uchun bunча ko'p token kerak
+    // emas edi, ortiqcha limit generatsiyani sekinlashtirar edi.
+    generationConfig: { maxOutputTokens: 900, temperature: 0.4 },
   };
 
-  const response = await fetch(`${API_URL}?key=${config.geminiApiKey}`, {
+  const response = await fetchWithTimeout(`${API_URL}?key=${config.geminiApiKey}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body),
