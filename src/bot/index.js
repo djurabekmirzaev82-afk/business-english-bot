@@ -1,16 +1,53 @@
 const { Telegraf, session } = require('telegraf');
 const config = require('../config');
+
 const ensureUser = require('./middleware/ensureUser');
 const { mainMenu } = require('./keyboards');
+
 const { handleStart } = require('./handlers/start');
 const { showCabinet } = require('./handlers/cabinet');
-const { startTest, handleAnswerCallback } = require('./handlers/placementTest');
+
+const {
+  startTest,
+  handleAnswerCallback
+} = require('./handlers/placementTest');
+
 const { comingSoon } = require('./handlers/comingSoon');
-const { showModuleList, showModule } = require('./handlers/businessEnglish');
-const { showSchedule, showContact } = require('./handlers/orgInfo');
-const { showWritingMenu, showSubmenu, selectLesson, handleWritingSubmission } = require('./handlers/writing');
-const { showSpeakingMenu, selectScenario, handleSpeakingMessage, endSpeaking } = require('./handlers/speaking');
-const { showIeltsSpeakingMenu, startTopic: startIeltsSpeakingTopic, handleAnswer: handleIeltsSpeakingAnswer, handleAudioAnswer: handleIeltsSpeakingAudio } = require('./handlers/ieltsSpeaking');
+
+const {
+  showModuleList,
+  showModule,
+  startBusinessChallenge,
+  handleBusinessChallengeAnswer,
+  cancelBusinessChallenge
+} = require('./handlers/businessEnglish');
+
+const {
+  showSchedule,
+  showContact
+} = require('./handlers/orgInfo');
+
+const {
+  showWritingMenu,
+  showSubmenu,
+  selectLesson,
+  handleWritingSubmission
+} = require('./handlers/writing');
+
+const {
+  showSpeakingMenu,
+  selectScenario,
+  handleSpeakingMessage,
+  endSpeaking
+} = require('./handlers/speaking');
+
+const {
+  showIeltsSpeakingMenu,
+  startTopic: startIeltsSpeakingTopic,
+  handleAnswer: handleIeltsSpeakingAnswer,
+  handleAudioAnswer: handleIeltsSpeakingAudio
+} = require('./handlers/ieltsSpeaking');
+
 const {
   showListeningMenu,
   showResources: showListeningResources,
@@ -19,9 +56,13 @@ const {
   handleSentenceReplyAnswer,
   handleSpeakerMatchingAnswer,
   handleExtractsMcAnswer,
-  handleTextAnswer: handleListeningTextAnswer,
+  handleTextAnswer: handleListeningTextAnswer
 } = require('./handlers/listeningMock');
-const { showAdminStats } = require('./handlers/admin');
+
+const {
+  showAdminStats
+} = require('./handlers/admin');
+
 const {
   showReadingMenu: showReadingMockMenu,
   showDrillMenu,
@@ -31,109 +72,324 @@ const {
   handleClozeSubmission,
   handleMmAnswer,
   handleMcAnswer,
-  handleGapAnswer,
+  handleGapAnswer
 } = require('./handlers/readingMock');
 
 const bot = new Telegraf(config.botToken);
 
-// In-memory session (per chat). Fine for MVP / single-process deployment.
-// For multi-instance production, swap in a Postgres or Redis session store.
-bot.use(session({ defaultSession: () => ({}) }));
+// Session
+bot.use(
+  session({
+    defaultSession: () => ({})
+  })
+);
+
 bot.use(ensureUser);
 
+// START
 bot.start(handleStart);
-bot.command('menu', (ctx) => ctx.reply('Asosiy menyu:', mainMenu));
 
-bot.hears('📝 Placement Test', startTest);
-bot.command('test', startTest);
+bot.command('menu', (ctx) =>
+  ctx.reply('Asosiy menyu:', mainMenu)
+);
 
-bot.hears('👨‍🎓 Mening kabinetim', showCabinet);
+// CABINET
+bot.hears(
+  '👨‍🎓 Mening kabinetim',
+  showCabinet
+);
+
 bot.command('cabinet', showCabinet);
 
+// PLACEMENT TEST
+bot.hears(
+  '📝 Placement Test',
+  startTest
+);
+
+bot.command('test', startTest);
+
+// ADMIN
 bot.command('admin', showAdminStats);
 
-bot.hears('🏠 Asosiy menu', (ctx) => ctx.reply('Asosiy menyu:', mainMenu));
+// MAIN MENU
+bot.hears(
+  '🏠 Asosiy menu',
+  (ctx) => ctx.reply('Asosiy menyu:', mainMenu)
+);
 
-// Business English modules
-bot.hears('💼 Business English', showModuleList);
-bot.action(/^bemod:(.+)$/, showModule);
+// ======================================================
+// BUSINESS ENGLISH
+// ======================================================
 
-// Schedule & Contact (static info — edit src/config/orgInfo.js)
-bot.hears('📅 Schedule', showSchedule);
-bot.hears('☎ Contact', showContact);
+bot.hears(
+  '💼 Business English',
+  showModuleList
+);
 
-// Writing (Multilevel-format lessons + AI-checked tasks)
-bot.hears('✍ Writing', showWritingMenu);
-bot.action(/^wsubmenu:(.+)$/, showSubmenu);
-bot.action(/^wlesson:(.+)$/, selectLesson);
+bot.action(
+  /^bemod:(.+)$/,
+  showModule
+);
 
-// Reading (Multilevel-format: standalone part drills + full 5-part mocks)
-bot.hears('📖 Reading', showReadingMockMenu);
-bot.action('rread:menu:drills', showDrillMenu);
-bot.action('rread:menu:mocks', showMockMenu);
-bot.action(/^rread:startdrillpart:(\d+)$/, startDrill);
-bot.action(/^rread:startmock:(.+)$/, startMock);
-bot.action(/^rread:mm:(.+)$/, handleMmAnswer);
-bot.action(/^rread:mc:(\d+):(\d+)$/, handleMcAnswer);
-bot.action(/^rread:gap:(.+)$/, handleGapAnswer);
+// Business Challenge
+bot.action(
+  'bechallenge:start',
+  startBusinessChallenge
+);
 
-// Listening (Multilevel-format: standalone part practice + full mocks, MP3-or-TTS audio)
-bot.hears('🎧 Listening', showListeningMenu);
-bot.action(/^lmock:startpart:(\d+)$/, startListeningPart);
-bot.action(/^lmock:startmock:(.+)$/, startListeningMock);
-bot.action(/^lmock:sr:(\d+)$/, handleSentenceReplyAnswer);
-bot.action(/^lmock:sm:([A-F])$/, handleSpeakerMatchingAnswer);
-bot.action(/^lmock:emc:(\d+):(\d+):(\d+)$/, handleExtractsMcAnswer);
-bot.action('lresources:show', showListeningResources);
+bot.action(
+  'bechallenge:cancel',
+  cancelBusinessChallenge
+);
 
-// Speaking Club (text-based AI roleplay)
-bot.hears('🎤 Speaking Club', showSpeakingMenu);
-bot.action(/^speak:(.+)$/, selectScenario);
-bot.action('ispeak:menu', showIeltsSpeakingMenu);
-bot.action(/^ispeak:(.+)$/, startIeltsSpeakingTopic);
-bot.hears('🛑 Suhbatni tugatish', endSpeaking);
+// ======================================================
+// SCHEDULE & CONTACT
+// ======================================================
 
-// Still reserved for later phases
-['📚 Courses'].forEach((label) => bot.hears(label, comingSoon));
+bot.hears(
+  '📅 Schedule',
+  showSchedule
+);
 
-bot.action(/^answer:(\d+)$/, handleAnswerCallback);
+bot.hears(
+  '☎ Contact',
+  showContact
+);
 
-// Generic free-text router: only fires when no bot.hears() label matched above.
-// Routes to whichever flow (Writing / Speaking / Reading Mock Cloze) the user currently has active.
+// ======================================================
+// WRITING
+// ======================================================
+
+bot.hears(
+  '✍ Writing',
+  showWritingMenu
+);
+
+bot.action(
+  /^wsubmenu:(.+)$/,
+  showSubmenu
+);
+
+bot.action(
+  /^wlesson:(.+)$/,
+  selectLesson
+);
+
+// ======================================================
+// READING
+// ======================================================
+
+bot.hears(
+  '📖 Reading',
+  showReadingMockMenu
+);
+
+bot.action(
+  'rread:menu:drills',
+  showDrillMenu
+);
+
+bot.action(
+  'rread:menu:mocks',
+  showMockMenu
+);
+
+bot.action(
+  /^rread:startdrillpart:(\d+)$/,
+  startDrill
+);
+
+bot.action(
+  /^rread:startmock:(.+)$/,
+  startMock
+);
+
+bot.action(
+  /^rread:mm:(.+)$/,
+  handleMmAnswer
+);
+
+bot.action(
+  /^rread:mc:(\d+):(\d+)$/,
+  handleMcAnswer
+);
+
+bot.action(
+  /^rread:gap:(.+)$/,
+  handleGapAnswer
+);
+
+// ======================================================
+// LISTENING
+// ======================================================
+
+bot.hears(
+  '🎧 Listening',
+  showListeningMenu
+);
+
+bot.action(
+  /^lmock:startpart:(\d+)$/,
+  startListeningPart
+);
+
+bot.action(
+  /^lmock:startmock:(.+)$/,
+  startListeningMock
+);
+
+bot.action(
+  /^lmock:sr:(\d+)$/,
+  handleSentenceReplyAnswer
+);
+
+bot.action(
+  /^lmock:sm:([A-F])$/,
+  handleSpeakerMatchingAnswer
+);
+
+bot.action(
+  /^lmock:emc:(\d+):(\d+):(\d+)$/,
+  handleExtractsMcAnswer
+);
+
+bot.action(
+  'lresources:show',
+  showListeningResources
+);
+
+// ======================================================
+// SPEAKING
+// ======================================================
+
+bot.hears(
+  '🎤 Speaking Club',
+  showSpeakingMenu
+);
+
+bot.action(
+  /^speak:(.+)$/,
+  selectScenario
+);
+
+bot.action(
+  'ispeak:menu',
+  showIeltsSpeakingMenu
+);
+
+bot.action(
+  /^ispeak:(.+)$/,
+  startIeltsSpeakingTopic
+);
+
+bot.hears(
+  '🛑 Suhbatni tugatish',
+  endSpeaking
+);
+
+// ======================================================
+// COURSES
+// ======================================================
+
+[
+  '📚 Courses'
+].forEach((label) => {
+  bot.hears(label, comingSoon);
+});
+
+// ======================================================
+// PLACEMENT ANSWERS
+// ======================================================
+
+bot.action(
+  /^answer:(\d+)$/,
+  handleAnswerCallback
+);
+
+// ======================================================
+// TEXT ROUTER
+// ======================================================
+
 bot.on('text', async (ctx) => {
-  if (ctx.session.readingRun && ctx.session.readingRun.state && ctx.session.readingRun.state.awaitingCloze) {
+
+  // BUSINESS CHALLENGE
+  if (
+    ctx.session.businessChallenge &&
+    ctx.session.businessChallenge.awaitingAnswer
+  ) {
+    return handleBusinessChallengeAnswer(ctx);
+  }
+
+  // READING CLOZE
+  if (
+    ctx.session.readingRun &&
+    ctx.session.readingRun.state &&
+    ctx.session.readingRun.state.awaitingCloze
+  ) {
     return handleClozeSubmission(ctx);
   }
+
+  // IELTS SPEAKING
   if (ctx.session.ieltsSpeaking) {
     return handleIeltsSpeakingAnswer(ctx);
   }
+
+  // WRITING
   if (ctx.session.pendingWriting) {
     return handleWritingSubmission(ctx);
   }
+
+  // SPEAKING
   if (ctx.session.pendingSpeaking) {
     return handleSpeakingMessage(ctx);
   }
-  if (ctx.session.listeningRun) {
-    const handled = await handleListeningTextAnswer(ctx);
-    if (handled) return;
-  }
-  // No active flow and text didn't match any menu button — gently redirect.
-  await ctx.reply('Quyidagi menyudan bo\'limni tanlang 👇', mainMenu);
-});
 
-// Voice notes / audio files are only meaningful during an active IELTS Speaking session.
-bot.on(['voice', 'audio'], async (ctx) => {
-  if (ctx.session.ieltsSpeaking) {
-    return handleIeltsSpeakingAudio(ctx);
+  // LISTENING
+  if (ctx.session.listeningRun) {
+    const handled =
+      await handleListeningTextAnswer(ctx);
+
+    if (handled) {
+      return;
+    }
   }
+
+  // DEFAULT
   await ctx.reply(
-    "Ovozli xabar faqat \"🎓 IELTS Speaking\" mashqi davomida ishlaydi. Quyidagi menyudan bo'limni tanlang 👇",
+    'Quyidagi menyudan bo\'limni tanlang 👇',
     mainMenu
   );
 });
 
+// ======================================================
+// VOICE / AUDIO
+// ======================================================
+
+bot.on(
+  ['voice', 'audio'],
+  async (ctx) => {
+
+    if (ctx.session.ieltsSpeaking) {
+      return handleIeltsSpeakingAudio(ctx);
+    }
+
+    await ctx.reply(
+      'Ovozli xabar faqat "🎓 IELTS Speaking" mashqi davomida ishlaydi. Quyidagi menyudan bo\'limni tanlang 👇',
+      mainMenu
+    );
+  }
+);
+
+// ======================================================
+// ERROR HANDLER
+// ======================================================
+
 bot.catch((err, ctx) => {
-  console.error(`Bot error for update ${ctx.updateType}:`, err);
+  console.error(
+    `Bot error for update ${ctx.updateType}:`,
+    err
+  );
 });
 
 module.exports = bot;
